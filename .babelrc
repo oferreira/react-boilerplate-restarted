@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "styled-components",
+    "transform-es2015-modules-commonjs",
+    "transform-regenerator",
+    "transform-class-properties",
+    "transform-decorators-legacy"
+  ]
+}
