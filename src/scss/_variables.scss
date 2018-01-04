@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// Variables
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Colors
+//  2. Fonts
+//  3. Heading & body
+//  4. Radius
+//  5. Radius
+
+/* Colors
+   ========================================================================== */
+
+$blue:                  #1D3649;
+$darker-blue:           #172b3a;
+$lighter-blue:          #778692;
+$yellow:                #f6d83e;
+$grey:                  #e8ebec;
+$darker-grey:           #c6ccd1;
+$lighter-grey:          #f3f5f6;
+$white:                 #ffffff;
+
+
+$primary-color-light:   $lighter-blue;
+$primary-color:         $blue;
+$primary-color-dark:    $darker-blue;
+
+$secondary-color:       $yellow;
+
+$tertiary-color-light:  $lighter-grey;
+$tertiary-color:        $grey;
+$tertiary-color-dark:   $darker-grey;
+
+
+/* Font
+   ========================================================================== */
+
+$font-metric:                 'Metric', sans-serif !default;
+$font-dalaFloda:              'Dala Floda Web' !default;
+
+$font-chinese:                'hanyiruiyisong' !default;
+$font-chinese-2:              'fzlthjw' !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+$font-weight-light:           200 !default;
+$font-weight-normal:          300 !default;
+$font-weight-regular:         400 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$font-family-primary:         $font-metric !default;
+$font-family-secondary:       $font-dalaFloda;
+
+
+/* Heading
+   ========================================================================== */
+
+
+//Heading primary 1
+$heading-primary-1-color:             $primary-color;
+$heading-primary-1-font-size:         5rem;
+$heading-primary-1-font-size-mobile:  3.125rem;
+$heading-primary-1-font-family:       $font-family-secondary;
+$heading-primary-1-font-weight:       $font-weight-normal;
+
+//Heading primary 2
+$heading-primary-2-color:             $primary-color;
+$heading-primary-2-font-size:         3rem;
+$heading-primary-2-font-size-mobile:  2.344rem;
+$heading-primary-2-font-family:       $font-family-secondary;
+$heading-primary-2-font-weight:       $font-weight-normal;
+
+//Heading primary 3
+$heading-primary-3-color:             $primary-color;
+$heading-primary-3-font-size:         1.5rem;
+$heading-primary-3-font-size-mobile:  1.5rem;
+$heading-primary-3-font-family:       $font-family-secondary;
+$heading-primary-3-font-weight:       $font-weight-normal;
+
+
+//Heading secondary 1
+$heading-secondary-1-color:             $primary-color;
+$heading-secondary-1-font-size:         2.375rem;
+$heading-secondary-1-font-size-mobile:  1.938rem;
+$heading-secondary-1-font-family:       $font-family-primary;
+$heading-secondary-1-font-weight:       $font-weight-light;
+
+//Heading secondary 2
+$heading-secondary-2-color:             $primary-color;
+$heading-secondary-2-font-size:         1.875rem;
+$heading-secondary-2-font-size-mobile:  1.188rem;
+$heading-secondary-2-font-family:       $font-family-primary;
+$heading-secondary-2-font-weight:       $font-weight-regular;
+
+//Heading secondary 3
+$heading-secondary-3-color:             $primary-color;
+$heading-secondary-3-font-size:         1.5rem;
+$heading-secondary-3-font-size-mobile:  1rem;
+$heading-secondary-3-font-family:       $font-family-primary;
+$heading-secondary-3-font-weight:       $font-weight-regular;
+
+//body 1
+$body-1-color:                $primary-color;
+$body-1-font-size:            1.125rem;
+$body-1-font-size-mobile:     0.813rem;
+$body-1-font-family:          $font-family-primary;
+$body-1-font-weight:          $font-weight-regular;
+
+//body 2
+$body-2-color:                $primary-color-light;
+$body-2-font-size:            1rem;
+$body-2-font-size-mobile:     0.750rem;
+$body-2-font-family:          $font-family-primary;
+$body-2-font-weight:          $font-weight-normal;
+$body-2-letter-spacing:       100;
+
+//body 3
+$body-3-color:                $primary-color-light;
+$body-3-font-size:            1rem;
+$body-3-font-size-mobile:     0.750rem;
+$body-3-font-family:          $font-family-primary;
+$body-3-font-weight:          $font-weight-normal;
+
+
+//Link
+$link-color:                  $primary-color;
+$link-font-size:              1rem;
+$link-font-size-mobile:       0.813rem;
+$link-font-family:            $font-family-primary;
+$link-font-weight:            $font-weight-normal;
+
+
+/* Radius
+   ========================================================================== */
+
+
+
+
+
+/* button
+   ========================================================================== */
+
+//Btn primary
+// Les valeurs ne sont pas les bonnes ...
+$button-primary-border:           none !default;
+$button-primary-background-focus: $primary-color !default;
+$button-primary-font-size:        1rem !default;
+$button-primary-icon-font-size:   1.3rem !default;
+$button-primary-height:           36px !default;
+$button-primary-padding:          0 2rem !default;
+$button-primary-radius:           2px !default;
+
+
+
+/* Card
+   ========================================================================== */
+
+
+// 10. Forms
+// ==========================================================================
+
+// Text Inputs + Textarea
+$input-height: 3rem !default;
+$input-border-color: $tertiary-color-dark !default;
+$input-border: 1px solid $input-border-color !default;
+$input-background: #fff !default;
+
+
+//$input-error-color: $error-color !default;
+//$input-success-color: $success-color !default;
+//$input-focus-color: $primary-color !default;
+//
+//$input-font-size: 1rem !default;
+//$input-margin-bottom: 8px;
+//
+//$input-margin: 0 0 $input-margin-bottom 0 !default;
+//$input-padding: 0 !default;
+//
+//$label-font-size: .8rem !default;
+//$input-disabled-color: rgba(0,0,0, .42) !default;
+//$input-disabled-solid-color: #949494 !default;
+//$input-disabled-border: 1px dotted $input-disabled-color !default;
+//$input-invalid-border: 1px solid $input-error-color !default;
+//$placeholder-text-color: lighten($input-border-color, 20%) !default;
+//
+//// Radio Buttons
+//$radio-fill-color:  !default;
+//$radio-empty-color:  !default;
+//$radio-border: !default;
+//
+//// Range
+//$range-height:  !default;
+//$range-width:  !default;
+//$track-height: !default;
+//
+//// Select
+//$select-border: !default;
+//$select-background:  !default;
+//$select-focus:  !default;
+//$select-option-hover:  !default;
+//$select-option-focus:  !default;
+//$select-option-selected: !default;
+//$select-padding:  !default;
+//$select-radius:  !default;
+//$select-disabled-color: !default;
+//
+//// Switches
+//$switch-bg-color:  !default;
+//$switch-checked-lever-bg: !default;
+//$switch-unchecked-bg:  !default;
+//$switch-unchecked-lever-bg:  !default;
+//$switch-radius:  !default;

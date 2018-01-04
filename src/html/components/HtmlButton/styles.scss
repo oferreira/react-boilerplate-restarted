@@ -1,4 +1,6 @@
+$testcolor:orange;
+
 
 .Button {
-  background-color: red;
+  background-color: $testcolor;
 }

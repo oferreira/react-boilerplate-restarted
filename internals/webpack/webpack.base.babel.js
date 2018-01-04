@@ -74,6 +74,27 @@ module.exports = (options) => ({
         // Preprocess our own .css files
         // This is the place to add your own loaders (e.g. sass/less etc.)
         // for a list of loaders, see https://webpack.js.org/loaders/#styling
+        test: /\.s?css$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          },
+        }, {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+            includePaths: ['sites'],
+          },
+        }],
+      },
+      {
+        // Preprocess our own .css files
+        // This is the place to add your own loaders (e.g. sass/less etc.)
+        // for a list of loaders, see https://webpack.js.org/loaders/#styling
         test: /\.css$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
