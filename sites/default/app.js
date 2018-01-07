@@ -1,5 +1,6 @@
-import bootstrap from 'bootstrap'
+import bootstrap from 'core/bootstrap'
 import routes from 'routes'
+import 'styles/theme.scss'
 
 /* eslint-disable import/no-unresolved, import/extensions */
 import '!file-loader?name=[name].[ext]!./assets/images/favicon.ico'

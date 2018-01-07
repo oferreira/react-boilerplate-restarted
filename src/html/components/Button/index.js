@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import './styles.scss'
+import Styled from './Styled'
 
-const HtmlButton = ({
+const Button = ({
   children,
   disabled,
 }) => {
@@ -12,19 +12,19 @@ const HtmlButton = ({
   })
 
   return (
-    <button className={classes} disabled={disabled}>
+    <Styled className={classes} disabled={disabled}>
       {children}
-    </button>
+    </Styled>
   )
 }
 
-HtmlButton.propTypes = {
+Button.propTypes = {
   children: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
 }
 
-HtmlButton.defaultProps = {
+Button.defaultProps = {
   disabled: false,
 }
 
-export default HtmlButton
+export default Button
