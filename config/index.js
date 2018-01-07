@@ -1,4 +1,4 @@
 
-const config = require('./dev.yml')
+const yaml = require('./dev.yml')
 
-module.exports = config
+module.exports = JSON.stringify(yaml, undefined, 4)
