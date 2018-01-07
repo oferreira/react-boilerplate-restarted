@@ -9,6 +9,7 @@ const setup = require('./middlewares/frontendMiddleware')
 const isDev = process.env.NODE_ENV !== 'production'
 const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false
 const { resolve } = require('path')
+const fs = require('fs')
 const app = express()
 
 const config = require('../config/')
@@ -16,6 +17,8 @@ const config = require('../config/')
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi)
 
+app.use('*/api/menu/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/298d53551662b9ec1e79a334fd46d1a7.json'), 'utf8'))))
+app.use('*/api/node/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/683f604e365b7de2a6816f234d969227.json'), 'utf8'))))
 app.use('/config.js', (req, res) => res.status(200).send(`window.config = eval(${JSON.stringify(config)})`))
 
 // In production we need to pass these values in instead of relying on webpack

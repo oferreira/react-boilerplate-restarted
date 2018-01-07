@@ -1,0 +1,36 @@
+{
+  "standard.front_page": {
+    "title": "Home",
+    "uri": "",
+    "alias": "/",
+    "external": false,
+    "expanded": false,
+    "enabled": true,
+    "below": {
+      "d3d870ee-a34a-4e54-b27f-d8ee3dddc80c": {
+        "title": "Google",
+        "uri": "https://www.google.fr/search?client=opera\u0026q=google%2Ffr\u0026sourceid=opera\u0026ie=UTF-8\u0026oe=UTF-8",
+        "alias": "https://www.google.fr/search?client=opera\u0026q=google%2Ffr\u0026sourceid=opera\u0026ie=UTF-8\u0026oe=UTF-8",
+        "external": true,
+        "expanded": false,
+        "enabled": true
+      },
+      "9b1620c9-1120-4c19-bc45-73f14014aafc": {
+        "title": "Wifi test 777",
+        "uri": "node/40",
+        "alias": "/node/40",
+        "external": false,
+        "expanded": false,
+        "enabled": true
+      }
+    }
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53": {
+    "title": "Destinations",
+    "uri": "node/43",
+    "alias": "/destinations",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  }
+}
