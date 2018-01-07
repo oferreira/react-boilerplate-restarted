@@ -1,20 +1,17 @@
 import React from 'react'
 // import { connect } from 'react-redux'
-import HtmlButton from 'html/components/HtmlButton'
+import Button from 'html/components/Button'
 
 export class OffersPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
-        OffersPage
-        <HtmlButton>
-          dispatch
-        </HtmlButton>
+        <h1>OffersPage</h1>
+        <Button>Test include a component from core</Button>
       </div>
     )
   }
 }
-
 
 // OffersPage.propTypes = {}
 // OffersPage.defaultProps = {}
@@ -23,4 +20,5 @@ export class OffersPage extends React.PureComponent { // eslint-disable-line rea
 // const mapDispatchToProps = null
 //
 // export default connect(mapStateToProps, mapDispatchToProps)(OffersPage)
+
 export default OffersPage

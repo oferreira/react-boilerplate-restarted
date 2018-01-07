@@ -2,16 +2,20 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { Link } from 'react-router-dom'
-// require('./styles.scss')
+import Node from 'drupal/containers/Node'
+import './style.scss'
 
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        HomePage
-        <Link to={'/offers'}>About</Link>
-      </h1>
+      <div>
+        <h1>HomePage</h1>
+        <Link to="/offers">
+          Go to OffersPage
+        </Link>
+        <Node id={22} />
+      </div>
     )
   }
 }
@@ -23,7 +27,7 @@ const mapStateToProps = null
 const mapDispatchToProps = null
 
 
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
+const withConnect = connect(mapStateToProps, mapDispatchToProps)
 
 export default compose(
   withConnect,
