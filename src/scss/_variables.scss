@@ -9,23 +9,28 @@
 //  1. Colors
 //  2. Fonts
 //  3. Heading & body
-//  4. Radius
-//  5. Radius
+//  4. Grid
+//  5. Z-index
+//  6. Button
+//  7. Form
+
+
+
 
 /* Colors
    ========================================================================== */
 
-$blue:                  #1D3649;
-$darker-blue:           #172b3a;
-$lighter-blue:          #778692;
-$yellow:                #f6d83e;
-$grey:                  #e8ebec;
-$darker-grey:           #c6ccd1;
-$lighter-grey:          #f3f5f6;
-$white:                 #ffffff;
+$blue:                  #1D3649 !default;
+$darker-blue:           #172b3a !default;
+$lighter-blue:          #778692 !default;
+$yellow:                #f6d83e !default;
+$grey:                  #e8ebec !default;
+$darker-grey:           #c6ccd1 !default;
+$lighter-grey:          #f3f5f6 !default;
+$white:                 #ffffff !default;
 
 
-$primary-color-light:   $lighter-blue;
+$primary-color-light:   $lighter-blue !default;
 $primary-color:         $blue;
 $primary-color-dark:    $darker-blue;
 
@@ -56,7 +61,7 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
 $font-family-primary:         $font-metric !default;
-$font-family-secondary:       $font-dalaFloda;
+$font-family-secondary:       $font-dalaFloda !default;
 
 
 /* Heading
@@ -64,106 +69,134 @@ $font-family-secondary:       $font-dalaFloda;
 
 
 //Heading primary 1
-$heading-primary-1-color:             $primary-color;
-$heading-primary-1-font-size:         5rem;
-$heading-primary-1-font-size-mobile:  3.125rem;
-$heading-primary-1-font-family:       $font-family-secondary;
-$heading-primary-1-font-weight:       $font-weight-normal;
+$heading-primary-1-color:             $primary-color !default;
+$heading-primary-1-font-size:         5rem !default;
+$heading-primary-1-font-size-mobile:  3.125rem !default;
+$heading-primary-1-font-family:       $font-family-secondary !default;
+$heading-primary-1-font-weight:       $font-weight-normal !default;
 
 //Heading primary 2
-$heading-primary-2-color:             $primary-color;
-$heading-primary-2-font-size:         3rem;
-$heading-primary-2-font-size-mobile:  2.344rem;
-$heading-primary-2-font-family:       $font-family-secondary;
-$heading-primary-2-font-weight:       $font-weight-normal;
+$heading-primary-2-color:             $primary-color !default;
+$heading-primary-2-font-size:         3rem !default;
+$heading-primary-2-font-size-mobile:  2.344rem !default;
+$heading-primary-2-font-family:       $font-family-secondary !default;
+$heading-primary-2-font-weight:       $font-weight-normal !default;
 
 //Heading primary 3
-$heading-primary-3-color:             $primary-color;
-$heading-primary-3-font-size:         1.5rem;
-$heading-primary-3-font-size-mobile:  1.5rem;
-$heading-primary-3-font-family:       $font-family-secondary;
-$heading-primary-3-font-weight:       $font-weight-normal;
+$heading-primary-3-color:             $primary-color !default;
+$heading-primary-3-font-size:         1.5rem !default;
+$heading-primary-3-font-size-mobile:  1.5rem !default;
+$heading-primary-3-font-family:       $font-family-secondary !default;
+$heading-primary-3-font-weight:       $font-weight-normal !default;
 
 
 //Heading secondary 1
-$heading-secondary-1-color:             $primary-color;
-$heading-secondary-1-font-size:         2.375rem;
-$heading-secondary-1-font-size-mobile:  1.938rem;
-$heading-secondary-1-font-family:       $font-family-primary;
-$heading-secondary-1-font-weight:       $font-weight-light;
+$heading-secondary-1-color:             $primary-color !default;
+$heading-secondary-1-font-size:         2.375rem !default;
+$heading-secondary-1-font-size-mobile:  1.938rem !default;
+$heading-secondary-1-font-family:       $font-family-primary !default;
+$heading-secondary-1-font-weight:       $font-weight-light !default;
 
 //Heading secondary 2
-$heading-secondary-2-color:             $primary-color;
-$heading-secondary-2-font-size:         1.875rem;
-$heading-secondary-2-font-size-mobile:  1.188rem;
-$heading-secondary-2-font-family:       $font-family-primary;
-$heading-secondary-2-font-weight:       $font-weight-regular;
+$heading-secondary-2-color:             $primary-color !default;
+$heading-secondary-2-font-size:         1.875rem !default;
+$heading-secondary-2-font-size-mobile:  1.188rem !default;
+$heading-secondary-2-font-family:       $font-family-primary !default;
+$heading-secondary-2-font-weight:       $font-weight-regular !default;
 
 //Heading secondary 3
-$heading-secondary-3-color:             $primary-color;
-$heading-secondary-3-font-size:         1.5rem;
-$heading-secondary-3-font-size-mobile:  1rem;
-$heading-secondary-3-font-family:       $font-family-primary;
-$heading-secondary-3-font-weight:       $font-weight-regular;
+$heading-secondary-3-color:             $primary-color !default;
+$heading-secondary-3-font-size:         1.5rem !default;
+$heading-secondary-3-font-size-mobile:  1rem !default;
+$heading-secondary-3-font-family:       $font-family-primary !default;
+$heading-secondary-3-font-weight:       $font-weight-regular !default;
 
 //body 1
-$body-1-color:                $primary-color;
-$body-1-font-size:            1.125rem;
-$body-1-font-size-mobile:     0.813rem;
-$body-1-font-family:          $font-family-primary;
-$body-1-font-weight:          $font-weight-regular;
+$body-1-color:                          $primary-color !default;
+$body-1-font-size:                      1.125rem !default;
+$body-1-font-size-mobile:               0.813rem !default;
+$body-1-font-family:                    $font-family-primary !default;
+$body-1-font-weight:                    $font-weight-regular !default;
 
 //body 2
-$body-2-color:                $primary-color-light;
-$body-2-font-size:            1rem;
-$body-2-font-size-mobile:     0.750rem;
-$body-2-font-family:          $font-family-primary;
-$body-2-font-weight:          $font-weight-normal;
-$body-2-letter-spacing:       100;
+$body-2-color:                          $primary-color-light !default;
+$body-2-font-size:                      1rem !default;
+$body-2-font-size-mobile:               0.750rem !default;
+$body-2-font-family:                    $font-family-primary !default;
+$body-2-font-weight:                    $font-weight-normal !default;
+$body-2-letter-spacing:                 100 !default;
 
 //body 3
-$body-3-color:                $primary-color-light;
-$body-3-font-size:            1rem;
-$body-3-font-size-mobile:     0.750rem;
-$body-3-font-family:          $font-family-primary;
-$body-3-font-weight:          $font-weight-normal;
+$body-3-color:                          $primary-color-light !default;
+$body-3-font-size:                      1rem !default;
+$body-3-font-size-mobile:               0.750rem !default;
+$body-3-font-family:                    $font-family-primary !default;
+$body-3-font-weight:                    $font-weight-normal !default;
 
 
 //Link
-$link-color:                  $primary-color;
-$link-font-size:              1rem;
-$link-font-size-mobile:       0.813rem;
-$link-font-family:            $font-family-primary;
-$link-font-weight:            $font-weight-normal;
+$link-color:                            $primary-color !default;
+$link-font-size:                        1rem !default;
+$link-font-size-mobile:                 0.813rem !default;
+$link-font-family:                      $font-family-primary !default;
+$link-font-weight:                      $font-weight-normal !default;
 
 
-/* Radius
+
+/* Grid (https://getbootstrap.com/docs/4.0/layout/grid/)
    ========================================================================== */
 
+$enable-grid-classes:         true !default;
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+
+$grid-breakpoints: (
+                              xs: 0,     // Extra small screen / phone
+                              sm: 576px, // Small screen / phone
+                              md: 768px, // Medium screen / tablet
+                              lg: 992px, // Large screen / desktop
+                              xl: 1200px // Extra large screen / wide desktop
+);
+
+$container-max-widths: (
+                              sm: 100%,
+                              md: 100%,
+                              lg: 100%,
+                              xl: 1140px
+);
 
 
+/* Z-index
+   ========================================================================== */
+
+$zindex-dropdown-backdrop:    990 !default;
+$zindex-navbar:               1000 !default;
+$zindex-dropdown:             1000 !default;
+$zindex-fixed:                1030 !default;
+$zindex-sticky:               1030 !default;
+$zindex-modal-backdrop:       1040 !default;
+$zindex-modal:                1050 !default;
+$zindex-popover:              1060 !default;
+$zindex-tooltip:              1070 !default;
 
 
-/* button
+/* Button
    ========================================================================== */
 
 //Btn primary
 // Les valeurs ne sont pas les bonnes ...
 $button-primary-border:           none !default;
 $button-primary-background-focus: $primary-color !default;
-$button-primary-font-size:        1rem !default;
-$button-primary-icon-font-size:   1.3rem !default;
-$button-primary-height:           36px !default;
-$button-primary-padding:          0 2rem !default;
-$button-primary-radius:           2px !default;
+$button-primary-font-size:        1.125em !default;
+$button-primary-font-weight:      $font-weight-normal !default;
+$button-primary-icon-font-size:   1.2rem !default;
+$button-primary-height:           56px !default;
+$button-primary-padding:          0 1rem !default;
+$button-primary-radius:           15px !default;
 
 
-
-/* Card
-   ========================================================================== */
-
-
-// 10. Forms
+// Forms
 // ==========================================================================
 
 // Text Inputs + Textarea
