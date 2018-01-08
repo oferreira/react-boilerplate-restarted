@@ -9,7 +9,7 @@ import { ConnectedRouter } from 'react-router-redux'
 import { Switch } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import createHistory from 'history/createBrowserHistory'
-import 'sanitize.css/sanitize.css'
+import '../scss/_global.scss'
 
 // Import Language Provider
 import LanguageProvider from 'core/language/containers/LanguageProvider'

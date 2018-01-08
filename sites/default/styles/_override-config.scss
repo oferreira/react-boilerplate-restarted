@@ -1,11 +1,13 @@
 // ==========================================================================
-// Config
+// Config (only @import)
 // ==========================================================================
 
-@import "variables";
-@import "global";
+//import config global
+@import "../../../src/scss/config";
 
-// Boostrap (grid & breakpoint)
-@import "bootstrap/bootstrap-grid";
+// import config project
+@import "override-variables";
+
+
 
 

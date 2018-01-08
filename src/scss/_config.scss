@@ -1,11 +1,10 @@
-@charset "UTF-8";
-
 // ==========================================================================
-// Global
+// Config
 // ==========================================================================
 
-// Right to left
+@import "variables";
 
-body{
-  direction: ltr;
-}
+// Boostrap (grid & breakpoint)
+@import "bootstrap/bootstrap-grid";
+
+
