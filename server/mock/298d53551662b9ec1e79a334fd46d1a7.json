@@ -5,6 +5,14 @@
     "alias": "/",
     "external": false,
     "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-1": {
+    "title": "Destinations",
+    "uri": "node/43",
+    "alias": "/destinations",
+    "external": false,
+    "expanded": false,
     "enabled": true,
     "below": {
       "d3d870ee-a34a-4e54-b27f-d8ee3dddc80c": {
@@ -16,7 +24,7 @@
         "enabled": true
       },
       "9b1620c9-1120-4c19-bc45-73f14014aafc": {
-        "title": "Wifi test 777",
+        "title": "Test",
         "uri": "node/40",
         "alias": "/node/40",
         "external": false,
@@ -25,10 +33,42 @@
       }
     }
   },
-  "07dcc1bb-19f4-4339-ad85-8c55ab411d53": {
-    "title": "Destinations",
-    "uri": "node/43",
-    "alias": "/destinations",
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-2": {
+    "title": "Inspiration",
+    "uri": "node/44",
+    "alias": "/inspiration",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-3": {
+    "title": "Offers",
+    "uri": "node/45",
+    "alias": "/offers",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-4": {
+    "title": "Meetings & Events",
+    "uri": "node/46",
+    "alias": "/meetings-and-events",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-5": {
+    "title": "Loyality program",
+    "uri": "node/47",
+    "alias": "/loyality-program",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-6": {
+    "title": "Brand",
+    "uri": "node/48",
+    "alias": "/brand",
     "external": false,
     "expanded": false,
     "enabled": true
