@@ -1,0 +1,76 @@
+/*
+ * Load font Metric
+ */
+
+@import "variables";
+
+/***********************************************************************
+  Metric
+***********************************************************************/
+
+//Metric Light
+@font-face {
+  font-family: $font-metric;
+  src:
+    url('#{$font-path}Metric/Metric-light/MetricWeb-Light.eot'),
+    url('#{$font-path}Metric/Metric-light/MetricWeb-Light.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}Metric/Metric-light/MetricWeb-Light.woff2')  format('woff2'),
+    url('#{$font-path}Metric/Metric-light/MetricWeb-Light.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+//Metric Medium
+@font-face {
+  font-family: $font-metric;
+  src:
+    url('#{$font-path}Metric/Metric-medium/MetricWeb-Medium.eot'),
+    url('#{$font-path}Metric/Metric-medium/MetricWeb-Medium.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}Metric/Metric-medium/MetricWeb-Medium.woff2')  format('woff2'),
+    url('#{$font-path}Metric/Metric-medium/MetricWeb-Medium.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+//Metric Regular
+@font-face {
+  font-family: $font-metric;
+  src:
+    url('#{$font-path}Metric/Metric-regular/MetricWeb-Regular.eot'),
+    url('#{$font-path}Metric/Metric-regular/MetricWeb-Regular.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}Metric/Metric-regular/MetricWeb-Regular.woff2')  format('woff2'),
+    url('#{$font-path}Metric/Metric-regular/MetricWeb-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+//Metric Bold
+@font-face {
+  font-family: $font-metric;
+  src:
+    url('#{$font-path}Metric/Metric-bold/MetricWeb-Bold.eot'),
+    url('#{$font-path}Metric/Metric-bold/MetricWeb-Bold.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}Metric/Metric-bold/MetricWeb-Bold.woff2')  format('woff2'),
+    url('#{$font-path}Metric/Metric-bold/MetricWeb-Bold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/***********************************************************************
+  Dala Floda
+***********************************************************************/
+@font-face {
+  font-family: $font-dalaFloda;
+  src: url('#{$font-path}DalaFloda/DalaFloda-Roman-Web.eot');
+  src: url('#{$font-path}DalaFloda/DalaFloda-Roman-Web.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}DalaFloda/DalaFloda-Roman-Web.woff2') format('woff2'),
+  url('#{$font-path}DalaFloda/DalaFloda-Roman-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
