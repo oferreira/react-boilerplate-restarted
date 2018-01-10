@@ -14,7 +14,7 @@ import { injectDrupalReducer } from 'drupal/reducers'
 import { injectDrupalFetchNodeWatcher } from 'drupal/sagas/fetchNode'
 import requestNode from 'drupal/actions/requestNode'
 import { makeSelectNodes } from 'drupal/selectors'
-import { nodeByIdFilter } from 'drupal/filters'
+import { findByIdFilter } from 'core/filters'
 import NodeField from 'drupal/components/NodeField'
 
 export class Node extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -30,7 +30,7 @@ export class Node extends React.PureComponent { // eslint-disable-line react/pre
   }
 
   render() {
-    const node = this.props.nodes.find(nodeByIdFilter(this.props.id))
+    const node = this.props.nodes.find(findByIdFilter(this.props.id))
 
     if (!node) return null
 
@@ -53,7 +53,7 @@ Node.propTypes = {
   ]),
   requestNode: PropTypes.func,
   fields: PropTypes.array,
-  nodes: PropTypes.array,
+  nodes: PropTypes.object,
 }
 
 const mapStateToProps = createStructuredSelector({
