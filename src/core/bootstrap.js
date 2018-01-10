@@ -9,7 +9,6 @@ import { ConnectedRouter } from 'react-router-redux'
 import { Switch } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import createHistory from 'history/createBrowserHistory'
-import '../scss/_global.scss'
 
 // Import Language Provider
 import LanguageProvider from 'core/language/containers/LanguageProvider'
@@ -19,6 +18,7 @@ import configureStore from 'core/store/configureStore'
 
 // Import i18n messages
 import translationMessages from 'core/language/utils/translationMessages'
+import 'scss/_global.scss'
 
 export const MOUNT_NODE = document.getElementById('app')
 
