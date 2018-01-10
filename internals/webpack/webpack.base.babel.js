@@ -77,7 +77,19 @@ module.exports = (options) => ({
       {
         test: /\.s?css$/,
         exclude: /node_modules/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        loaders: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          },
+        }, {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+          },
+        }],
       },
       {
         // Preprocess our own .css files
