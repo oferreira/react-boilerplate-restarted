@@ -1,4 +1,5 @@
 @charset "UTF-8";
+// @import "fonts";
 
 // ==========================================================================
 // Variables
@@ -187,15 +188,34 @@ $zindex-tooltip:              1070 !default;
    ========================================================================== */
 
 //Btn primary
-// Les valeurs ne sont pas les bonnes ...
-$button-primary-border:           none !default;
-$button-primary-background-focus: $primary-color !default;
-$button-primary-font-size:        1.125em !default;
-$button-primary-font-weight:      $font-weight-normal !default;
-$button-primary-icon-font-size:   1.2rem !default;
-$button-primary-height:           56px !default;
-$button-primary-padding:          0 1rem !default;
-$button-primary-radius:           15px !default;
+$button-primary-font-size:              1.125rem !default;
+$button-primary-font-weight:            $font-weight-normal !default;
+$button-primary-padding:                0 1rem !default;
+$button-primary-border:                 1px solid transparent !default;
+$button-primary-background:             $secondary-color !default;
+$button-primary-background-opacity:     1 !default;
+$button-primary-background-focus:       $primary-color !default;
+$button-primary-background-disabled:    $tertiary-color-dark !default;
+$button-primary-font-size:              1rem !default;
+$button-primary-color:                  $primary-color !default;
+$button-primary-color-focus:            $secondary-color !default;
+$button-primary-icon-font-size:         1.3rem !default;
+$button-primary-height:                 58px !default;
+$button-primary-padding:                0 ($button-primary-height / 2) !default;
+$button-primary-radius:                 $button-primary-height / 2 !default;
+$button-primary-color-disabled:         $white;
+$button-primary-width:                  20rem;
+
+$button-secondary-background-opacity:   .5;
+$button-secondary-color-focus:          $primary-color;
+
+$button-tertiary-border-color:          $primary-color;
+$button-tertiary-color-focus:           $white;
+
+
+/* Card
+   ========================================================================== */
+
 
 
 // Forms

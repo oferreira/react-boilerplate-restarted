@@ -20,7 +20,6 @@ export class OffersPage extends React.PureComponent { // eslint-disable-line rea
           </div>
 
         </div>
-
       </div>
     )
   }
