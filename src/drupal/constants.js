@@ -1,4 +1,9 @@
-export const STATE_NAME = 'drupal'
+export const DRUPAL_STATE_NAME = 'drupal'
 
-export const REQUEST_NODE = '@drupal/REQUEST_NODE'
-export const REQUEST_NODE_SUCCESS = '@drupal/REQUEST_NODE_SUCCESS'
+// DRUPAL_REQUEST_NODE
+export const DRUPAL_REQUEST_NODE = '@drupal/REQUEST_NODE'
+export const DRUPAL_REQUEST_NODE_SUCCESS = '@drupal/REQUEST_NODE_SUCCESS'
+
+// DRUPAL_REQUEST_MENU
+export const DRUPAL_REQUEST_MENU = '@drupal/REQUEST_MENU'
+export const DRUPAL_REQUEST_MENU_SUCCESS = '@drupal/REQUEST_MENU_SUCCESS'
