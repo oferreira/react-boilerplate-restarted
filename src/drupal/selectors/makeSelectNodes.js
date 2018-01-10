@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 import { selectDrupal } from './index'
 
 /**
- * Select the language locale
+ * Select the list on nodes
  */
 const makeSelectNodes = () => createSelector(
   selectDrupal,

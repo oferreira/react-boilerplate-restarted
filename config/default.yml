@@ -1,5 +1,0 @@
-api:
-  drupal:
-    fetch_node: '/{locale}/node/{id}'
-    fetch_languages: '/{locale}/languages'
-    fetch_currencies: '/{locale}/currencies'

@@ -1,5 +1,5 @@
 /**
- * Get informations of a node from Drupal
+ * Get informations of a Menu from Drupal
  */
 
 import { call, put, select, takeLatest } from 'redux-saga/effects'
@@ -9,20 +9,20 @@ import injectSaga from 'core/sagas/utils/injectSaga'
 import requestLoaded from 'core/sagas/actions/requestLoaded'
 import { makeSelectLocale } from 'core/language/selectors'
 import {
-  DRUPAL_REQUEST_NODE,
-  DRUPAL_REQUEST_NODE_SUCCESS,
+  DRUPAL_REQUEST_MENU,
+  DRUPAL_REQUEST_MENU_SUCCESS,
 } from 'drupal/constants'
 
 /**
  * Github repos request/response handler
  */
-export function* fetchNode({ id }) {
+export function* fetchMenu({ id }) {
   const locale = yield select(makeSelectLocale())
-  const url = createUrl('{locale}/api/node/{id}', { id, locale })
+  const url = createUrl('{locale}/api/menu/{id}', { id, locale })
 
   try {
     const payload = yield call(request, url)
-    yield put(requestLoaded(DRUPAL_REQUEST_NODE_SUCCESS, payload, id))
+    yield put(requestLoaded(DRUPAL_REQUEST_MENU_SUCCESS, payload, id))
   } catch (e) {
     throw new Error(e)
   }
@@ -31,10 +31,10 @@ export function* fetchNode({ id }) {
 /**
  * Root saga manages watcher lifecycle
  */
-export function* fetchNodeWatcher() {
-  yield takeLatest(DRUPAL_REQUEST_NODE, fetchNode)
+export function* fetchMenuWatcher() {
+  yield takeLatest(DRUPAL_REQUEST_MENU, fetchMenu)
 }
 
-export const injectDrupalFetchNodeWatcher = () => injectSaga({ key: 'injectDrupalFetchNodeWatcher', saga: fetchNodeWatcher })
+export const injectDrupalFetchMenuWatcher = () => injectSaga({ key: 'injectDrupalFetchMenuWatcher', saga: fetchMenuWatcher })
 
-export default fetchNodeWatcher
+export default fetchMenuWatcher

@@ -2,26 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { Link } from 'react-router-dom'
-
 import Node from 'drupal/containers/Node'
-import Button from 'html/components/Button'
 import './style.scss'
 
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
-        <h1>HomePage</h1>
-        <Link to="/offers">
-          Go to OffersPage
-        </Link>
+      <div className="HomePage">
+        <Menu id="main" />
         <Node id={22} />
-        <h1>
-          HomePage
-          <Link to="/offers">About</Link>
-        </h1>
-
         <div className="wrapper">
           <h1>Buttons</h1>
           <div className="buttons">

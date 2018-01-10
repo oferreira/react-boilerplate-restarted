@@ -1,0 +1,10 @@
+{
+  "api": {
+    "drupal": {
+      "url": "http://louvrehotels.dev:10088",
+      "fetch_node": "{%api.drupal.url%}/{locale}/node/{id}",
+      "fetch_languages": "{%api.drupal.url%}/{locale}/languages",
+      "fetch_currencies": "{%api.drupal.url%}/{locale}/currencies"
+    }
+  }
+}
