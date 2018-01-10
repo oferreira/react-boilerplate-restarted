@@ -1,0 +1,122 @@
+@import '../../../scss/variables';
+.Button {
+  border: $button-primary-border;
+  height: $button-primary-height;
+  font-size: $button-primary-font-size;
+  color: $button-primary-color;
+  font-family: $font-family-primary;
+  padding: $button-primary-padding;
+  background: $white;
+  width: $button-primary-width;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    background: $button-primary-background;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    transition: all .1s linear;
+  }
+  &::before {
+    background: $button-primary-background-focus;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(100%);
+    z-index: 200;
+    transition: all .1s linear;
+  }
+
+  &:hover {
+    color: $button-primary-color-focus;
+
+    &::before {
+      transform: translateY(0);
+    }
+    &::after {
+      transform: translateY(-100%);
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $button-primary-color-disabled;
+    cursor: default;
+    &::after {
+      background: $button-primary-background-disabled;
+      transform: translateY(0) !important;
+    }
+
+    &:hover {
+      color: $button-primary-color-disabled;
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__Label {
+    position: relative;
+    z-index: 9999; // TODO => variables
+    color: inherit;
+  }
+
+  &--rounded {
+    border-radius: $button-primary-radius;
+  }
+
+  &__Secondary {
+    &::after,
+    &::before {
+      opacity: $button-secondary-background-opacity;
+    }
+    &:hover {
+      color: $button-secondary-color-focus;
+    }
+
+    &:disabled {
+      color: $button-primary-color-disabled;
+      &:hover {
+        color: $button-primary-color-disabled;
+      }
+    }
+  }
+
+  &__Tertiary {
+    border-color: $button-tertiary-border-color;
+    &::after {
+      background: none;
+    }
+    &:hover {
+      color: $button-tertiary-color-focus;
+    }
+    &:disabled {
+      color: inherit;
+      opacity: .4;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+}
