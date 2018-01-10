@@ -1,4 +1,3 @@
+const config = require('./default.json')
 
-const yaml = require('./dev.yml')
-
-module.exports = JSON.stringify(yaml, undefined, 4)
+module.exports = JSON.stringify(config, undefined, 4)
