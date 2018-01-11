@@ -1,0 +1,19 @@
+// @import '../../utils/scss/import.scss';
+
+.Tripadvisor__Rates {
+  cursor: pointer;
+
+  &__Note {
+    vertical-align: middle;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0;
+    text-decoration: underline;
+    // margin-left: $small-base-margin;
+    display: inline-block;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+  }
+}

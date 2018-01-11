@@ -2,6 +2,8 @@
  * Combine all reducers in this file and export the combined reducers.
  */
 import { combineReducers } from 'redux-immutable'
+import { reducer as form } from 'redux-form/immutable'
+
 import languageReducers from 'core/language/reducers'
 import routerReducers from 'core/router/reducers'
 
@@ -10,6 +12,7 @@ import routerReducers from 'core/router/reducers'
  */
 export default function createReducer(injectedReducers) {
   return combineReducers({
+    form,
     ...routerReducers,
     ...languageReducers,
     ...injectedReducers,

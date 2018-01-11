@@ -1,3 +1,7 @@
-const config = require('./default.json')
+// Config files
+const envConfig = Object.assign({},
+  require(`./${process.env.NODE_ENV || 'dev'}.json`),
+  require('./default.json')
+)
 
-module.exports = JSON.stringify(config, undefined, 4)
+module.exports = envConfig

@@ -7,7 +7,7 @@
 import { fromJS } from 'immutable'
 
 import {
-  STATE_NAME,
+  LANGUAGE_STORE_NAME,
   CHANGE_LOCALE,
   DEFAULT_LOCALE,
 } from './constants'
@@ -27,5 +27,5 @@ function reducer(state = initialState, action) {
 }
 
 export default {
-  [STATE_NAME]: reducer,
+  [LANGUAGE_STORE_NAME]: reducer,
 }

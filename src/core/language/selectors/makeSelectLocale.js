@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect'
-import { selectLanguage } from './index'
-
+import selectLanguage from './selectLanguage'
 
 /**
  * Select the language locale

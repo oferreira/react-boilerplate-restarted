@@ -1,4 +1,4 @@
-export const STATE_NAME = 'language'
+export const LANGUAGE_STORE_NAME = 'language'
 export const CHANGE_LOCALE = '@language/CHANGE_LOCALE'
 
 

@@ -1,4 +1,4 @@
-import AppRoot from 'root'
+import AppRoot from 'core/Root'
 import HomePage from 'pages/HomePage/Loadable'
 import OffersPage from 'pages/OffersPage/Loadable'
 

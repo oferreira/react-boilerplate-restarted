@@ -1,0 +1,24 @@
+@import '../../../utils/scss/variables.scss';
+@import '../../../utils/scss/global.scss';
+
+.Filter__Chip {
+  @extend .ui-element-font;
+  color: $primary;
+  margin: $base-margin $base-margin 0 $base-margin;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+  background: $ui-bg-medium;
+  width: auto;
+  padding: 0 rem-calc(8px);
+  .icon {
+    @extend .ui-element-medium-font;
+    color: $primary;
+  }
+  span {
+    width: 100%;
+    text-align: center;
+  }
+}

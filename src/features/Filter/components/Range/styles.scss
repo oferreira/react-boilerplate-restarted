@@ -1,0 +1,107 @@
+@import '../../../utils/scss/variables.scss';
+@import '../../../utils/scss/global.scss';
+
+.input-range__slider {
+  appearance: none;
+  background: $lightOnPrimary;
+  border: 0px solid $primary;
+  border-radius: 100%;
+  height: $button-icon-height;
+  width: $button-icon-height;
+  cursor: pointer;
+  display: block;
+  margin-top: -$button-icon-height/2;
+  margin-left: -$button-icon-height/2;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  box-shadow: 0px 1px 10px 0px rgba(29, 54, 73, 0.1);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+  .input-range__slider:active {
+    transform: scale(1.1);
+  }
+  .input-range--disabled .input-range__slider {
+    background: #cccccc;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+    transform: none;
+  }
+
+.input-range__slider-container {
+  transition: left 0.3s ease-out;
+}
+
+.input-range__label {
+  @extend .ui-element-medium-font;
+  color: $ui-element;
+  transform: translateZ(0);
+  white-space: nowrap;
+}
+
+.input-range__label--min,
+.input-range__label--max {
+  display: none;
+  bottom: -1.4rem;
+  position: absolute; }
+
+.input-range__label--min {
+  left: 0;
+  width: $button-icon-height;
+  margin-left: -$button-icon-height/2;
+  text-align: center;
+}
+
+.input-range__label--max {
+  right: 0;
+}
+
+.input-range__label--value {
+  position: absolute;
+  top: -$button-icon-height;
+  width: $button-icon-height;
+  margin-left: -$button-icon-height/2;
+  text-align: center;
+  left: 0;
+}
+
+.input-range__label-container {
+  left: 0%;
+  margin: auto;
+  position: relative;
+}
+  .input-range__label--max .input-range__label-container {
+    left: 50%;
+  }
+
+.input-range__track {
+  background: $ui-text;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: block;
+  height: 0.2rem;
+  position: relative;
+  transition: left 0.3s ease-out, width 0.3s ease-out;
+}
+  .input-range--disabled .input-range__track {
+    background: #eeeeee;
+  }
+
+.input-range__track--background {
+  left: 0;
+  margin-top: -0.15rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.input-range__track--active {
+  background: $primary;
+}
+
+.input-range {
+  position: relative;
+  width: 77%;
+  margin: rem-calc(24px) auto rem-calc(0px) auto !important;
+  height: rem-calc(72px);
+}

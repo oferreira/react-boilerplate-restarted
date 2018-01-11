@@ -1,0 +1,57 @@
+@import '../../../utils/scss/flexbox';
+@import '../../../utils/scss/breakpoints';
+@import '../../../utils/scss/variables.scss';
+@import '../../../utils/scss/global.scss';
+@import '../../../utils/scss/flexbox';
+@import '../../../utils/scss/breakpoints';
+
+.Filter__Expand{
+  @extend .col-xs-12;
+  border-top: 1px solid $alternate;
+  min-height: rem-calc(96px);
+  display: flex;
+  flex-direction: column;
+  @media #{$large-up} {
+    padding: $triple-base-margin $double-base-margin $triple-base-margin $double-base-margin;
+  }
+
+  &-btn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__Title {
+    @extend .ui-element-big-title;
+    color: $ui-element;
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+  .Expand__Toggle {
+    width: 100%;
+  }
+
+  .Expand {
+    &__Small {
+      display: none;
+      height: 100%;
+      width: 100%;
+      overflow: visible;
+      visibility: visible;
+      &--isOpen {
+        visibility: visible;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .icon {
+    color:$secondary;
+    font-size: 1.5em;
+  }
+}
+
+
+

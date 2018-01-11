@@ -1,0 +1,101 @@
+// @import '../../../utils/scss/flexbox.scss';
+// @import '../../../utils/scss/variables.scss';
+// @import '../../../utils/scss/breakpoints.scss';
+// @import '../../../utils/scss/global.scss';
+
+.TripAdvisorReview {
+    // @extend .secondary-font;
+    // @extend .row;
+    // background: $lightOnPrimary;
+    // padding: $base-margin 0;
+    margin: 0;
+    // border-bottom: solid 1px $white-input-border-color;
+    // color: $tertiary;
+
+    &:last-child {
+      border: none;
+    }
+
+    &__User {
+        // @extend .col-xs-12;
+        // @extend .col-md-2;
+        // margin-top: $base-margin;
+        display: flex;
+
+        & > img {
+            border-radius: 100%;
+            // height: rem-calc(50);
+            // width: rem-calc(50);
+        }
+
+        &__Username {
+            // margin-left: $base-margin;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+
+            &__Name {
+            //   color: $tripAdvisor;
+            //   font-weight: $font-S;
+            }
+        }
+    }
+
+    &__Title {
+        // @extend .primary-font;
+        // font-weight: $font-S;
+        // color: $primary;
+
+        &__Date {
+            // @extend .secondary-font;
+            // color: $tertiary;
+            vertical-align: middle;
+            // margin-left: $small-base-margin;
+        }
+    }
+
+    &__Detail {
+        // @extend .col-xs-12;
+        // @extend .col-md-9;
+    }
+
+    &__Text {
+        // margin-top: $base-margin;
+    }
+
+    .xs-hidden {
+        display: none;
+    }
+
+    .md-hidden {
+        display: block;
+    }
+}
+
+// ####################################
+// Desktop - User to the left side
+// ####################################
+// @media #{$large-up} {
+//   .TripAdvisorReview {
+//     max-width: 100%;
+
+//     &__User {
+//       display: block;
+//       text-align: center;
+
+//       & > img {
+//         height: rem-calc(80);
+//         width: rem-calc(80);
+//       }
+//     }
+//   }
+
+//   .xs-hidden {
+//     display: block !important;
+//   }
+
+//   .md-hidden {
+//     display: none !important;
+//   }
+// }

@@ -1,4 +1,4 @@
-import bootstrap from 'core/bootstrap'
+import setup from 'setup'
 import routes from 'routes'
 import 'styles/_override-config.scss'
 
@@ -16,4 +16,4 @@ import '!file-loader?name=[name].[ext]!./manifest.json'
 import 'file-loader?name=[name].[ext]!./.htaccess'
 /* eslint-enable import/no-unresolved, import/extensions */
 
-bootstrap(routes)
+setup(routes)

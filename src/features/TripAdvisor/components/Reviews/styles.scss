@@ -1,0 +1,65 @@
+// @import '../../../utils/scss/flexbox.scss';
+// @import '../../../utils/scss/variables.scss';
+// @import '../../../utils/scss/breakpoints.scss';
+// @import '../../../utils/scss/global.scss';
+
+.TripAdvisorReviews {
+  // background: $lightOnPrimary;
+
+  &__Title {
+    // @extend .col-xs-12;
+    // @extend .ui-element-small-font;
+    // padding-top: $base-margin;
+    // padding-bottom: $base-margin;
+    // background: $lightOnWhite;
+    // color: $tertiary;
+  }
+
+  & b {
+    // color: $tripAdvisor;
+    // font-weight: $font-S;
+  }
+
+  &__Reviews {
+    // @extend .col-xs-12;
+  }
+
+  &__More {
+    text-align: center;
+    // padding: $double-base-margin $base-margin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__Partner {
+      // @extend .ui-element-small-font;
+      // color: $tertiary;
+
+      &__Img {
+        // max-width: rem-calc(135px);
+      }
+
+      &--hidden {
+        visibility: hidden;
+      }
+    }
+
+    & a {
+      flex: 1;
+      cursor: pointer;
+      // color: $primary;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      & span {
+        text-decoration: underline;
+      }
+
+      & i {
+        // color: $secondary;
+        // margin-left: $base-margin;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+}

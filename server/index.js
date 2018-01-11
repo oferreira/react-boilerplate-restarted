@@ -12,14 +12,20 @@ const { resolve } = require('path')
 const fs = require('fs')
 const app = express()
 
-const config = require('../config/')
+const system = require('./system')
+const config = require('../config/index.config')
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi)
 
 app.use('*/api/menu/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/298d53551662b9ec1e79a334fd46d1a7.json'), 'utf8'))))
 app.use('*/api/node/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/683f604e365b7de2a6816f234d969227.json'), 'utf8'))))
-app.use('/config.js', (req, res) => res.status(200).send(`window.config = eval(${JSON.stringify(config)})`))
+
+app.use('/config/*', (req, res) => res.status(200).send(`window.config = eval(${JSON.stringify(config)})`))
+
+// System status & diagnostics
+app.use('/system/status', (req, res) => res.status(200).send(JSON.stringify(system.getStatus(req))))
+app.use('/system/diagnostics', (req, res) => res.status(200).send(JSON.stringify(system.getDiagnostics(req))))
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
