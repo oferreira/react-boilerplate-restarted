@@ -1,0 +1,2 @@
+export const PAYMENT_PROVIDER_ADYEN = 1
+export const PAYMENT_PROVIDER_OPERA = 2
