@@ -1,0 +1,95 @@
+{
+  "radius": {
+    "autocomplete": "55000",
+    "default": {"radius": "35", "maxDistance": "10", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "10", "maxZoomKY": "10", "maxZoomPC": "10", "maxZoomAllBrands": "10", "minZoomAllBrands": "10"},
+    "cities": [
+      {"name": "paris", "lat": "48.856558", "lon": "2.350966", "radius": "10", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "roissy-en-france", "lat": "49.0040270", "lon": "2.5152416", "radius": "10", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "10", "maxZoomKY": "10", "maxZoomPC": "11", "maxZoomAllBrands": "11", "minZoomAllBrands": "11" },
+      {"name": "lyon", "lat": "45.767299", "lon": "4.834329", "radius": "10", "maxResorts": "20", "maxDistance": "25", "minResorts": "2", "maxZoomCA": "10", "maxZoomKY": "10", "maxZoomPC": "12", "maxZoomAllBrands": "10", "minZoomAllBrands": "10"},
+      {"name": "montpellier", "lat": "43.6081760", "lon": "3.8794455", "radius": "10", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "9", "maxZoomKY": "9", "maxZoomPC": "9", "maxZoomAllBrands": "10", "minZoomAllBrands": "10"},
+      {"name": "bordeaux", "lat": "44.8373682", "lon": "-0.5761440", "radius": "10", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "10", "maxZoomKY": "9", "maxZoomPC": "9", "maxZoomAllBrands": "11", "minZoomAllBrands": "11"},
+      {"name": "saint-malo", "lat": "48.6493370", "lon": "-2.0256740", "radius": "10", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "12", "maxZoomPC": "11", "maxZoomAllBrands": "11", "minZoomAllBrands": "10", "roadDistances": "true"},
+      {"name": "dinard", "lat": "48.6330240", "lon": "-2.0551250", "radius": "10", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "12", "maxZoomPC": "11", "maxZoomAllBrands": "11", "minZoomAllBrands": "10", "roadDistances": "true"},
+      {"name": "nantes", "lat": "47.218371", "lon": "-1.553621", "radius": "50", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "10", "minZoomAllBrands": "11"},
+      {"name": "aéroport Roissy Charles de Gaulle", "lat": "49.0096906", "lon": "2.547924500000022", "radius": "40", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "La Baule", "lat": "47.2869183", "lon": "-2.391377700000021", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Massy Palaiseau", "lat": "48.724904", "lon": "2.256614000000013", "radius": "42", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Paris Disneyland (Coupvray)", "lat": "48.724904", "lon": "2.775807900000018", "radius": "40", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Pornic", "lat": "47.115491", "lon": "-2.1044440000000577", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Saint-Witz", "lat": "49.091281", "lon": "2.5670860000000175", "radius": "38", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Alkmaar", "lat": "52.6323813", "lon": "4.753375399999982", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Amsterdam", "lat": "52.3702157", "lon": "4.895167899999933", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Bergen Op Zoom", "lat": "51.49457580000001", "lon": "4.287162200000012", "radius": "41", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Bodegraven", "lat": "52.0823259", "lon": "4.7460843999999724", "radius": "36", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Bois-le-Duc", "lat": "51.69781620000001", "lon": "5.303674799999953", "radius": "46", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Breda", "lat": "47.115491", "lon": "-2.1044440000000577", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Vlissingen", "lat": "51.464666", "lon": "3.604715599999963", "radius": "39", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Eindhoven", "lat": "51.44164199999999", "lon": "5.469722499999989", "radius": "52", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Helmond", "lat": "51.4792547", "lon": "5.657009600000038", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Hilversum", "lat": "52.2291696", "lon": "5.166897400000039", "radius": "39", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Leende", "lat": "51.3494735", "lon": "5.552504900000031", "radius": "36", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Leiderdorp", "lat": "52.1509854", "lon": "4.528173299999935", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Leyde", "lat": "52.1540172", "lon": "4.4826984999999695", "radius": "39", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Merkeerk", "lat": "51.9184658", "lon": "4.989936199999988", "radius": "44", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Nijkerk", "lat": "52.2224835", "lon": "5.483562500000062", "radius": "46", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Noordwijk", "lat": "52.2399885", "lon": "4.450009399999999", "radius": "36", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Oosterhout", "lat": "51.6410202", "lon": "4.8616901000000325", "radius": "36", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Sevenum", "lat": "51.41063399999999", "lon": "6.0262189000000035", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Zevenbergen", "lat": "51.6460635", "lon": "4.607522600000038", "radius": "44", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Zoetermeer", "lat": "52.060669", "lon": "4.494024999999965", "radius": "46", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Altenholz", "lat": "54.389608", "lon": "10.105898900000057", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Ploen", "lat": "54.16133019999999", "lon": "10.425949800000012", "radius": "36", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Bruges", "lat": "51.209348", "lon": "3.2246995000000425", "radius": "39", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Nicosie", "lat": "35.1855659", "lon": "33.38227640000002", "radius": "39", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Caramulo", "lat": "40.5717838", "lon": "-8.17063989999997", "radius": "41", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Estarreja", "lat": "40.7528385", "lon": "-8.570985599999972", "radius": "41", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Al Khobar", "lat": "26.2907674", "lon": "50.21156759999997", "radius": "41", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Manama", "lat": "26.2285161", "lon": "50.58604969999999", "radius": "40", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Sharjah", "lat": "25.0753974", "lon": "55.7578403", "radius": "39", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Ras Al-Khaimah", "lat": "25.80069259999999", "lon": "55.97619940000004", "radius": "37", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Gurugram", "lat": "28.4594965", "lon": "77.02663830000006", "radius": "41", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"},
+      {"name": "Denpasar", "lat": "-8.670458199999999", "lon": "115.2126293", "radius": "40", "maxDistance": "8", "maxResorts": "15", "minResorts": "2", "maxZoomCA": "11", "maxZoomKY": "11", "maxZoomPC": "12", "maxZoomAllBrands": "11", "minZoomAllBrands": "12"}
+    ]
+  },
+  "optionsMap": {
+    "minZoom": 1,
+    "maxZoom": 18,
+    "defaultZoom": 11,
+    "clusterRadius": 40,
+    "center": {
+      "lat": 33.223191,
+      "lng": 43.679291
+    },
+    "baiduCenter": {
+      "lat": 31.23039,
+      "lng": 121.473702
+    }
+  },
+  "routes": {
+    "error": "/notfound"
+  },
+  "rooms": {
+    "available": 9,
+    "max": {
+      "adult": 4,
+      "child": 3
+    },
+    "min": {
+      "adult": 1,
+      "child": 0
+    }
+  },
+  "packageScopes": {
+    "INCLUDED": "INCLUDED",
+    "TO_PAY_PER_ROOM": "TO_PAY_PER_ROOM",
+    "TO_PAY_FOR_ALL": "TO_PAY_FOR_ALL"
+  },
+  "specialRates": ["promoCode", "blockCode", "IATACode", "corporateCode"],
+  "SessionSearchTimeout": 1200000,
+  "rateCodeType": {
+    "IATA": "IATACode",
+    "PROMO": "promoCode",
+    "CORPORATE": "corporateCode",
+    "BLOCK": "blockCode"
+  }
+}

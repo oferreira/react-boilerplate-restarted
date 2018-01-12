@@ -1,0 +1,36 @@
+@import '../../../scss/variables';
+
+.Footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-top: 1px dashed $primary-color;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: $primary-color;
+
+
+  &__Social-link{
+    display: flex;
+  }
+
+  &__Scissors {
+    height: 2rem;
+    width: 2rem;
+    align-self: flex-end;
+    margin: -1.3rem 3rem 1rem auto;
+    font-size: 3rem;
+  }
+
+  &__Link {
+    display: block;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    color: $primary-color;
+    text-decoration: none;
+    font-size: rem-calc(13px);
+    border-bottom: .05rem solid $primary-color;
+  }
+}
+

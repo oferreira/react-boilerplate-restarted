@@ -1,0 +1,16 @@
+@import './font-icon-variable';
+
+$font-icon-path:'../../components/Icon/fonts';
+$font-family-icon:'icomoon';
+
+@font-face {
+  font-family: $font-family-icon;
+  src:  url('#{$font-icon-path}/icomoon.eot?c28flw');
+  src:  url('#{$font-icon-path}/icomoon.eot?c28flw#iefix') format('embedded-opentype'),
+  url('#{$font-icon-path}/icomoon.ttf?c28flw') format('truetype'),
+  url('#{$font-icon-path}/icomoon.woff?c28flw') format('woff'),
+  url('#{$font-icon-path}/icomoon.svg?c28flw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

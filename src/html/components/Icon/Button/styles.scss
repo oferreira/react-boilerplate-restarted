@@ -1,0 +1,24 @@
+@import '../../../utils/scss/variables.scss';
+@import '../../../utils/scss/breakpoints.scss';
+
+.IconButton {
+  height: $button-icon-height;
+  width: $button-icon-width;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  &--primary {
+    color: $secondary;
+  }
+  &--tertiary {
+    color: $tertiary;
+  }
+  &--inverted {
+    background: $secondary;
+    color: $primary;
+  }
+  &__BtnClose {
+    cursor: pointer;
+    color: $lightOnPrimary;
+  }
+}

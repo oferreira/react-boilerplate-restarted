@@ -1,0 +1,37 @@
+.Logos {
+  width: 100%;
+  padding: 0 1rem;
+  font-size: 2.5rem;
+
+
+  &__List {
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  &__Hotel {
+    margin: .05rem 15px;
+    .icon{
+      //min-width: 135px;
+      font-size: 55px;
+    }
+
+  }
+
+  &__LHGLogo {
+    border-left: 2px solid #626065;
+    height: 24px;
+    padding-left: 1rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 1rem;
+    box-sizing: border-box;
+    background: url('assets/gt-logo-lh-group.png') no-repeat 1rem center;
+    min-width: 236px;
+  }
+}

@@ -324,6 +324,7 @@
     "null-loader": "0.1.1",
     "offline-plugin": "4.9.0",
     "plop": "1.9.1",
+    "postcss-loader": "^2.0.10",
     "pre-commit": "1.2.2",
     "react-test-renderer": "16.2.0",
     "rimraf": "2.6.2",
