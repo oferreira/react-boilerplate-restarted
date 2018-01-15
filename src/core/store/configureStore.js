@@ -45,12 +45,12 @@ export default function configureStore(initialState = {}, history) {
   store.injectedReducers = {} // Reducer registry
   store.injectedSagas = {} // Saga registry
 
-  store.runSaga(sagas).done.catch((/*error*/) => {
+  store.runSaga(sagas).done.catch((/* error */) => {
     store.dispatch(push('/error'))
   })
 
   // Make reducers hot reloadable, see http://mxs.is/googmo
-  /* istanbul ignore next */
+  // istanbul ignore next
   if (module.hot) {
     module.hot.accept('core/reducers', () => {
       store.replaceReducer(createReducer(store.injectedReducers))

@@ -10,8 +10,4 @@ Icon.propTypes = {
   name: PropTypes.string.isRequired,
 }
 
-Icon.defaultProps = {
-  name: 'default',
-}
-
 export default Icon

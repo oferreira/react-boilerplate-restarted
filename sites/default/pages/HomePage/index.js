@@ -4,7 +4,7 @@ import { compose } from 'redux'
 import Node from 'drupal/containers/Node'
 import Menu from 'drupal/containers/Menu'
 import Button from 'html/components/Button'
-import Footer from 'html/components/Footer'
+import Footer from 'html/containers/Footer'
 import './style.scss'
 
 
@@ -52,7 +52,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             </Button>
           </div>
         </div>
-        <Footer />
+        <Footer menuId={'footer'} />
       </div>
     )
   }
