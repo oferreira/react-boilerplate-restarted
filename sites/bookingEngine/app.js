@@ -18,3 +18,5 @@ import 'file-loader?name=[name].[ext]!./.htaccess'
 import './scss/_override-config.scss'
 
 setup(routes)
+
+if (module.hot) { module.hot.accept() }
