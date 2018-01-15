@@ -40,5 +40,6 @@ export default (routes = [], initialState = {}) => {
 
   render()
 
-  if (process.env.NODE_ENV === 'production') require('offline-plugin/runtime').install()
+  // Akamai is in charge to cache files
+  // if (process.env.NODE_ENV === 'production') require('offline-plugin/runtime').install()
 }

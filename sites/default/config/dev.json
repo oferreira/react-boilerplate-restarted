@@ -1,3 +1,209 @@
 {
-
+  "language": {
+    "default": "en-us"
+  },
+  "api": {
+    "url": "https://api-dev.louvrehotels.com/gt",
+    "drupal": "http://gt-drupal-dev.louvrehotels.com/graphql",
+    "languages": "http://gt-drupal-dev.louvrehotels.com/api/languages",
+    "translations": "http://gt-drupal-dev.louvrehotels.com/{lang}/api/translations",
+    "currencies": "http://gt-drupal-dev.louvrehotels.com/api/currencies",
+    "countries": "http://gt-drupal-dev.louvrehotels.com/api/countries",
+    "cgv": "http://gt-drupal-dev.louvrehotels.com/{lang}/api/cgv/25",
+    "cookiePolicy": "http://gt-drupal-dev.louvrehotels.com/{lang}/api/cookie_policy/26",
+    "amenities": "https://api-dev.louvrehotels.com/gt/resorts/features",
+    "rooms_features": "https://api-dev.louvrehotels.com/gt/resorts/rooms/features",
+    "autocomplete": "https://api-dev.louvrehotels.com/gt/resorts/autocomplete?rawtext={input}",
+    "resorts": "https://api-dev.louvrehotels.com/gt/resorts",
+    "geosearch": "https://api-dev.louvrehotels.com/gt/resorts/geosearch",
+    "countrysearch": "https://api-dev.louvrehotels.com/gt/resorts/countrysearch?countryName={countryName}&locale={locale}",
+    "availabilities": "https://api-dev.louvrehotels.com/gt/availabilities/rooms",
+    "alternative_availabilities": "https://api-dev.louvrehotels.com/gt/availabilities/rooms/alternates",
+    "packages": "https://api-dev.louvrehotels.com/gt/availabilities/packages",
+    "upgrade_room": "https://api-dev.louvrehotels.com/gt/room/upsell/{resortId}",
+    "bookings_config": "https://api-dev.louvrehotels.com/gt/bookings/config?resortId={id}&locale={lang}",
+    "bookings_process": "https://api-dev.louvrehotels.com/gt/bookings/process",
+    "booking_fetch": "https://api-dev.louvrehotels.com/gt/bookings/{id}?lastName={lastName}",
+    "booking_cancel": "https://api-dev.louvrehotels.com/gt/bookings/cancel/{confirmationNumber}",
+    "pictures_rooms": "https://api-dev.louvrehotels.com/gt/Media/pictures/rooms?id={id}&locale={lang}",
+    "pictures_hotel": "https://api-dev.louvrehotels.com/gt/Media/pictures/resort?id={id}&locale={lang}",
+    "bookings_verify": "https://api-dev.louvrehotels.com/gt/bookings/verify",
+    "tripAdvisor": "https://api.tripadvisor.com/api/partner/2.0/location",
+    "companyCode": "https://api-dev.louvrehotels.com/gt/company?companyCode={code}",
+    "travelAgentCode": "https://api-dev.louvrehotels.com/gt/travel-agent?travelAgentCode={code}",
+    "woosmap": {
+      "autocomplete": "https://api.woosmap.com/stores/search?lat={lat}&lng={lng}&max_distance={radius}&stores_by_page=50&limit=50&query=type:GT OR type:TI OR type:RT&key={key}",
+      "map": "https://api.woosmap.com/stores/search?query=type:GT OR type:TI OR type:RT&key={key}&limit=300&stores_by_page=300"
+    },
+    "google": {
+      "geocode": "https://maps.googleapis.com/maps/api/geocode/json?address={address}&channel={channel}",
+      "places": "https://maps.googleapis.com/maps/api/js?libraries=places&key={key}"
+    },
+    "baidu": {
+      "places": "https://api.map.baidu.com/api?v=2.0&ak={key}&callback={callback}"
+    },
+    "cancelRules": "https://api-dev.louvrehotels.com/gt/resorts/cancellationrules/{resortId}?rateCode={rateCode}&date={date}",
+    "wordingRules": "http://gt-drupal-dev.louvrehotels.com/{lang}/api/cancellation/rule/{key}",
+    "fetch_amenities_rooms": "https://api-dev.louvrehotels.com/gt/resorts/rooms/categories/features?resortId={resortId}",
+    "drupal_fetch_amenities": "http://gt-drupal-dev.louvrehotels.com/{lang}/api/amenities"
+  },
+  "defaultSetup": {
+    "isGoogle": true,
+    "isChina": false
+  },
+  "keys": {
+    "woosmap": "lh-dev-woos",
+    "google": "AIzaSyCSpcqOAz9dbS8yABHLgEwuuZEEtud-Z2k",
+    "googleClient": "gme-louvre",
+    "googleSignature": "G8fe2f-Fltl357clwgyri70M6Mk=",
+    "baidu": "doYQHN2FrxOAECICKHcuMuOEIZF0Lyql",
+    "tripAdvisor": "AE22ED45245E4B31B1850438EC8A27D7"
+  },
+  "currency": {
+    "default": "EUR"
+  },
+  "hotelGroup": {
+    "list": [
+      "royal-tulip",
+      "golden-tulip-2line",
+      "metropolo",
+      "sarovar",
+      "campanile",
+      "kyriad",
+      "tulip-inn",
+      "jinjiang-inn",
+      "premiere-classe"
+    ]
+  },
+  "hotel": {
+    "picture": {
+      "default": {
+        "m": "http://media.iceportal.com/71561/photos/2655578_M.jpg",
+        "s": "http://media.iceportal.com/71561/photos/2655578_M.jpg"
+      }
+    }
+  },
+  "socials": {
+    "facebook": {
+      "fr": "https://www.facebook.com/Golden-Tulip-Hôtels-France-1686018951693845/?fref=ts",
+      "nl": "https://www.facebook.com/GoldenTulipBenelux/",
+      "default": "https://www.facebook.com/Golden-Tulip-Hotels-10763360898/?fref=ts"
+    },
+    "instagram": {
+      "default": "https://www.instagram.com/goldentuliphotels/"
+    }
+  },
+  "links": {
+    "contacts": {
+      "fr": "https://www.goldentulip.com/fr/content/contacts",
+      "en": "https://www.goldentulip.com/en/content/contacts",
+      "de": "https://www.goldentulip.com/de/content/kontakt",
+      "ar": "https://www.goldentulip.com/ar/content/%D8%AC%D9%87%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%AA%D8%B5%D8%A7%D9%84",
+      "zh-hans": "https://www.goldentulip.com/zh-hans/content/%E8%81%94%E7%B3%BB%E4%BF%A1%E6%81%AF",
+      "es": "https://www.goldentulip.com/es/content/informaci%C3%B3n-de-contacto",
+      "it": "https://www.goldentulip.com/it/content/contatti",
+      "ja": "https://www.goldentulip.com/ja/content/%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%85%88",
+      "nl": "https://www.goldentulip.com/nl/content/contactgegevens",
+      "pl": "https://www.goldentulip.com/pl/content/dane-kontaktowe",
+      "pt-br": "https://www.goldentulip.com/pt-br/content/contatos",
+      "ru": "https://www.goldentulip.com/ru/content/%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B",
+      "default": "https://www.goldentulip.com/en/content/contacts"
+    },
+    "TermsAndConditions": {
+      "fr": "https://www.goldentulip.com/fr/content/conditions-g%C3%A9n%C3%A9rales",
+      "en": "https://www.goldentulip.com/en/content/terms-conditions",
+      "de": "https://www.goldentulip.com/de/content/allgemeine-nutzungsbedingungen",
+      "ar": "https://www.goldentulip.com/ar/content/%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D8%B7-%D9%88%D8%A7%D9%84%D8%A3%D8%AD%D9%83%D8%A7%D9%85",
+      "zh-hans": "https://www.goldentulip.com/zh-hans/content/%E6%9D%A1%E6%AC%BE%E5%92%8C%E6%9D%A1%E4%BB%B6",
+      "es": "https://www.goldentulip.com/es/content/t%C3%A9rminos-y-condiciones",
+      "it": "https://www.goldentulip.com/it/content/termini-e-condizioni",
+      "ja": "https://www.goldentulip.com/ja/content/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84",
+      "nl": "https://www.goldentulip.com/nl/content/voorwaarden-en-bepalingen",
+      "pl": "https://www.goldentulip.com/pl/content/warunki-i-zasady",
+      "pt-br": "https://www.goldentulip.com/pt-br/content/termos-e-condi%C3%A7%C3%B5es",
+      "ru": "https://www.goldentulip.com/ru/content/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D0%B8-%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F",
+      "default": "https://www.goldentulip.com/en/content/terms-conditions"
+    },
+    "SiteMap": {
+      "fr": "https://www.goldentulip.com/fr/sitemap",
+      "en": "https://www.goldentulip.com/en/sitemap",
+      "de": "https://www.goldentulip.com/de/sitemap",
+      "ar": "https://www.goldentulip.com/ar/sitemap",
+      "zh-hans": "https://www.goldentulip.com/zh-hans/sitemap",
+      "es": "https://www.goldentulip.com/es/sitemap",
+      "it": "https://www.goldentulip.com/it/sitemap",
+      "ja": "https://www.goldentulip.com/ja/sitemap",
+      "nl": "https://www.goldentulip.com/nl/sitemap",
+      "pl": "https://www.goldentulip.com/pl/sitemap",
+      "pt-br": "https://www.goldentulip.com/pt-br/sitemap",
+      "ru": "https://www.goldentulip.com/ru/sitemap",
+      "default": "https://www.goldentulip.com/en/sitemap"
+    },
+    "Careers": {
+      "fr": "https://www.goldentulip.com/fr/content/carri%C3%A8res",
+      "en": "https://www.goldentulip.com/en/content/careers",
+      "de": "https://www.goldentulip.com/de/content/karriere",
+      "ar": "https://www.goldentulip.com/ar/content/%D9%81%D8%B1%D8%B5-%D8%B9%D9%85%D9%84",
+      "zh-hans": "https://www.goldentulip.com/zh-hans/content/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95",
+      "es": "https://www.goldentulip.com/es/content/oportunidades-laborales",
+      "it": "https://www.goldentulip.com/it/content/lavora-con-noi",
+      "ja": "https://www.goldentulip.com/ja/content/%E4%BA%BA%E6%9D%90%E5%8B%9F%E9%9B%86",
+      "nl": "https://www.goldentulip.com/nl/content/carri%C3%A8re",
+      "pl": "https://www.goldentulip.com/pl/content/praca",
+      "pt-br": "https://www.goldentulip.com/pt-br/content/carreiras",
+      "ru": "https://www.goldentulip.com/ru/content/%D0%9A%D0%B0%D1%80%D1%8C%D0%B5%D1%80%D0%B0",
+      "default": "https://www.goldentulip.com/en/content/careers"
+    },
+    "Press": {
+      "fr": "https://www.goldentulip.com/fr/content/presse",
+      "en": "https://www.goldentulip.com/en/content/press",
+      "de": "https://www.goldentulip.com/de/content/presse",
+      "ar": "https://www.goldentulip.com/ar/content/%D8%B5%D8%AD%D8%A7%D9%81%D8%A9",
+      "zh-hans": "https://www.goldentulip.com/zh-hans/content/%E6%96%B0%E9%97%BB",
+      "es": "https://www.goldentulip.com/es/content/prensa",
+      "it": "https://www.goldentulip.com/it/content/sala-stampa",
+      "ja": "https://www.goldentulip.com/ja/content/%E3%83%97%E3%83%AC%E3%82%B9",
+      "nl": "https://www.goldentulip.com/nl/content/pers",
+      "pl": "https://www.goldentulip.com/pl/content/prasa",
+      "pt-br": "https://www.goldentulip.com/pt-br/content/imprensa",
+      "ru": "https://www.goldentulip.com/ru",
+      "default": "https://www.goldentulip.com/en/content/press"
+    },
+    "TravelAgents": {
+      "fr": "https://www.goldentulip.com/fr/content/agents-de-voyage",
+      "en": "https://www.goldentulip.com/en/content/travel-agents",
+      "de": "https://www.goldentulip.com/de/node/8871",
+      "ar": "https://www.goldentulip.com/ar/content/%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%B3%D9%81%D8%B1",
+      "zh-hans": "https://www.goldentulip.com/ar/content/%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D8%A7%D9%84%D8%B3%D9%81%D8%B1",
+      "es": "https://www.goldentulip.com/es/content/agentes-de-viajes",
+      "it": "https://www.goldentulip.com/it/content/agenzie-di-viaggi",
+      "ja": "https://www.goldentulip.com/ja/content/%E6%97%85%E8%A1%8C%E4%BB%A3%E7%90%86%E5%BA%97%E3%81%AE%E7%9A%86%E6%A7%98",
+      "nl": "https://www.goldentulip.com/nl/content/reisagenten",
+      "pl": "https://www.goldentulip.com/pl/content/biura-podr%C3%B3%C5%BCy",
+      "pt-br": "https://www.goldentulip.com/pt-br/content/agentes-de-viagem",
+      "ru": "https://www.goldentulip.com/ru/content/%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D0%B0%D0%BC",
+      "default": "https://www.goldentulip.com/en/content/travel-agents"
+    },
+    "GiftCertificates": {
+      "fr": "https://www.goldentulip.com/fr/content/ch%C3%A8ques-cadeaux",
+      "en": "https://www.goldentulip.com/en/content/gift-cheques",
+      "de": "https://www.goldentulip.com/de/content/geschenkgutscheine",
+      "ar": "https://www.goldentulip.com/ar/content/%D8%B4%D9%8A%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%87%D8%AF%D8%A7%D9%8A%D8%A7",
+      "zh-hans": "https://www.goldentulip.com/zh-hans/content/%E7%A4%BC%E5%88%B8",
+      "es": "https://www.goldentulip.com/es/content/gift-cheques",
+      "it": "https://www.goldentulip.com/it/content/buoni-regalo",
+      "ja": "https://www.goldentulip.com/ja/content/%E3%82%AE%E3%83%95%E3%83%88%E5%88%B8",
+      "nl": "https://www.goldentulip.com/nl/content/cadeaucheques",
+      "pl": "https://www.goldentulip.com/pl/content/czeki-podarunkowe",
+      "pt-br": "https://www.goldentulip.com/pt-br/content/cheque-presente",
+      "ru": "https://www.goldentulip.com/ru/content/%D0%9F%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D1%8B%D0%B5-%D1%87%D0%B5%D0%BA%D0%B8",
+      "default": "https://www.goldentulip.com/en/content/gift-cheques"
+    }
+  },
+  "currencyMoreUsed": ["AED", "BRL", "CNY", "EUR", "GBP", "RUB", "SAR", "USD"],
+  "GTM": "GTM-5HG7X3",
+  "log": {
+    "level": 6,
+    "sentry": "https://fd37d124ed8c41159420546fa966953a@sentry.io/23414"
+  }
 }

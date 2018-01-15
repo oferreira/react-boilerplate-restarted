@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compose } from 'redux'
 
-import { withSearchHotel, withAvailabiltiesHotel } from 'features/Hotels'
+// import { withSearchHotel, withAvailabiltiesHotel } from 'features/Hotels'
 import withPayment from 'features/Payment'
 import CookiePolicy from 'features/CookiePolicy'
 import ContactForm from 'features/ContactForm'
