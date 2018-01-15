@@ -5,7 +5,7 @@ import Node from 'drupal/containers/Node'
 import Menu from 'drupal/containers/Menu'
 import Button from 'html/components/Button'
 import Footer from 'html/components/Footer'
-import Select from 'html/components/Select'
+import SelectLanguages from 'core/language/containers/SelectLanguages'
 import './style.scss'
 
 
@@ -16,7 +16,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         <Menu id="main" />
         <Node id={22} />
         <div className="wrapper">
-          <Select id="main"/>
+          <SelectLanguages />
         </div>
         <div className="wrapper">
           <h1>Buttons</h1>

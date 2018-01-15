@@ -1,31 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { compose } from 'redux'
-import InjectDrupalMenu from 'drupal/hoc/InjectDrupalMenu'
-import MenuList from 'html/components/MenuList'
-import OptionList from 'html/components/OptionList'
 import './styles.scss'
 
 const Select = ({
   items,
-  renderList,
-  renderItem,
 }) => {
-  const ListToRender = renderList
-  const ItemToRender = (typeof renderItem !== 'undefined' ? renderItem : OptionList)
-
   const content = Object.keys(items).map((id) => {
-    const item = items[id]
-
-    let below = null
-    if (typeof item.below !== 'undefined') {
-      below = <ListToRender items={item.below} />
-    }
+    const {
+      key,
+      value,
+    } = items[id]
 
     return (
-      <ItemToRender key={item.uri} item={item}>
-        {below}
-      </ItemToRender>
+      <option key={key}>{value}</option>
     )
   })
 
@@ -36,18 +23,15 @@ const Select = ({
         {content}
       </select>
     </div>
-  )}
+  )
+}
 
 Select.propTypes = {
-  items: PropTypes.object,
-  renderList: PropTypes.func,
-  renderItem: PropTypes.func,
+  items: PropTypes.array,
 }
 
 Select.defaultProps = {
   items: {},
 }
 
-export default compose(
-  InjectDrupalMenu,
-)(Select)
+export default Select
