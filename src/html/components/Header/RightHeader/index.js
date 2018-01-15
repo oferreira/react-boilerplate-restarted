@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { isBurgerOpen } from 'html/selectors/burgerMenu'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 import './styles.scss'
 
-const RightHeader = ({ children }) => (
-  <div className="RightHeader">
+const RightHeader = ({ children, burgerIsOpen }) => (
+  <div className={`RightHeader ${burgerIsOpen ? 'RightHeader--burgerOpen' : ''}`}>
     { children }
     <ul className="RightHeader__Links">
       <li className="RightHeader__Link">800 358 0846</li>
@@ -17,6 +20,11 @@ const RightHeader = ({ children }) => (
 
 RightHeader.propTypes = {
   children: PropTypes.node,
+  burgerIsOpen: PropTypes.bool,
 }
 
-export default RightHeader
+const mapStateToProps = createStructuredSelector({
+  burgerIsOpen: isBurgerOpen(),
+})
+
+export default connect(mapStateToProps, null)(RightHeader)

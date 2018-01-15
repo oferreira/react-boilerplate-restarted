@@ -17,7 +17,7 @@
     url('#{$font-path}Metric/Metric-light/MetricWeb-Light.eot?#iefix') format('embedded-opentype'),
     url('#{$font-path}Metric/Metric-light/MetricWeb-Light.woff2')  format('woff2'),
     url('#{$font-path}Metric/Metric-light/MetricWeb-Light.woff') format('woff');
-  font-weight: $font-weight-light;
+  font-weight: 200;
   font-style: normal;
 }
 

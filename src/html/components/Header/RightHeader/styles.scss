@@ -5,10 +5,15 @@
   &__Links {
     display: flex;
   }
+  &--burgerOpen {
+    & .RightHeader__Link {
+      border-color: $primary-color;
+    }
+  }
 
   &__Link {
     padding: 0 1rem;
-    font-weight: $font-weight-base;
+    font-weight: $font-weight-light;
     border-right: 1px solid $lighter-grey;
     line-height: 1.5rem;
 
