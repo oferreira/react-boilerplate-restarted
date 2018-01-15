@@ -1,0 +1,20 @@
+@import '../../../../scss/variables';
+
+.MenuList {
+  font-family: $font-dalaFloda;
+  color: $primary-color;
+  font-size: 2rem;
+  font-weight: 500;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__Item{
+    flex: 0 0 auto;
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+}

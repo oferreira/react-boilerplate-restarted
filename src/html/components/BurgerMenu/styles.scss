@@ -1,0 +1,69 @@
+@import '../../../scss/variables';
+
+.BurgerMenu {
+  top: $header-height;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: $white;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform $animation-duration-short linear;
+
+  &--isOpen {
+    transform: translateX(0);
+  }
+
+  &__Header {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 55px;
+  }
+
+  &__Content {
+    max-width: 980px;
+    margin: 5rem auto 0 auto;
+  }
+
+  &__List {
+    max-width: 425px;
+    flex: 1 1 auto;
+    display: flex;
+  }
+
+  &__Content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__Footer {
+    width: 425px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: $lighter-blue;
+
+    & > li:hover {
+      color: $primary-color;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.stayConfPlaceHolder {
+  height: 425px;
+  width: 425px;
+  background: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: $white;
+  font-family: $font-dalaFloda;
+}

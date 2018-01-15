@@ -1,0 +1,19 @@
+@import '../../../../scss/variables';
+
+.RightHeader {
+  margin-left: auto;
+  &__Links {
+    display: flex;
+  }
+
+  &__Link {
+    padding: 0 1rem;
+    font-weight: $font-weight-base;
+    border-right: 1px solid $lighter-grey;
+    line-height: 1.5rem;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

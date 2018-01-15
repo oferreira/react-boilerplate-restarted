@@ -1,0 +1,40 @@
+@import '../../../scss/variables';
+
+.Header {
+  background: $primary-color;
+  z-index: $zindex-navbar;
+  transition: all $animation-duration-short linear;
+  color: $white;
+  width: 100%;
+  position: relative;
+
+  &--burgerIsOpen,
+  &__Secondary {
+    background: $white;
+    color: $primary-color;
+    & .Header__BurgerToggle {
+      color: $primary-color;
+    }
+  }
+
+  &__Content {
+    height: $header-height;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__BurgerToggle {
+    height: 1.5rem;
+    width: 1.5rem;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $secondary-color;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

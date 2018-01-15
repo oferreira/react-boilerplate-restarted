@@ -6,6 +6,7 @@ import { reducer as form } from 'redux-form/immutable'
 
 import languageReducers from 'core/language/reducers'
 import routerReducers from 'core/router/reducers'
+import burgerReducers from 'html/reducers/burgerMenu'
 
 /**
  * Creates the main reducer with the dynamically injected ones
@@ -16,5 +17,6 @@ export default function createReducer(injectedReducers) {
     ...routerReducers,
     ...languageReducers,
     ...injectedReducers,
+    ...burgerReducers,
   })
 }
