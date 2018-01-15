@@ -16,8 +16,6 @@ import LanguageProvider from 'core/language/containers/LanguageProvider'
 // Import store configurator
 import configureStore from 'core/store/configureStore'
 
-// Import i18n messages
-import translationMessages from 'core/language/utils/translationMessages'
 import 'scss/_global.scss'
 
 export const MOUNT_NODE = document.getElementById('app')
@@ -27,10 +25,10 @@ export default (routes = [], initialState = {}) => {
   const history = createHistory()
   const store = configureStore(initialState, history)
 
-  const render = (messages) => {
+  const render = () => {
     ReactDOM.render(
       <Provider store={store}>
-        <LanguageProvider messages={messages}>
+        <LanguageProvider>
           <ConnectedRouter history={history}>
             <Switch>{renderRoutes(routes)}</Switch>
           </ConnectedRouter>
@@ -40,31 +38,7 @@ export default (routes = [], initialState = {}) => {
     )
   }
 
-  if (module.hot) {
-    // Hot reloadable React components and translation json files
-    // modules.hot.accept does not accept dynamic dependencies,
-    // have to be constants at compile-time
-    module.hot.accept(['core/language/utils/translationMessages'], () => {
-      ReactDOM.unmountComponentAtNode(MOUNT_NODE)
-      render(translationMessages)
-    })
-  }
-
-  // Chunked polyfill for browsers without Intl support
-  if (!window.Intl) {
-    (new Promise((resolve) => {
-      resolve(import('intl'))
-    }))
-      .then(() => Promise.all([
-        import('intl/locale-data/jsonp/en.js'),
-      ]))
-      .then(() => render(translationMessages))
-      .catch((err) => {
-        throw err
-      })
-  } else {
-    render(translationMessages)
-  }
+  render()
 
   if (process.env.NODE_ENV === 'production') require('offline-plugin/runtime').install()
 }

@@ -1,0 +1,12 @@
+{
+  "language": {
+    "default": "en-us"
+  },
+  "api": {
+    "drupal": {
+      "url": "",
+      "fetch_node": "{%api.drupa.url%}/{locale}/api/menu/{id}",
+      "fetch_menu": "{%api.drupa.url%}/{locale}/api/node/{id}"
+    }
+  }
+}
