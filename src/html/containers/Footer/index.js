@@ -8,23 +8,20 @@ import './styles.scss'
 const Footer = ({
   menuId,
 }) => (
-  <div className="Footer">
-    <div className="Footer__Scissors">
-      <Icon name="scissors" />
-    </div>
+  <div className="FooterWrapper">
     <Menu id={menuId} />
-    <div className="Logos">
-      <div className="LogoList">
-        <div className="Logo"><i className="icon icon-royal-tulip"></i></div>
-        <div className="Logo"><i className="icon icon-golden-tulip-2line"></i></div>
-        <div className="Logo"><i className="icon icon-metropolo"></i></div>
-        <div className="Logo"><i className="icon icon-sarovar"></i></div>
-        <div className="Logo"><i className="icon icon-campanile"></i></div>
-        <div className="Logo"><i className="icon icon-kyriad"></i></div>
-        <div className="Logo"><i className="icon icon-tulip-inn"></i></div>
-        <div className="Logo"><i className="icon icon-jinjiang-inn"></i></div>
-        <div className="Logo"><i className="icon icon-premiere-classe"></i></div>
-        <div className="Logos__LHGLogo"></div>
+    <div className="FooterWrapper__Logo">
+      <div className="FooterWrapper__LogoLists">
+        <div className="FooterWrapper__item"><Icon name="royal-tulip" /></div>
+        <div className="FooterWrapper__item"><Icon name="golden-tulip-2line" /></div>
+        <div className="FooterWrapper__item"><Icon name="metropolo" /></div>
+        <div className="FooterWrapper__item"><Icon name="sarovar" /></div>
+        <div className="FooterWrapper__item"><Icon name="campanile" /></div>
+        <div className="FooterWrapper__item"><Icon name="kyriad" /></div>
+        <div className="FooterWrapper__item"><Icon name="tulip-inn" /></div>
+        <div className="FooterWrapper__item"><Icon name="jinjiang-inn" /></div>
+        <div className="FooterWrapper__item"><Icon name="premiere-classe" /></div>
+        <div className="FooterWrapper__item--LHGLogo"></div>
       </div>
     </div>
   </div>

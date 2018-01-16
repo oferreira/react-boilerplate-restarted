@@ -1,18 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const MenuItem = ({
   item,
-  children,
 }) => (
   <li className="MenuItem">
-    {item.title}
-    {children}
+    <Link className="MenuItemLink" to={item.alias || item.uri} title={item.title}>{item.title}</Link>
   </li>
 )
 
 MenuItem.propTypes = {
-  children: PropTypes.object,
   item: PropTypes.object,
 }
 

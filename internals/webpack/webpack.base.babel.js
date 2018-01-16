@@ -83,13 +83,11 @@ module.exports = (options) => ({
           loader: 'css-loader',
           options: {
             sourceMap: true,
-            localIndentName: 'gt-',
           },
         }, {
           loader: 'sass-loader',
           options: {
             sourceMap: true,
-            localIndentName: 'gt-',
           },
         }],
       },
