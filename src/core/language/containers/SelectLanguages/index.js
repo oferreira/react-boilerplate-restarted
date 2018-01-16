@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { compose } from 'redux'
 import { makeSelectLanguages } from 'core/language/selectors'
-import Select from 'html/components/Select'
+import Select from 'common/components/Select'
 
 const SelectLanguages = ({
   languages,

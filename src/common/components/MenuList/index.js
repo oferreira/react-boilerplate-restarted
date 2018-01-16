@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MenuItem from 'html/components/MenuItem'
+import MenuItem from 'common/components/MenuItem'
 
 const MenuList = ({
   items,

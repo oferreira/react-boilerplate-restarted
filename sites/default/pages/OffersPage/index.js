@@ -1,7 +1,7 @@
 import React from 'react'
 // import { connect } from 'react-redux'
-import Button from 'html/components/Button'
-import H1 from 'html/components/H1'
+import Button from 'common/components/Button'
+import H1 from 'common/components/H1'
 import './style.scss'
 
 export class OffersPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
