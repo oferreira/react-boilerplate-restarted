@@ -6,6 +6,7 @@ import Menu from 'drupal/containers/Menu'
 import Button from 'html/components/Button'
 import Footer from 'html/components/Footer'
 import SelectLanguages from 'core/language/containers/SelectLanguages'
+import Translation from 'core/language/components/Translation'
 import './style.scss'
 
 
@@ -17,6 +18,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         <Node id={22} />
         <div className="wrapper">
           <SelectLanguages />
+          <Translation id="app.CityTax.taxesAndChargeIncluded" />
         </div>
         <div className="wrapper">
           <h1>Buttons</h1>

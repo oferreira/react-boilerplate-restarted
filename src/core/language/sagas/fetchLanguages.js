@@ -8,6 +8,7 @@ import injectSaga from 'core/sagas/utils/injectSaga'
 import requestLoaded from 'core/sagas/actions/requestLoaded'
 import { makeSelectLocale } from 'core/language/selectors'
 import {
+  CHANGE_LOCALE,
   REQUEST_LANGUAGES,
   REQUEST_LANGUAGES_SUCCESS,
 } from 'core/language/constants'
@@ -15,13 +16,13 @@ import {
 /**
  * fetch languages
  */
-export function* fetchLanguages({ id }) {
+export function* fetchLanguages() {
   const locale = yield select(makeSelectLocale())
-  const url = createUrl('{locale}/api/v2/languages', { id, locale })
+  const url = createUrl('{locale}/api/v2/languages', { locale })
 
   try {
     const payload = yield call(request, url)
-    yield put(requestLoaded(REQUEST_LANGUAGES_SUCCESS, payload, id))
+    yield put(requestLoaded(REQUEST_LANGUAGES_SUCCESS, payload, locale))
   } catch (e) {
     throw new Error(e)
   }
@@ -32,6 +33,7 @@ export function* fetchLanguages({ id }) {
  */
 export function* fetchLanguagesWatcher() {
   yield takeLatest(REQUEST_LANGUAGES, fetchLanguages)
+  yield takeLatest(CHANGE_LOCALE, fetchLanguages)
 }
 
 export const injectDrupalFetchLanguagesWatcher = () => injectSaga({ key: 'injectDrupalFetchLanguagesWatcher', saga: fetchLanguagesWatcher })

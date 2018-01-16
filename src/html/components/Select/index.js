@@ -1,37 +1,55 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import changeLocale from 'core/language/actions/changeLocale'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 import './styles.scss'
 
-const Select = ({
-  items,
-}) => {
-  const content = Object.keys(items).map((id) => {
-    const {
-      key,
-      value,
-    } = items[id]
+class Select extends React.PureComponent {
+  static propTypes = {
+    items: PropTypes.array,
+    onChangeLocale: PropTypes.func,
+  }
+
+  componentWillMount() {
+    this.props.onChangeLocale('en-us')
+    this.onChangeLocale = this.onChangeLocale.bind(this)
+  }
+
+  onChangeLocale(event) {
+    this.props.onChangeLocale(event.target.value)
+  }
+
+  render() {
+    const content = Object.keys(this.props.items).map((id) => {
+      const {
+        key,
+        value,
+      } = this.props.items[id]
+
+      return (
+        <option key={key} value={key}>{value}</option>
+      )
+    })
 
     return (
-      <option key={key}>{value}</option>
+      <div className="Select__Wrapper">
+        <span className="Select__Wrapper__Icon"><i className="icon icon-arrow-bot"></i></span>
+        <select className="select" onChange={this.onChangeLocale}>
+          {content}
+        </select>
+      </div>
     )
-  })
-
-  return (
-    <div className="Select__Wrapper">
-      <span className="Select__Wrapper__Icon"><i className="icon icon-arrow-bot"></i></span>
-      <select className="select">
-        {content}
-      </select>
-    </div>
-  )
+  }
 }
 
-Select.propTypes = {
-  items: PropTypes.array,
-}
+const mapDispatchToProps = (dispatch) => ({
+  onChangeLocale: (locale) => dispatch(changeLocale(locale)),
+})
 
-Select.defaultProps = {
-  items: {},
-}
+const withConnect = connect(null, mapDispatchToProps)
 
-export default Select
+export default compose(
+  withConnect,
+)(Select)
+
