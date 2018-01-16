@@ -36,6 +36,26 @@
     max-width: 100%;
     flex: 1 1 auto;
     display: flex;
+
+    & > ul {
+      color: $white;
+      font-weight: $font-weight-light;
+      font-size: 1.2rem;
+      flex-direction: column;
+      display: flex;
+      width: 100%;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px $lighter-blue solid;
+      & > li {
+        line-height: 3rem;
+        text-transform: uppercase;
+        &:hover {
+          color: $secondary-color;
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   &__Content {
@@ -50,10 +70,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    flex-direction: column;
+
     font-size: 1.2rem;
     line-height: 3rem;
     color: $lighter-blue;
+
+    & > ul {
+      flex-direction: column;
+    }
   }
 
 
@@ -94,23 +118,42 @@
     }
 
     &__List {
-      max-width: 425px;
+      max-width: 50%;
       flex: 1 1 auto;
-      display: flex;
+      font-family: $font-dalaFloda;
+      font-weight: 500;
+      & > ul {
+        justify-content: space-between;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        & > li {
+          color: $primary-color;
+          font-size: 2rem;
+          text-transform: none;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
     }
 
     &__Footer {
-      width: 425px;
-      flex-direction: row;
+      width: 50%;
       align-items: center;
       margin: 2rem 0;
       font-size: 1.5rem;
-
-      & > li:hover {
-        color: $primary-color;
-        text-decoration: underline;
-        cursor: pointer;
+      & > ul {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        & > li:hover {
+          color: $primary-color;
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
+
     }
 
   }
