@@ -3,7 +3,7 @@ import { fromJS } from 'immutable'
 import {
   BURGER_TOGGLE,
   STATE_NAME,
-} from 'html/constants/burgerMenu'
+} from 'common/constants/burgerMenu'
 
 export const initialState = fromJS({
   burgerMenu: false,

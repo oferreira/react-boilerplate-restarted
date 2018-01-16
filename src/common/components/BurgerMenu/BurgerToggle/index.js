@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { isBurgerOpen } from 'html/selectors/burgerMenu'
-import { burgerToggle } from 'html/actions/burgerMenu'
+import { isBurgerOpen } from 'common/selectors/burgerMenu'
+import { burgerToggle } from 'common/actions/burgerMenu'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import Icon from 'html/components/Icon'
+import Icon from 'common/components/Icon'
 import './styles.scss'
 
 

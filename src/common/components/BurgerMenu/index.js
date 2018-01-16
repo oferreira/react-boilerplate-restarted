@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { isBurgerOpen } from 'html/selectors/burgerMenu'
+import { isBurgerOpen } from 'common/selectors/burgerMenu'
 import MenuList from './MenuList'
 import './styles.scss'
 

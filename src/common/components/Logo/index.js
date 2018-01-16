@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { isBurgerOpen } from 'html/selectors/burgerMenu'
+import { isBurgerOpen } from 'common/selectors/burgerMenu'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import './styles.scss'

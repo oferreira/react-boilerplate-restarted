@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Logo from 'html/components/logo'
+import Logo from 'common/components/logo'
 import './styles.scss'
 
 const LeftHeader = ({ children }) => (
