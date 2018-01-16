@@ -4,8 +4,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { isBurgerOpen } from 'html/selectors/burgerMenu'
-import { burgerToggle } from 'html/actions/burgerMenu'
-import Icon from 'html/components/Icon'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import classNames from 'classnames'
@@ -16,7 +14,6 @@ const Header = ({
   children,
   secondary,
   tertiary,
-  toggleBurger
 }) => {
   const classes = classNames(
     'Header',
@@ -26,19 +23,11 @@ const Header = ({
       Header__Tertiary: tertiary,
     }
   )
-  const burger = () => (
-    toggleBurger(!burgerIsOpen)
-  )
+
 
   return (
     <div className={classes}>
       <div className="Header__Content">
-        <div
-          className={`Header__BurgerToggle ${burgerIsOpen ? 'BurgerToggle--opened' : ''}`}
-          onClick={burger}
-        >
-          <Icon name={burgerIsOpen ? 'cross' : 'burger-menu'} />
-        </div>
         {children}
       </div>
     </div>
@@ -50,15 +39,17 @@ Header.propTypes = {
   secondary: PropTypes.bool,
   tertiary: PropTypes.bool,
   children: PropTypes.node,
-  toggleBurger: PropTypes.func,
+}
+
+Header.defaultProps = {
+  secondary: false,
+  tertiary: false,
+  burgerIsOpen: false,
 }
 
 const mapStateToProps = createStructuredSelector({
-  burgerIsOpen: isBurgerOpen(),
+  burgerIsOpen: isBurgerOpen() || false,
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleBurger: (value) => dispatch(burgerToggle(value)),
-})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default connect(mapStateToProps, null)(Header)

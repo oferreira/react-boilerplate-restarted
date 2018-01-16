@@ -15,6 +15,10 @@ Logo.propTypes = {
   burgerIsOpen: PropTypes.bool,
 }
 
+Logo.defaultProps = {
+  burgerIsOpen: false,
+}
+
 const mapStateToProps = createStructuredSelector({
   burgerIsOpen: isBurgerOpen(),
 })

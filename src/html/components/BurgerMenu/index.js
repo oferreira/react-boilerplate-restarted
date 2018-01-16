@@ -16,6 +16,7 @@ const BurgerMenu = ({ isOpen }) => {
   return (
     <div className={classes}>
       <div className="BurgerMenu__Content">
+
         <div className="BurgerMenu__List">
           <MenuList id="main" />
         </div>

@@ -1,4 +1,4 @@
-@import '../../../scss/variables';
+@import '../../../scss/config';
 
 .Header {
   background: $primary-color;
@@ -8,13 +8,9 @@
   width: 100%;
   position: relative;
 
-  &--burgerIsOpen,
+
   &__Secondary {
     background: $white;
-    color: $primary-color;
-    & .Header__BurgerToggle {
-      color: $primary-color;
-    }
   }
 
   &__Content {
@@ -25,16 +21,11 @@
     align-items: center;
   }
 
-  &__BurgerToggle {
-    height: 1.5rem;
-    width: 1.5rem;
-    background: none;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: $secondary-color;
-    font-size: 1.5rem;
-    cursor: pointer;
+}
+@include media-breakpoint-up(md) {
+  .Header {
+    &--burgerIsOpen {
+      background: $white;
+    }
   }
 }
