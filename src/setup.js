@@ -41,4 +41,6 @@ export default (routes = [], initialState = {}) => {
   render()
 
   if (process.env.NODE_ENV === 'production') require('offline-plugin/runtime').install()
+
+  if (module.hot) { module.hot.accept() }
 }
