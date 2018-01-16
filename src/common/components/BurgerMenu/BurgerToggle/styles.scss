@@ -1,0 +1,23 @@
+@import '../../../../scss/config';
+
+.BurgerToggle {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: $white;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &--opened {
+    color: $white;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .BurgerToggle {
+    color: $secondary-color;
+    &--opened {
+      color: $primary-color;
+    }
+  }
+}

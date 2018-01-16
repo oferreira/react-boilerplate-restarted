@@ -5,6 +5,9 @@ import Node from 'drupal/containers/Node'
 import Menu from 'drupal/containers/Menu'
 import Button from 'common/components/Button'
 import Footer from 'common/components/Footer'
+import BurgerMenu from 'common/components/BurgerMenu'
+import BurgerToggle from 'common/components/BurgerMenu/BurgerToggle'
+import Header from 'common/components/Header'
 import SelectLanguages from 'core/language/containers/SelectLanguages'
 import Translation from 'core/language/components/Translation'
 import './style.scss'
@@ -14,6 +17,10 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   render() {
     return (
       <div className="HomePage">
+        <Header>
+          <BurgerToggle />
+        </Header>
+        <BurgerMenu />
         <Menu id="main" />
         <Node id={22} />
         <div className="wrapper">
@@ -69,7 +76,6 @@ HomePage.defaultProps = {}
 
 const mapStateToProps = null
 const mapDispatchToProps = null
-
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps)
 
