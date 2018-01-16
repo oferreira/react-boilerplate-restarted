@@ -1,7 +1,7 @@
 /* global config */
-import React from 'react';
-import Icon from '../../Icon';
-import './styles.scss';
+import React from 'react'
+import Icon from '../../Icon'
+import './styles.scss'
 
 const Logos = () => (
   <div className="Logos">
@@ -14,6 +14,6 @@ const Logos = () => (
       <div className="Logos__LHGLogo" />
     </div>
   </div>
-);
+)
 
-export default Logos;
+export default Logos
