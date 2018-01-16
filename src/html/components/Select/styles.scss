@@ -1,9 +1,10 @@
-    
+@import '../../../scss/config';
+
 .select {
     width: 100%;
     flex: 0 0 auto;
     margin-bottom: 1rem;
-    color: #f3f5f6;
+    color: $tertiary-color-light;
     background: #2f4658;
     border: 1px solid #4a5e6d;
     -webkit-box-sizing: border-box;
