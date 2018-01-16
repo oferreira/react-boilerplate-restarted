@@ -1,7 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
+
+import Node from 'drupal/containers/Node'
 import Footer from 'common/containers/Footer'
+
 import BurgerMenu from 'common/components/BurgerMenu'
 import BurgerToggle from 'common/components/BurgerMenu/BurgerToggle'
 import Header from 'common/components/Header'
@@ -18,10 +21,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <BurgerToggle />
         </Header>
         <BurgerMenu />
-        <div className="wrapper">
-          <SelectLanguages />
-          <Translation id="app.CityTax.taxesAndChargeIncluded" />
-        </div>
+        <Node id={22} />
+        <SelectLanguages />
+        <Translation id="app.CityTax.taxesAndChargeIncluded" />
         <Footer menuId="footer" />
       </div>
     )
