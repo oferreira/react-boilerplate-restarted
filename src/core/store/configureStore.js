@@ -45,7 +45,7 @@ export default function configureStore(initialState = {}, history) {
   store.injectedReducers = {} // Reducer registry
   store.injectedSagas = {} // Saga registry
 
-  store.runSaga(sagas).done.catch((/*error*/) => {
+  store.runSaga(sagas).done.catch((/* error */) => {
     store.dispatch(push('/error'))
   })
 

@@ -1,0 +1,33 @@
+@import '../../../scss/config';
+
+.select {
+    width: 100%;
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+    color: $tertiary-color-light;
+    background: #2f4658;
+    border: 1px solid #4a5e6d;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: .25rem 2.0625rem .25rem .625rem;
+    min-width: 2.0625rem;
+    height: 3rem;
+    font-weight: 200;
+    font-size: 1.3125rem;
+}
+
+.Select__Wrapper {
+    position: relative;
+
+    &__Icon {
+        display: block;
+        color: #f6d83e;
+        position: absolute;
+        right: .875rem;
+        top: .8125rem;
+        pointer-events: none;
+    }
+}

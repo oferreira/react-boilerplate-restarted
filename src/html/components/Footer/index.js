@@ -8,7 +8,7 @@ import './styles.scss'
 // import Links from './Links';
 import Icon from '../Icon'
 
-function Footer({ children, style }) {
+function Footer({ style }) {
   return (
     <div style={style} className="Footer">
       <div className="Footer__Scissors">
@@ -23,7 +23,6 @@ function Footer({ children, style }) {
 }
 
 Footer.propTypes = {
-  children: PropTypes.element,
   style: PropTypes.object,
 }
 

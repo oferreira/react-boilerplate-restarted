@@ -7,7 +7,7 @@ const Icon = ({ name }) => (
 )
 
 Icon.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
 }
 
 Icon.defaultProps = {
