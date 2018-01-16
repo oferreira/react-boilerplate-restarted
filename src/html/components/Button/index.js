@@ -13,20 +13,18 @@ const Button = ({
   action,
 }) => {
   const classes = classNames(
+    'Button',
     {
       Button__Primary: primary,
       Button__Secondary: secondary,
       Button__Tertiary: tertiary,
+      'Button--rounded': rounded,
     }
   )
 
   return (
     <button
-      className={
-        `Button
-        ${classes}
-        ${rounded ? 'Button--rounded' : ''}`
-      }
+      className={classes}
       onClick={disabled ? null : action}
       disabled={disabled}
     >

@@ -4,6 +4,9 @@ import { compose } from 'redux'
 import Node from 'drupal/containers/Node'
 import Menu from 'drupal/containers/Menu'
 import Button from 'html/components/Button'
+import BurgerMenu from 'html/components/BurgerMenu'
+import BurgerToggle from 'html/components/BurgerMenu/BurgerToggle'
+import Header from 'html/components/Header'
 import Footer from 'html/components/Footer'
 import SelectLanguages from 'core/language/containers/SelectLanguages'
 import Translation from 'core/language/components/Translation'
@@ -14,6 +17,10 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   render() {
     return (
       <div className="HomePage">
+        <Header>
+          <BurgerToggle />
+        </Header>
+        <BurgerMenu />
         <Menu id="main" />
         <Node id={22} />
         <div className="wrapper">
@@ -69,7 +76,6 @@ HomePage.defaultProps = {}
 
 const mapStateToProps = null
 const mapDispatchToProps = null
-
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps)
 

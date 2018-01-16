@@ -1,0 +1,16 @@
+@import '../../../scss/variables';
+
+.Logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+
+  &__Img {
+    width: 160px;
+    fill: $white;
+    height: 24px;
+    &--burgerOpened {
+      fill: $primary-color;
+    }
+  }
+}

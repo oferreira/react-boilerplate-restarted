@@ -48,7 +48,7 @@ $tertiary-color-dark:   $darker-grey;
 $font-path: '../assets/fonts/';
 
 
-$font-metric:                 'Metric', sans-serif !default;
+$font-metric:                 'Metric' !default;
 $font-dalaFloda:              'Dala Floda Web' !default;
 
 $font-chinese:                'hanyiruiyisong' !default;
@@ -227,6 +227,24 @@ $input-height: 3rem !default;
 $input-border-color: $tertiary-color-dark !default;
 $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
+
+/* Header
+   ========================================================================== */
+$header-height: 46px;
+$header-primary-background: $primary-color;
+$header-primary-color: $white;
+
+$header-secondary-background: $white;
+$header-secondary-color: $primary-color;
+
+$header-tertiary-background: none;
+$header-tertiary-color: $primary-color;
+
+/* Misc
+   ========================================================================== */
+$animation-duration-short: .2s;
+$animation-duration-medium: .5s;
+$animation-duration-long: .7s;
 
 
 //$input-error-color: $error-color !default;
