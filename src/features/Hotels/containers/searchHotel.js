@@ -7,12 +7,15 @@ import { createStructuredSelector } from 'reselect'
 
 import hotelReducer from 'features/Hotels/reducers'
 import injectReducer from 'core/reducers/utils/injectReducer'
-// import injectSaga from 'core/sagas/utils/injectSaga'
+import injectSaga from 'core/sagas/utils/injectSaga'
 
-import { requestSearch } from '../actions'
-import { HOTEL_STORE_NAME } from '../constants'
+import { requestSearch, availabilitiesRequest } from '../actions'
+import {
+  HOTEL_STORE_NAME,
+  HOTEL_SAGA_NAME,
+} from '../constants'
 import {} from '../selectors'
-// import saga from '../sagas'
+import saga from '../sagas'
 
 export default (WrappedComponent) => {
   class SearchHotel extends React.PureComponent {
@@ -23,7 +26,7 @@ export default (WrappedComponent) => {
     }
 
     componentWillMount() {
-
+      this.props.availabilitiesRequest()
     }
 
     render() {
@@ -37,14 +40,16 @@ export default (WrappedComponent) => {
 
   const mapDispatchToProps = (dispatch) => ({
     onSearch: (location) => dispatch(requestSearch(location)),
+    availabilitiesRequest: () => dispatch(availabilitiesRequest()),
   })
 
   const withConnect = connect(mapStateToProps, mapDispatchToProps)
   const withReducer = injectReducer({ key: HOTEL_STORE_NAME, reducer: hotelReducer })
-  // const withSaga = injectSaga({ key: HOTEL_STORE_NAME, saga })
+  const withSaga = injectSaga({ key: HOTEL_SAGA_NAME, saga })
 
   return compose(
     withReducer,
     withConnect,
+    withSaga,
   )(SearchHotel)
 }

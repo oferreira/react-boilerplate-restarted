@@ -13,7 +13,7 @@ require('./styles.scss')
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     onSubmit: PropTypes.func,
-    unfilteredHotel: PropTypes.array,
+    unfilteredHotel: PropTypes.func,
   }
 
   componentWillMount() {
@@ -49,7 +49,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 }
 
-// const enhancers = compose(withSearchHotel, withAvailabiltiesHotel)
-const enhancers = compose(withPayment({ resortCodeKey: 'resortCode' }))
+const enhancers = compose(withSearchHotel, withAvailabiltiesHotel)
+// const enhancers = compose(withPayment({ resortCodeKey: 'resortCode' }))
 
 export default enhancers(HomePage)

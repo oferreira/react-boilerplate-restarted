@@ -1,4 +1,8 @@
+// STORE KEYS
 export const HOTEL_STORE_NAME = 'hotels'
+
+// SAGA KEYS
+export const HOTEL_SAGA_NAME = 'hotelsSaga'
 
 // AVAILABILITIES
 export const REQUEST_HOTEL_AVAILABILITIES = 'app/src/Hotels/REQUEST_HOTEL_AVAILABILITIES'
