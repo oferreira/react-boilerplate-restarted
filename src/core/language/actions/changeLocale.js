@@ -3,9 +3,9 @@ import {
 } from 'core/language/constants'
 
 /**
- * Request informations of a menu
+ * Request informations of a language
  *
- * @param  {id} id of menu
+ * @param  {locale} locale of language
  *
  * @return {object}   An action object with a type of CHANGE_LOCALE
  */

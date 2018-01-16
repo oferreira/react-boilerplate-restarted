@@ -20,7 +20,6 @@ const initialState = fromJS({
 function reducer(state = initialState, action) {
   switch (action.type) {
     case CHANGE_LOCALE:
-    console.log('action.locale', action.locale)
       return state
         .set('locale', action.locale)
     case REQUEST_LANGUAGES_SUCCESS: {
