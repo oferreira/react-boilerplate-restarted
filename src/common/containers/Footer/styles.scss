@@ -1,0 +1,108 @@
+@import '../../../scss/config';
+
+.FooterWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-top: 1px dashed $primary-color;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: $primary-color;
+
+  // List Link
+  .Menu{
+    line-height: 1.5;
+    .MenuList{
+      margin: 0;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 5px;
+      border-top: 1px solid $tertiary-color-dark;
+      .MenuItem{
+        list-style: none;
+        text-align: center;
+        margin: 10px 0;
+        .MenuItemLink{
+          color:$primary-color;
+          font-weight: $font-weight-regular;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // list Logo
+  &__Logo {
+    width: 100%;
+    padding: 0;
+    font-size: 2.5rem;
+  }
+
+  &__LogoLists {
+    border-top: 1px solid $tertiary-color-dark;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  &__item {
+    margin: 0px;
+    padding:6px;
+    .icon{
+      font-size: 40px;
+    }
+  }
+
+  &__item--LHGLogo {
+    border-left: 1px solid $tertiary-color-dark;
+    height: 24px;
+    padding-left: 1rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 0rem;
+    box-sizing: border-box;
+    background: url('assets/gt-logo-lh-group.png') no-repeat 1rem center;
+    min-width: 155px;
+  }
+
+}
+
+
+
+/* Mobile
+   ========================================================================== */
+@include media-breakpoint-up(md) {
+  .FooterWrapper{
+
+    &__LogoLists {
+      justify-content: center;
+    }
+
+    &__item {
+      margin: .05rem 15px;
+      .icon{
+        font-size: 55px;
+      }
+    }
+
+    // List Link
+    .Menu{
+      .MenuList{
+        display: flex;
+        padding: 15px 0;
+
+        .MenuItem{
+          margin: 0 15px;
+          text-align: left;
+        }
+      }
+    }
+
+    &__item--LHGLogo {
+      min-width: 236px;
+    }
+  }
+}
+
