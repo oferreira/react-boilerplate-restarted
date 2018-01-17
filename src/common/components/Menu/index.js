@@ -20,9 +20,9 @@ const Menu = ({
 
   return (
     <ul className={classes}>
-      {Object.keys(items).map((item) => (
+      {Object.keys(items).map((item, index) => (
         <li
-          key={item}
+          key={index}
           className="Menu__Item"
         >
           <Link to={items[item].uri}>{items[item].title}</Link>
