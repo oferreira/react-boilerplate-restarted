@@ -10,6 +10,7 @@ import BurgerToggle from 'common/components/BurgerMenu/BurgerToggle'
 import Header from 'common/components/Header'
 import SelectLanguages from 'core/language/containers/SelectLanguages'
 import Translation from 'core/language/components/Translation'
+import CardLayout from 'brand/CardLayout'
 import './style.scss'
 
 
@@ -22,6 +23,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         </Header>
         <BurgerMenu />
         <Menu id="main" />
+        <CardLayout />
         <Node id={22} />
         <div className="wrapper">
           <SelectLanguages />

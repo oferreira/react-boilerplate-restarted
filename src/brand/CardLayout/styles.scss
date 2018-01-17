@@ -1,0 +1,14 @@
+.card-wrapper {
+    //border: 1px solid blue;
+    display: grid;
+    //grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    padding: 30px;
+}
+
+.card-item {
+    //border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px;
+  }
