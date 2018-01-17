@@ -33,6 +33,18 @@ function checkStatus(response) {
 }
 
 /**
+ * stringifyBody
+ * @param {object} [options]
+ */
+export const stringifyBody = (options = {}) => {
+  if (!options || !options.body) return options
+  return {
+    ...options,
+    body: JSON.stringify(options.body),
+  }
+}
+
+/**
  * Requests a URL, returning a promise
  *
  * @param  {string} url       The URL we want to request
@@ -41,7 +53,7 @@ function checkStatus(response) {
  * @return {object}           The response data
  */
 export default function request(url, options) {
-  return fetch(url, options)
+  return fetch(url, stringifyBody(options))
     .then(checkStatus)
     .then(parseJSON)
 }
