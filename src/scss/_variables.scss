@@ -50,7 +50,7 @@ $error-color:   #ff0000;
 $font-path: '../assets/fonts/';
 
 
-$font-metric:                 'Metric', sans-serif !default;
+$font-metric:                 'Metric' !default;
 $font-dalaFloda:              'Dala Floda Web' !default;
 
 $font-chinese:                'hanyiruiyisong' !default;
@@ -247,6 +247,24 @@ $input-disabled-color: $tertiary-color !default;
 $input-disabled-background: $input-disabled-color !default;
 
 // $placeholder-text-color: lighten($input-border-color, 20%) !default;
+/* Header
+   ========================================================================== */
+$header-height: 46px;
+$header-primary-background: $primary-color;
+$header-primary-color: $white;
+
+$header-secondary-background: $white;
+$header-secondary-color: $primary-color;
+
+$header-tertiary-background: none;
+$header-tertiary-color: $primary-color;
+
+/* Misc
+   ========================================================================== */
+$animation-duration-short: .2s;
+$animation-duration-medium: .5s;
+$animation-duration-long: .7s;
+
 
 //// Radio Buttons
 $radio-fill-color: $primary-color !default;

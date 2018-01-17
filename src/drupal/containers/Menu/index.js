@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compose } from 'redux'
 import InjectDrupalMenu from 'drupal/hoc/InjectDrupalMenu'
-import MenuList from 'html/components/MenuList'
+import MenuList from 'common/components/MenuList'
 
 const Menu = (props) => {
   const ListToRender = (typeof props.renderList !== 'undefined' ? props.renderList : MenuList)

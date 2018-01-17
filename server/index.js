@@ -18,6 +18,8 @@ const config = require('../config/index.config')
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi)
 
+app.use('*/api/menu/footerburger', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/footerBurger.json'), 'utf8'))))
+app.use('*/api/menu/footer', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/a24d3886ce0a13a42c5185e4d4675d6e.json'), 'utf8'))))
 app.use('*/api/menu/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/298d53551662b9ec1e79a334fd46d1a7.json'), 'utf8'))))
 app.use('*/api/node/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/683f604e365b7de2a6816f234d969227.json'), 'utf8'))))
 
@@ -30,8 +32,8 @@ app.use('/system/diagnostics', (req, res) => res.status(200).send(JSON.stringify
 app.use('*/api/node/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/683f604e365b7de2a6816f234d969227.json'), 'utf8'))))
 app.use('*/api/menu/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/298d53551662b9ec1e79a334fd46d1a7.json'), 'utf8'))))
 app.use('*/api/languages', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/1cc80e5b193e6f303846e8cf21b824ff.json'), 'utf8'))))
+app.use('de-de/api/v2/languages', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/de-de.json'), 'utf8'))))
 app.use('*/api/v2/languages', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/6ec81ad1093b4fda2105b0f0dbe2f3e3.json'), 'utf8'))))
-app.use('*/api/translations', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/a5fa09e80d8a445ab7a6a7d966a6ce9d.json'), 'utf8'))))
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
