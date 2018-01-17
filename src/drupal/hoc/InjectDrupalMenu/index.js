@@ -36,9 +36,7 @@ export default (WrappedComponent) => {
 
     render() {
       const items = this.props.menus.find(findByIdFilter(this.props.id))
-
       if (!items) return null
-
       return (
         <WrappedComponent
           {...this.props}

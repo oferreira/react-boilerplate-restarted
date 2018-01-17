@@ -2,7 +2,7 @@
  * Get informations of a node from Drupal
  */
 
-import { call, put, select, takeLatest } from 'redux-saga/effects'
+import { call, put, select, takeEvery } from 'redux-saga/effects'
 import request from 'core/utils/request'
 import { createUrl } from 'core/utils/api'
 import injectSaga from 'core/sagas/utils/injectSaga'
@@ -32,7 +32,7 @@ export function* fetchNode({ id }) {
  * Root saga manages watcher lifecycle
  */
 export function* fetchNodeWatcher() {
-  yield takeLatest(DRUPAL_REQUEST_NODE, fetchNode)
+  yield takeEvery(DRUPAL_REQUEST_NODE, fetchNode)
 }
 
 export const injectDrupalFetchNodeWatcher = () => injectSaga({ key: 'injectDrupalFetchNodeWatcher', saga: fetchNodeWatcher })

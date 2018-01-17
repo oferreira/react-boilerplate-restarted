@@ -1,0 +1,58 @@
+{
+  "07dcc1bb-19f4-4339-ad85-footer-1": {
+    "title": "Contacts",
+    "uri": "node/43",
+    "alias": "/contacts",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-footer-2": {
+    "title": "Cancel Reservation",
+    "uri": "node/44",
+    "alias": "/cancel-reservation",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-footer-3": {
+    "title": "Terms and Conditions",
+    "uri": "node/45",
+    "alias": "/terms-and-conditions",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-footer-4": {
+    "title": "Careers",
+    "uri": "node/46",
+    "alias": "/careers",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-footer-5": {
+    "title": "Press",
+    "uri": "node/47",
+    "alias": "/press",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-footer-6": {
+    "title": "Travel Agents",
+    "uri": "node/48",
+    "alias": "/travel-agents",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-6": {
+    "title": "Gift Certificates",
+    "uri": "node/48",
+    "alias": "/gift-certificates",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  }
+}

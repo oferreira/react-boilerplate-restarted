@@ -1,0 +1,34 @@
+{
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-2": {
+    "title": "Contact",
+    "uri": "",
+    "alias": "/",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-3": {
+    "title": "FAQ",
+    "uri": "node/45",
+    "alias": "/offers",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-4": {
+    "title": "News",
+    "uri": "node/46",
+    "alias": "/meetings-and-events",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  },
+  "07dcc1bb-19f4-4339-ad85-8c55ab411d53-5": {
+    "title": "Partners",
+    "uri": "node/47",
+    "alias": "/loyality-program",
+    "external": false,
+    "expanded": false,
+    "enabled": true
+  }
+}

@@ -1,0 +1,11 @@
+.Menu {
+  display: flex;
+
+  &__Row {
+    flex-direction: row;
+  }
+
+  &__Column {
+    flex-direction: column;
+  }
+}

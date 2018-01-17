@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import changeLocale from 'core/language/actions/changeLocale'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
+import Icon from 'common/components/Icon'
 import './styles.scss'
 
 class Select extends React.PureComponent {
@@ -34,8 +35,13 @@ class Select extends React.PureComponent {
 
     return (
       <div className="Select__Wrapper">
-        <span className="Select__Wrapper__Icon"><i className="icon icon-arrow-bot"></i></span>
-        <select className="select" onChange={this.onChangeLocale}>
+        <span className="Select__Wrapper__Icon">
+          <Icon name="arrow-bot" />
+        </span>
+        <select
+          className="select"
+          onChange={this.onChangeLocale}
+        >
           {content}
         </select>
       </div>
