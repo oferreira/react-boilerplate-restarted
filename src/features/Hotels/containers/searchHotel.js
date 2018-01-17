@@ -9,7 +9,11 @@ import hotelReducer from 'features/Hotels/reducers'
 import injectReducer from 'core/reducers/utils/injectReducer'
 import injectSaga from 'core/sagas/utils/injectSaga'
 
-import { requestSearch, availabilitiesRequest } from '../actions'
+import {
+  requestSearch,
+  availabilitiesRequest,
+  requestDetails,
+} from '../actions'
 import {
   HOTEL_STORE_NAME,
   HOTEL_SAGA_NAME,
@@ -27,6 +31,7 @@ export default (WrappedComponent) => {
 
     componentWillMount() {
       this.props.availabilitiesRequest()
+      this.props.requestDetails([{ id: 'FRA40267' }, { id: 'FRA42193' }, { id: 'FRA23316' }])
     }
 
     render() {
@@ -41,6 +46,7 @@ export default (WrappedComponent) => {
   const mapDispatchToProps = (dispatch) => ({
     onSearch: (location) => dispatch(requestSearch(location)),
     availabilitiesRequest: () => dispatch(availabilitiesRequest()),
+    requestDetails: (resortIdList) => dispatch(requestDetails(resortIdList)),
   })
 
   const withConnect = connect(mapStateToProps, mapDispatchToProps)

@@ -2,7 +2,7 @@ const mockAvailabilitiesResortPayload = {
   resortIdList: ['FRA40267', 'FRA42193', 'FRA23316'], specialCodeValue: '', specialCodeType: '', roomOccupancyList: [{ adult: '1', child: '0' }], numberOfRooms: 1, numberOfAdults: 1, numberOfChildren: 0, startDate: '2018-01-16T00:00:00', endDate: '2018-01-17T00:00:00', locale: 'en-us',
 }
 
-import { take, takeLatest, takeEvery, cancel, put, call, select } from 'redux-saga/effects'
+import { call, select } from 'redux-saga/effects'
 import request from 'core/utils/request'
 
 /**
@@ -15,9 +15,6 @@ export function* getAvailabilities(payload, resorts) {
   // const locale = yield select(makeSelectLocale())
   // const queryAvailabilities = payloadToQueryAvailability({ ...payload, resorts, locale })
 
-  console.log('CONFIG', mockAvailabilitiesResortPayload)
-  // const res = { ...mockAvailabilitiesResort }
-
   const res = yield call(request, config.api.availabilities_resort, {
     method: 'POST',
     headers: {
@@ -25,8 +22,6 @@ export function* getAvailabilities(payload, resorts) {
     },
     body: mockAvailabilitiesResortPayload,
   })
-
-  console.log('RES', res)
 
   if (res && res.resortAvailabilities) {
     return res.resortAvailabilities

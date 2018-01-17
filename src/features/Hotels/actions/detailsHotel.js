@@ -11,6 +11,6 @@ import {
 export function requestDetails(resorts) {
   return {
     type: REQUEST_HOTEL_DETAILS,
-    payload: { resorts },
+    payload: resorts,
   }
 }
