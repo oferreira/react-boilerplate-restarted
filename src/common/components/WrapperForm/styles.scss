@@ -1,0 +1,15 @@
+@import '../../../scss/_config.scss';
+
+.WrapperForm {
+  background: $primary-color;
+  padding: $form-padding;
+  margin: $form-margin;
+
+  &__Title {
+    color: $white;
+    text-align: center;
+    font-size: $heading-primary-3-font-size;
+    font-family: $heading-primary-3-font-family;
+    font-weight: $heading-primary-3-font-weight;
+  }
+}

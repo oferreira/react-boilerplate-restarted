@@ -1,0 +1,25 @@
+@import '../../../../scss/_config.scss';
+
+.HeaderHotel {
+  background: $primary-color-dark;
+  color: $white;
+  display: flex;
+  padding: $form-header-padding;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $header-margin;
+
+  & i {
+    color: $secondary-color;
+    padding: $form-header-icon-padding;
+  }
+
+  &__Title {
+    display: flex;
+    align-items: center;
+
+    &--Upper {
+      text-transform: uppercase;
+    }
+  }
+}
