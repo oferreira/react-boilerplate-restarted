@@ -1,0 +1,95 @@
+@import '../../../scss/_config.scss';
+
+.RadioButton {
+  display: inline-block;
+  width: 100%;
+  font-size: $label-font-size;  
+  color: $label-color;
+
+  &--half {
+    width: 48.5%;
+    margin-bottom: 1.5rem;
+  }
+
+  &__Input {
+    display: none;
+
+    &:not(:checked) + &__Label::after {
+      opacity: 1;
+      transform: scale(0);
+    }
+
+    &:checked + &__Label::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &__Label {
+      position: relative;
+      padding-left: 28px;
+      line-height: 20px;
+      display: inline-block;
+      cursor: pointer;
+      text-transform: capitalize;
+      font-weight: $label-font-weight;
+  
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: $radio-size;
+        height: $radio-size;
+        border: $radio-border;
+        border-radius: 100%;
+      }
+  
+      &:after {
+        content: '';
+        width: $radio-size-fill;
+        height: $radio-size-fill;
+        background: $radio-fill-color;
+        position: absolute;
+        top: $radio-size-padding-inside;
+        left: $radio-size-padding-inside;
+        border-radius: 100%;
+        transition: all 0.2s ease;
+      }
+
+      &--Light {
+        color: $label-light-color;
+
+        &:before {
+          border: $radio-border-light;
+        }
+
+        &:after {
+          background: $radio-fill-light-color;
+        }
+      }
+    }
+  }
+}
+
+/* .White .RadioButtonInput {
+  .RadioButtonInput__Label {
+
+    font-weight: $font-XS;
+    color: $white-txt-color;
+  }
+
+  .RadioButtonInput__FakeCheck {
+    border: 2px solid $white-input-border-color;
+  }
+
+  .RadioButtonInput__Input:checked + label .RadioButtonInput__FakeCheck {
+    border: 2px solid $white-input-border-color;
+    &:before {
+      background: $white-input-border-color;
+    }
+  }
+
+} */
+
+
+

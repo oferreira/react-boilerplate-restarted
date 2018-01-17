@@ -1,5 +1,5 @@
-$color:orange;
+@import '../../scss/_override-config.scss';
 
-h1{
-  color:$color;
+h1 {
+  color: $primary-color;
 }

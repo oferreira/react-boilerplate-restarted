@@ -1,0 +1,46 @@
+@import '../../../scss/variables';
+
+.FlatButton {
+  border: 0;
+  font-size: $button-primary-font-size;
+  color: $button-primary-color;
+  font-family: $font-family-primary;
+  font-size: $button-primary-font-size-small;
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & i {
+    background: $secondary-color;
+    border-radius: 100%;
+    color: $primary-color;
+    vertical-align: text-bottom;
+    margin: $button-i-margin;
+  }
+  
+  &:hover {
+    color: $button-primary-color-focus;
+  }
+
+  
+  
+  &--Disabled {
+    color: $button-primary-color-disabled;
+    cursor: default;
+  }
+  
+  &__Label {
+    text-decoration: underline;
+  }
+
+  &__Secondary {
+    color: $secondary-color;
+  }
+
+  &__Tertiary {
+    color: $tertiary-color;
+  }
+}
