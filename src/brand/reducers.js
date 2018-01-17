@@ -4,8 +4,9 @@
  *
  */
 import { fromJS } from 'immutable'
+import injectReducer from 'core/reducers/utils/injectReducer'
 import {
-  PARTNERSHIP_STORE_NAME,
+  BRAND_STORE_NAME,
   REQUEST_PARTNERSHIP_SUCCESS,
 } from './constants'
 
@@ -23,6 +24,8 @@ function reducer(state = initialState, action) {
   }
 }
 
+export const injectBrandReducer = () => injectReducer({ key: BRAND_STORE_NAME, reducer })
+
 export default {
-  [PARTNERSHIP_STORE_NAME]: reducer,
+  [BRAND_STORE_NAME]: reducer,
 }

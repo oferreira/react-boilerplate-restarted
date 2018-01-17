@@ -10,7 +10,7 @@ import BurgerToggle from 'common/components/BurgerMenu/BurgerToggle'
 import Header from 'common/components/Header'
 import SelectLanguages from 'core/language/containers/SelectLanguages'
 import Translation from 'core/language/components/Translation'
-import SelectPartnerships from 'brand/containers/SelectPartnerships'
+import PartnershipsProvider from 'brand/containers/PartnershipsProvider'
 import './style.scss'
 
 
@@ -22,7 +22,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <BurgerToggle />
         </Header>
         <BurgerMenu />
-        <SelectPartnerships />
+        <PartnershipsProvider />
         <Node id={22} />
         <SelectLanguages />
         <Translation id="app.CityTax.taxesAndChargeIncluded" />

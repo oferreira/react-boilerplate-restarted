@@ -9,12 +9,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { compose } from 'redux'
 import { createStructuredSelector } from 'reselect'
-import { IntlProvider } from 'react-intl'
 import {
   makeSelectPartnerships,
 } from 'brand/selectors'
 import { requestPartnerships } from 'brand/actions'
+import { injectBrandReducer } from 'brand/reducers'
+import { injectDrupalFetchPartnershipsWatcher } from 'brand/sagas'
+
 
 export class PartnershipsProvider extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   componentWillMount() {
@@ -22,20 +25,14 @@ export class PartnershipsProvider extends React.PureComponent { // eslint-disabl
   }
 
   render() {
-    return (
-      <IntlProvider
-        partnership={this.props.partnership}
-      >
-        {React.Children.only(this.props.children)}
-      </IntlProvider>
-    )
+    this.props.partnerships.map((x)=> console.log(x))
+    return null
   }
 }
 
 PartnershipsProvider.propTypes = {
   onRequestPartnerships: PropTypes.func,
-  children: PropTypes.element.isRequired,
-  partnership: PropTypes.element.isRequired,
+  Partnerships: PropTypes.object,
 }
 
 const mapStateToProps = createStructuredSelector({
@@ -43,7 +40,15 @@ const mapStateToProps = createStructuredSelector({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  onRequestLanguages: () => dispatch(requestPartnerships()),
+  onRequestPartnerships: () => dispatch(requestPartnerships()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(PartnershipsProvider)
+const withConnect = connect(mapStateToProps, mapDispatchToProps)
+const withReducer = injectBrandReducer()
+const withSaga = injectDrupalFetchPartnershipsWatcher()
+
+export default compose(
+  withReducer,
+  withSaga,
+  withConnect,
+)(PartnershipsProvider)
