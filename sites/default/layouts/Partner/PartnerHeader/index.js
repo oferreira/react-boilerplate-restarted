@@ -17,11 +17,11 @@ const PartnerHeader = () => (
     </div>
 
     <div className="PartnerHeader__Image">
-    <Img height={375} width={1280} />
-  </div>
+      <Img height={375} width={1280} />
+    </div>
 
-  <div className="PartnerHeader__Desc">
-    <Text length={400} />
+    <div className="PartnerHeader__Desc">
+      <Text length={400} />
     </div>
     <Button rounded small>
       Go to PartnerName
