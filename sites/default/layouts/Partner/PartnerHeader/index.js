@@ -1,7 +1,6 @@
 import React from 'react'
 /* COMPONENTS
   ======================================== */
-import H1 from 'common/components/H1'
 import Button from 'common/components/Button'
 /* PLACEHOLDERS
   ======================================== */
@@ -13,7 +12,7 @@ import './styles.scss'
 const PartnerHeader = () => (
   <div className="PartnerHeader">
     <div className="PartnerHeader__Name">
-      <H1 playful>PartnerName</H1>
+      <h1>PartnerName</h1>
     </div>
 
     <div className="PartnerHeader__Image">

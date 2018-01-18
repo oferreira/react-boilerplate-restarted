@@ -6,10 +6,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  & > h2 {
-    font-family: $font-family-secondary;
-    font-size: 48px;
-    color: $primary-color;
+  &__Title {
+    @extend .heading-primary-2;
   }
 
   &__List {

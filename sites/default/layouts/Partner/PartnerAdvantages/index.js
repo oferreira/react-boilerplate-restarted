@@ -4,7 +4,7 @@ import './styles.scss'
 
 const PartnerAdvantages = () => (
   <div className="PartnerAdvantages">
-    <h2>Your advantages</h2>
+    <h2 className="PartnerAdvantages__Title">Your advantages</h2>
     <div className="PartnerAdvantages__List">
       <Advantage />
       <Advantage />
