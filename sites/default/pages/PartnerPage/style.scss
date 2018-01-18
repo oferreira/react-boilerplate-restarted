@@ -3,17 +3,9 @@
 
 /* GRID
    ========================================================================== */
-.gt-offer-conainter{
+.container{
   @include make-container-max-widths();
-  margin:auto;
-
-  .gt-offer-header {
-    height:450px;
-    text-align: center;
-    @include make-row();
-    @extend .justify-content-center;
-    @extend .align-items-center;
-  }
+  margin: 0 auto;
 }
 
 /* MEDIA QUERIES
@@ -28,22 +20,13 @@
 /* GRID MOBILE
    ============================================================= ============= */
 @include media-breakpoint-up(xs) {
-  .gt-offer-header__title{
-    @include make-col(12);
-  }
-  .gt-offer-header__desc{
-    @include make-col(12);
-  }
+
+
 }
 
 /* GRID DESKTOP
    ========================================================================== */
 @include media-breakpoint-up(md) {
-  .gt-offer-header__title{
-    @include make-col(6);
-  }
-  .gt-offer-header__desc{
-    @include make-col(6);
-  }
+
 }
 

@@ -169,7 +169,7 @@ $container-max-widths: (
                               sm: 100%,
                               md: 100%,
                               lg: 100%,
-                              xl: 1140px
+                              xl: 1280px
 );
 
 
@@ -218,6 +218,9 @@ $button-secondary-color-focus:          $primary-color;
 $button-tertiary-border-color:          $primary-color;
 $button-tertiary-color-focus:           $white;
 
+$button-small-height:                   40px;
+$button-small-width:                    270px;
+$button-small-font-size:                1rem;
 
 /* Card
    ========================================================================== */

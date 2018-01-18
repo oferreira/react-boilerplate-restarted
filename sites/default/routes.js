@@ -1,6 +1,7 @@
 import AppRoot from 'core/Root'
 import HomePage from 'pages/HomePage/Loadable'
 import OffersPage from 'pages/OffersPage/Loadable'
+import PartnerPage from 'pages/PartnerPage/Loadable'
 
 const routes = [
   {
@@ -16,6 +17,11 @@ const routes = [
         name: 'home',
         path: '/offers',
         component: OffersPage,
+      },
+      {
+        name: 'Our Partner',
+        path: '/partner',
+        component: PartnerPage,
       },
     ],
   },
