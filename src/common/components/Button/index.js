@@ -11,6 +11,7 @@ const Button = ({
   tertiary,
   rounded,
   action,
+  small,
 }) => {
   const classes = classNames(
     'Button',
@@ -19,6 +20,7 @@ const Button = ({
       Button__Secondary: secondary,
       Button__Tertiary: tertiary,
       'Button--rounded': rounded,
+      'Button--small': small,
     }
   )
 
@@ -42,6 +44,7 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   tertiary: PropTypes.bool,
   rounded: PropTypes.bool,
+  small: PropTypes.bool,
   action: PropTypes.func,
 }
 

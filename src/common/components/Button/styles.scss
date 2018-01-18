@@ -4,8 +4,9 @@
   border: 0;
   height: $button-primary-height;
   font-size: $button-primary-font-size;
-  color: $button-primary-color;
   font-family: $font-family-primary;
+  font-weight: $button-primary-font-weight;
+  color: $button-primary-color;
   padding: $button-primary-padding;
   background: $white;
   width: $button-primary-width;
@@ -79,6 +80,12 @@
 
   &--rounded {
     border-radius: $button-primary-radius;
+  }
+
+  &--small {
+    height: $button-small-height;
+    width: $button-small-width;
+    font-size: $button-small-font-size;
   }
 
   &__Secondary {
