@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CardItem from 'brand/components/CardItem'
+import PartnerShipItem from 'brand/components/PartnerShipItem'
 import './styles.scss'
 
-const CardLayout = ({
+const PartnerShipLayout = ({
   partnerships,
 }) => {
-  const content = Object.keys(partnerships).map((id) => {
+  const content = partnerships.map((val, id) => {
     const partner = partnerships[id]
 
     return (
-      <CardItem
-        key={partner.uri}
+      <PartnerShipItem
+        key={id}
         image="image.jpg"
         title={partner.title}
         description={partner.body}
@@ -26,9 +26,9 @@ const CardLayout = ({
   )
 }
 
-CardLayout.propTypes = {
-  partnerships: PropTypes.Object,
+PartnerShipLayout.propTypes = {
+  partnerships: PropTypes.object,
 }
 
-export default CardLayout
+export default PartnerShipLayout
 
