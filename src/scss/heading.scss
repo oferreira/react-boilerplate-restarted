@@ -1,0 +1,123 @@
+
+/* Heading & body & link
+   ========================================================================== */
+.heading-primary-1{
+  color:$heading-primary-1-color;
+  font-size: $heading-primary-1-font-size-mobile;
+  font-family: $heading-primary-1-font-family;
+  font-weight: $heading-primary-1-font-weight;
+}
+
+.heading-primary-2{
+  color:$heading-primary-2-color;
+  font-size: $heading-primary-2-font-size-mobile;
+  font-family: $heading-primary-2-font-family;
+  font-weight: $heading-primary-2-font-weight;
+}
+
+.heading-primary-3{
+  color:$heading-primary-3-color;
+  font-size: $heading-primary-3-font-size-mobile;
+  font-family: $heading-primary-3-font-family;
+  font-weight: $heading-primary-3-font-weight;
+}
+
+//Heading Secondary
+.heading-secondary-1{
+  color:$heading-secondary-1-color;
+  font-size: $heading-secondary-1-font-size-mobile;
+  font-family: $heading-secondary-1-font-family;
+  font-weight: $heading-secondary-1-font-weight;
+}
+
+.heading-secondary-2{
+  color:$heading-secondary-2-color;
+  font-size: $heading-secondary-2-font-size-mobile;
+  font-family: $heading-secondary-2-font-family;
+  font-weight: $heading-secondary-2-font-weight;
+}
+
+.heading-secondary-3{
+  color:$heading-secondary-3-color;
+  font-size: $heading-secondary-3-font-size-mobile;
+  font-family: $heading-secondary-3-font-family;
+  font-weight: $heading-secondary-3-font-weight;
+}
+
+//Body text
+
+.body-1{
+  color:$body-1-color;
+  font-size: $body-1-font-size-mobile;
+  font-family: $body-1-font-family;
+  font-weight: $body-1-font-weight;
+}
+
+.body-2{
+  color:$body-2-color;
+  font-size: $body-2-font-size-mobile;
+  font-family: $body-2-font-family;
+  font-weight: $body-2-font-weight;
+}
+
+.body-3{
+  color:$body-3-color;
+  font-size: $body-3-font-size-mobile;
+  font-family: $body-3-font-family;
+  font-weight: $body-3-font-weight;
+}
+
+.link{
+  color:$link-color;
+  font-size: $link-font-size-mobile;
+  font-family: $link-font-family;
+  font-weight: $link-font-weight;
+}
+
+
+/* DESKTOP - Heading & body & link
+   ========================================================================== */
+
+@include media-breakpoint-up(md) {
+
+  .Heading-primary-1 {
+    font-size: $heading-primary-1-font-size;
+  }
+
+  .Heading-primary-2 {
+    font-size: $heading-primary-2-font-size;
+  }
+
+  .Heading-primary-3 {
+    font-size: $heading-primary-3-font-size;
+  }
+
+  .heading-secondary-1{
+    font-size: $heading-secondary-1-font-size;
+  }
+
+  .heading-secondary-2{
+    font-size: $heading-secondary-2-font-size;
+  }
+
+  .heading-secondary-3{
+    font-size: $heading-secondary-3-font-size;
+  }
+
+  .body-1{
+    font-size: $body-1-font-size;
+  }
+
+  .body-2{
+    font-size: $body-2-font-size;
+  }
+
+  .body-3{
+    font-size: $body-3-font-size;
+  }
+
+  .link{
+    font-size: $link-font-size;
+  }
+
+}

@@ -1,14 +1,37 @@
-//@import "../../../../src/scss/config";
+@import "../../styles/override-config";
 
-$color:orange;
 
-.wrapper {
-  width: 650px;
+.container{
+  @include make-container-max-widths();
+  margin: auto;
 }
 
-.buttons {
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+
+// Ours brand
+///////////////////////////////////////////
+
+.blockOurBrands{
+
+  &__title{}
+
+  &__brand{}
+
+  &__img{}
+
+  &__txt{}
+
+  &__link{}
+
+}
+
+
+/* GRID DESKTOP
+   ========================================================================== */
+@include media-breakpoint-up(md) {
+  .gt-offer-header__title{
+    @include make-col(6);
+  }
+  .gt-offer-header__desc{
+    @include make-col(6);
+  }
 }
