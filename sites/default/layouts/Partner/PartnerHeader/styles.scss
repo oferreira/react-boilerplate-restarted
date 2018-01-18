@@ -1,6 +1,6 @@
-@import "../../styles/override-config";
+@import "../../../styles/override-config";
 
-.Partner {
+.PartnerHeader {
 
 
 }
@@ -9,7 +9,7 @@
 /* DESKTOP
    ========================================================================== */
 @include media-breakpoint-up(md) {
-  .Partner {
+  .PartnerHeader {
     @include make-col-ready();
     @include make-col(12);
     display: flex;
@@ -25,8 +25,11 @@
     }
 
     &__Desc {
-      text-align: center;
+      font-weight: $font-weight-light;
+      text-align: justify;
       width: 100%;
+      font-size: 1.5rem;
+      margin: 1.5rem 0;
     }
   }
 }

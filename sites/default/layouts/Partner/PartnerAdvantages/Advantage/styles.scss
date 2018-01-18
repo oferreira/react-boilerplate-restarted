@@ -1,0 +1,15 @@
+@import '../../../../styles/override-config';
+
+.Advantage {
+  width: 270px;
+  height: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $darker-grey;
+  color: $lighter-blue;
+  text-align: center;
+  font-size: 1.125rem;
+  flex: 0 0 auto;
+  margin: 1rem;
+}
