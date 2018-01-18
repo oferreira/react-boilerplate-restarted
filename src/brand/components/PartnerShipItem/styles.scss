@@ -1,3 +1,5 @@
+@import '../../../scss/config';
+
 .card-item {
   &-wrapper {
     //border: 1px solid red;
@@ -10,21 +12,35 @@
     //border: 1px solid blue;
     display: flex;
     flex: 1;
-    padding: 10px 10px 10px 0;
+    padding: 10px 0;
     text-transform: uppercase;
     align-items: center;
+    text-align: left;
+
+    font-family: $font-metric;
+    color: $blue;
+    font-size: 1.2rem;
+    transform: scaleY(1.0005);
+    letter-spacing: 0.07em;
   }
+
   &-desc {
     //border: 1px solid green;
     display: -webkit-box;
     flex: 7;
-    line-height: 1.5em;
-    max-height: 4.3em;
+    line-height: 1.5rem;
+    max-height: 4.3rem;
     overflow: hidden;
     text-align: justify;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    text-align: left;
+
+    font-family: $font-metric;
+    color: $lighter-blue;
+    font-weight: 400;
+    transform: scaleY(1.0004);
   }
   &-img {
     background-repeat: no-repeat;
