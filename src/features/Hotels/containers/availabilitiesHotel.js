@@ -11,10 +11,27 @@ import injectReducer from 'core/reducers/utils/injectReducer'
 
 import { makeSelectLocale } from 'core/language/selectors'
 
-import { availabilitiesRequest } from '../actions'
+import { requestAvailabilities } from '../actions'
 import { HOTEL_STORE_NAME } from '../constants'
 import { getLoading, getMapLoading, getHotels } from '../selectors'
 // import saga from '../sagas'
+
+const AVAILABILITIES_REQUEST_PAYLOAD = {
+  arrival: '2018-01-20T00:00:00',
+  departure: '2018-01-21T00:00:00',
+  location: 'Paris',
+  rateCode: 'Unknown company',
+  'rooms[0][adult]': '1',
+  'rooms[0][child]': '0',
+  rooms: [
+    {
+      adult: '1',
+      child: '0',
+    },
+  ],
+  numberOfAdults: 1,
+  numberOfChildren: 0,
+}
 
 export default (WrappedComponent) => {
   class AvailabiltiesHotel extends React.PureComponent {
@@ -38,7 +55,7 @@ export default (WrappedComponent) => {
         location,
       } = this.props
 
-      onGetAvailabilities(location.query, locale)
+      onGetAvailabilities(AVAILABILITIES_REQUEST_PAYLOAD, 'en-us')
     }
 
     componentWillReceiveProps(props) {
@@ -49,7 +66,7 @@ export default (WrappedComponent) => {
       } = this.props
 
       if (props.locale !== locale) {
-        onGetAvailabilities(location.query, locale)
+        onGetAvailabilities(AVAILABILITIES_REQUEST_PAYLOAD, 'en-us')
       }
     }
 
@@ -80,7 +97,7 @@ export default (WrappedComponent) => {
   })
 
   const mapDispatchToProps = (dispatch) => ({
-    onGetAvailabilities: (query, locale) => dispatch(availabilitiesRequest(query, locale)),
+    onGetAvailabilities: (query, locale) => dispatch(requestAvailabilities(query, locale)),
   })
 
   const withConnect = connect(mapStateToProps, mapDispatchToProps)

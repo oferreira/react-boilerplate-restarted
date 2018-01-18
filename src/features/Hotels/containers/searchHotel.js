@@ -11,7 +11,6 @@ import injectSaga from 'core/sagas/utils/injectSaga'
 
 import {
   requestSearch,
-  availabilitiesRequest,
   requestDetails,
 } from '../actions'
 import {
@@ -30,8 +29,9 @@ export default (WrappedComponent) => {
     }
 
     componentWillMount() {
-      this.props.availabilitiesRequest()
-      this.props.requestDetails([{ id: 'FRA40267' }, { id: 'FRA42193' }, { id: 'FRA23316' }])
+      console.log('COMPONENT_WILL_MOUNT')
+      const { requestDetails } = this.props
+      requestDetails([{ id: 'FRA40267' }, { id: 'FRA42193' }, { id: 'FRA23316' }])
     }
 
     render() {
@@ -45,7 +45,6 @@ export default (WrappedComponent) => {
 
   const mapDispatchToProps = (dispatch) => ({
     onSearch: (location) => dispatch(requestSearch(location)),
-    availabilitiesRequest: () => dispatch(availabilitiesRequest()),
     requestDetails: (resortIdList) => dispatch(requestDetails(resortIdList)),
   })
 

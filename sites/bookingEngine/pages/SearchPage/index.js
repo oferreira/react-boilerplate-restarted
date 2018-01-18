@@ -17,11 +17,11 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 
   componentWillMount() {
-    console.log('SEARCH PAGE', this.props)
+    // console.log('SEARCH PAGE', this.props)
   }
 
   onSubmit = (data) => {
-    console.log(data.toJS())
+    // console.log(data.toJS())
     // const { currency, cart, locale, totalHelper, currencyHelper, hotelCurrency } = this.props
     // const bookingProcess = {
     //   ...(data.toJS()),

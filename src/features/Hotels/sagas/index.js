@@ -1,16 +1,24 @@
-import { takeLatest, all } from 'redux-saga/effects'
+import { takeLatest, all, call } from 'redux-saga/effects'
 
 import {
   REQUEST_HOTEL_AVAILABILITIES,
   REQUEST_HOTEL_DETAILS,
+  REQUEST_GEOLOC_SEARCH,
 } from '../constants'
 
-import { getAvailabilities } from './availabilitiesHotel'
+import {
+  getHotelsAvailabilities,
+  requestGeoloc,
+} from './availabilitiesHotel'
 import { getResortsDetails } from './resortsDetails'
+
+export function* test() {
+  return yield call(console.log, 'THIS IS A TEST')
+}
 
 export default function* () {
   yield all([
-    takeLatest(REQUEST_HOTEL_AVAILABILITIES, getAvailabilities),
-    takeLatest(REQUEST_HOTEL_DETAILS, getResortsDetails),
+    takeLatest(REQUEST_GEOLOC_SEARCH, requestGeoloc),
+    takeLatest(REQUEST_HOTEL_AVAILABILITIES, getHotelsAvailabilities),
   ])
 }

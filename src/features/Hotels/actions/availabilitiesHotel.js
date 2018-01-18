@@ -16,17 +16,17 @@ import {
   REQUEST_ALTERNATIVE_DATES_HOTEL_AVAILABILITIES_ERROR,
 } from '../constants'
 
-export const availabilitiesRequest = (query, locale) => ({
+export const requestAvailabilities = (query, locale) => ({
   type: REQUEST_HOTEL_AVAILABILITIES,
   payload: { query, locale },
 })
 
-export const availabilitiesRequestSuccess = (hotels) => ({
+export const requestAvailabilitiesSuccess = (hotels) => ({
   type: REQUEST_HOTEL_AVAILABILITIES_SUCCESS,
   payload: { hotels },
 })
 
-export const availabilitiesRequestError = (error) => ({
+export const requestAvailabilitiesError = (error) => ({
   type: REQUEST_HOTEL_AVAILABILITIES_ERROR,
   payload: { error },
 })
