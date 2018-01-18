@@ -142,6 +142,7 @@ export const cartToReservation = (x) => {
   data.comments = x.comment || ''
   data.arrivalTime = x.arrivalTime || ''
   data.newsletter = x.newsletter || false
+  data.sourceProfileCode = x.sourceProfileCode
 
   // Add special code to the process booking only if there is a special rateplan in the cart
   if (isRatePlanInBooking) {

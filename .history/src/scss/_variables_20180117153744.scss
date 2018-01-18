@@ -1,0 +1,334 @@
+@charset "UTF-8";
+// @import "fonts";
+
+// ==========================================================================
+// Variables
+// ==========================================================================
+//
+// Table of Contents:
+//
+//  1. Colors
+//  2. Fonts
+//  3. Heading & body
+//  4. Grid
+//  5. Z-index
+//  6. Button
+//  7. Form
+
+
+
+
+/* Colors
+   ========================================================================== */
+
+$blue:                  #1D3649 !default;
+$darker-blue:           #172b3a !default;
+$lighter-blue:          #778692 !default;
+$yellow:                #f6d83e !default;
+$grey:                  #e8ebec !default;
+$darker-grey:           #c6ccd1 !default;
+$lighter-grey:          #f3f5f6 !default;
+$white:                 #ffffff !default;
+
+
+$primary-color-light:   $lighter-blue !default;
+$primary-color:         $blue;
+$primary-color-dark:    $darker-blue;
+
+$secondary-color:       $yellow;
+
+$tertiary-color-light:  $lighter-grey;
+$tertiary-color:        $grey;
+$tertiary-color-dark:   $darker-grey;
+
+$error-color:   #ff0000;
+
+
+/* Font
+   ========================================================================== */
+
+$font-path: '../assets/fonts/';
+
+
+$font-metric:                 'Metric' !default;
+$font-dalaFloda:              'Dala Floda Web' !default;
+
+$font-chinese:                'hanyiruiyisong' !default;
+$font-chinese-2:              'fzlthjw' !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+$font-weight-light:           200 !default;
+$font-weight-normal:          300 !default;
+$font-weight-regular:         400 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$font-family-primary:         $font-metric !default;
+$font-family-secondary:       $font-dalaFloda !default;
+
+
+/* Heading
+   ========================================================================== */
+
+
+//Heading primary 1
+$heading-primary-1-color:             $primary-color !default;
+$heading-primary-1-font-size:         5rem !default;
+$heading-primary-1-font-size-mobile:  3.125rem !default;
+$heading-primary-1-font-family:       $font-family-secondary !default;
+$heading-primary-1-font-weight:       $font-weight-normal !default;
+
+//Heading primary 2
+$heading-primary-2-color:             $primary-color !default;
+$heading-primary-2-font-size:         3rem !default;
+$heading-primary-2-font-size-mobile:  2.344rem !default;
+$heading-primary-2-font-family:       $font-family-secondary !default;
+$heading-primary-2-font-weight:       $font-weight-normal !default;
+
+//Heading primary 3
+$heading-primary-3-color:             $primary-color !default;
+$heading-primary-3-font-size:         1.5rem !default;
+$heading-primary-3-font-size-mobile:  1.5rem !default;
+$heading-primary-3-font-family:       $font-family-secondary !default;
+$heading-primary-3-font-weight:       $font-weight-normal !default;
+
+
+//Heading secondary 1
+$heading-secondary-1-color:             $primary-color !default;
+$heading-secondary-1-font-size:         2.375rem !default;
+$heading-secondary-1-font-size-mobile:  1.938rem !default;
+$heading-secondary-1-font-family:       $font-family-primary !default;
+$heading-secondary-1-font-weight:       $font-weight-light !default;
+
+//Heading secondary 2
+$heading-secondary-2-color:             $primary-color !default;
+$heading-secondary-2-font-size:         1.875rem !default;
+$heading-secondary-2-font-size-mobile:  1.188rem !default;
+$heading-secondary-2-font-family:       $font-family-primary !default;
+$heading-secondary-2-font-weight:       $font-weight-regular !default;
+
+//Heading secondary 3
+$heading-secondary-3-color:             $primary-color !default;
+$heading-secondary-3-font-size:         1.5rem !default;
+$heading-secondary-3-font-size-mobile:  1rem !default;
+$heading-secondary-3-font-family:       $font-family-primary !default;
+$heading-secondary-3-font-weight:       $font-weight-regular !default;
+
+//body 1
+$body-1-color:                          $primary-color !default;
+$body-1-font-size:                      1.125rem !default;
+$body-1-font-size-mobile:               0.813rem !default;
+$body-1-font-family:                    $font-family-primary !default;
+$body-1-font-weight:                    $font-weight-regular !default;
+
+//body 2
+$body-2-color:                          $primary-color-light !default;
+$body-2-font-size:                      1rem !default;
+$body-2-font-size-mobile:               0.750rem !default;
+$body-2-font-family:                    $font-family-primary !default;
+$body-2-font-weight:                    $font-weight-normal !default;
+$body-2-letter-spacing:                 100 !default;
+
+//body 3
+$body-3-color:                          $primary-color-light !default;
+$body-3-font-size:                      1rem !default;
+$body-3-font-size-mobile:               0.750rem !default;
+$body-3-font-family:                    $font-family-primary !default;
+$body-3-font-weight:                    $font-weight-normal !default;
+
+
+//Link
+$link-color:                            $primary-color !default;
+$link-font-size:                        1rem !default;
+$link-font-size-mobile:                 0.813rem !default;
+$link-font-family:                      $font-family-primary !default;
+$link-font-weight:                      $font-weight-normal !default;
+
+
+
+/* Grid (https://getbootstrap.com/docs/4.0/layout/grid/)
+   ========================================================================== */
+
+$enable-grid-classes:         true !default;
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+
+$grid-breakpoints: (
+                              xs: 0,     // Extra small screen / phone
+                              sm: 576px, // Small screen / phone
+                              md: 768px, // Medium screen / tablet
+                              lg: 992px, // Large screen / desktop
+                              xl: 1200px // Extra large screen / wide desktop
+);
+
+$container-max-widths: (
+                              sm: 100%,
+                              md: 100%,
+                              lg: 100%,
+                              xl: 1140px
+);
+
+
+/* Z-index
+   ========================================================================== */
+
+$zindex-dropdown-backdrop:    990 !default;
+$zindex-navbar:               1000 !default;
+$zindex-dropdown:             1000 !default;
+$zindex-fixed:                1030 !default;
+$zindex-sticky:               1030 !default;
+$zindex-modal-backdrop:       1040 !default;
+$zindex-modal:                1050 !default;
+$zindex-popover:              1060 !default;
+$zindex-tooltip:              1070 !default;
+
+
+/* Button
+   ========================================================================== */
+
+//Btn primary
+$button-primary-font-size:              1.125rem !default;
+$button-primary-font-weight:            $font-weight-normal !default;
+$button-primary-padding:                0 1rem !default;
+$button-primary-border:                 1px solid transparent !default;
+$button-primary-background:             $secondary-color !default;
+$button-primary-background-opacity:     1 !default;
+$button-primary-background-focus:       $primary-color !default;
+$button-primary-background-disabled:    $tertiary-color-dark !default;
+$button-primary-font-size:              1rem !default;
+$button-primary-font-size-small:        0.875rem !default;
+$button-primary-color:                  $primary-color !default;
+$button-primary-color-focus:            $secondary-color !default;
+$button-primary-icon-font-size:         1.3rem !default;
+$button-primary-height:                 58px !default;
+$button-primary-padding:                0 ($button-primary-height / 2) !default;
+$button-primary-radius:                 $button-primary-height / 2 !default;
+$button-primary-color-disabled:         $white;
+$button-primary-width:                  20rem;
+
+$button-i-margin:                       0 .5rem !default;
+
+$button-secondary-background-opacity:   .5;
+$button-secondary-color-focus:          $primary-color;
+
+$button-tertiary-border-color:          $primary-color;
+$button-tertiary-color-focus:           $white;
+
+
+/* Card
+   ========================================================================== */
+
+
+
+// Forms
+// ==========================================================================
+
+$form-base-margin: 10px !default;
+$form-margin: $form-base-margin 0;
+$form-padding: 10px;
+$form-header-padding: 5px;
+$form-header-icon-padding: 0 10px 0 0;
+
+// Text Inputs + Textarea
+$input-height: 3rem !default;
+$input-background: $white !default;
+$input-alpha: 0.5;
+
+$input-border-color: $tertiary-color-dark !default;
+$input-border: 1px solid $input-border-color !default;
+
+$input-border-light-color: rgba($tertiary-color-dark, $input-alpha) !default;
+$input-border-light: 1px solid $input-border-light-color !default;
+
+$input-error-color: $error-color !default;
+$input-focus-color: $secondary-color !default;
+
+$label-font-weight: $body-3-font-weight !default;
+$label-font-size: $body-1-font-size !default;
+$label-color: $body-1-color;
+$label-light-color: $white;
+
+$input-disabled-color: $tertiary-color !default;
+$input-disabled-background: $input-disabled-color !default;
+
+$input-font-size: 1rem !default;
+$input-margin-top: 8px;
+$input-margin-bottom: 8px;
+$input-margin: 0 0 $input-margin-bottom 0 !default;
+$input-padding: 0.25rem !default;
+$label-margin: $input-margin-top 0 $input-margin-bottom 0 !default;
+
+// $placeholder-text-color: lighten($input-border-color, 20%) !default;
+/* Header
+   ========================================================================== */
+$header-height: 46px;
+$header-primary-background: $primary-color;
+$header-primary-color: $white;
+
+$header-secondary-background: $white;
+$header-secondary-color: $primary-color;
+
+$header-tertiary-background: none;
+$header-tertiary-color: $primary-color;
+
+/* Misc
+   ========================================================================== */
+$animation-duration-short: .2s;
+$animation-duration-medium: .5s;
+$animation-duration-long: .7s;
+
+
+// Numeric Inputs
+$numeric-input-height: 27px !default;
+$numeric-input-width: 60px !default;
+$numeric-input-color: $tertiary-color-light !default;
+$numeric-input-border: 1px solid $numeric-input-color !default;
+$numeric-input-font-family: $body-1-font-family !default;
+$numeric-input-font-weight: $body-1-font-weight !default;
+$numeric-input-font-size: $body-1-font-size !default;
+
+// Radio Buttons + Checkbox
+$radio-fill-color: $primary-color !default;
+$radio-fill-light-color: $white !default;
+$radio-empty-color: $white !default;
+
+$radio-border-size: 1px;
+$radio-border: $radio-border-size solid $primary-color !default;
+$radio-border-light: $radio-border-size solid $input-border-light-color !default;
+
+$radio-size-fill: 10px;
+$radio-size-padding-inside: 3px;
+$radio-size: ($radio-size-fill + ($radio-size-padding-inside * 2));
+
+//
+//// Range
+//$range-height:  !default;
+//$range-width:  !default;
+//$track-height: !default;
+
+// Select
+$select-height: 3rem !default;
+$select-border-color: $tertiary-color-dark !default;
+$select-border: 1px solid $select-border-color !default;
+$select-background: $white !default;
+// $select-focus:  !default;
+// $select-option-hover:  !default;
+// $select-option-focus:  !default;
+// $select-option-selected: !default;
+$select-padding: 0.25rem 2.0625rem 0.25rem 0.25rem !default;
+$select-icon-size: $heading-secondary-2-font-size;
+$select-icon-top: $select-height / 1.3;
+$select-icon-right: 10px;
+// $select-radius:  !default;
+$select-disabled-color: $tertiary-color !default;
+
+//// Switches
+//$switch-bg-color:  !default;
+//$switch-checked-lever-bg: !default;
+//$switch-unchecked-bg:  !default;
+//$switch-unchecked-lever-bg:  !default;
+//$switch-radius:  !default;

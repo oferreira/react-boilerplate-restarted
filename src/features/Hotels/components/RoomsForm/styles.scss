@@ -1,0 +1,21 @@
+@import '../../../../scss/_config.scss';
+
+.RoomsForm {
+    &__RoomUpdate {
+        margin-bottom: 1rem;
+    }
+
+    &__Button {
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        margin: 0 auto 2rem auto;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__Label {
+        text-decoration: underline;
+        margin-left: .5rem;
+    }
+}
