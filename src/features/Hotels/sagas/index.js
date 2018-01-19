@@ -12,10 +12,6 @@ import {
 } from './availabilitiesHotel'
 import { getResortsDetails } from './resortsDetails'
 
-export function* test() {
-  return yield call(console.log, 'THIS IS A TEST')
-}
-
 export default function* () {
   yield all([
     takeLatest(REQUEST_GEOLOC_SEARCH, requestGeoloc),

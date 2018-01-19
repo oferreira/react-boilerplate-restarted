@@ -1,5 +1,6 @@
 import AppRoot from 'core/Root'
 import SearchPage from 'pages/SearchPage/Loadable'
+import ResultsPage from 'pages/ResultsPage/Loadable'
 
 const routes = [
   {
@@ -9,6 +10,11 @@ const routes = [
         name: 'search',
         path: '/search',
         component: SearchPage,
+      },
+      {
+        name: 'results',
+        path: '/results',
+        component: ResultsPage,
       },
     ],
   },

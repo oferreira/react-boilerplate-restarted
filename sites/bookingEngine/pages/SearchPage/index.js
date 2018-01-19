@@ -10,10 +10,9 @@ import ContactForm from 'features/ContactForm'
 require('./styles.scss')
 
 
-export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class SearchPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     onSubmit: PropTypes.func,
-    unfilteredHotel: PropTypes.func,
   }
 
   componentWillMount() {
@@ -52,4 +51,4 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 const enhancers = compose(withSearchHotel, withAvailabiltiesHotel)
 // const enhancers = compose(withPayment({ resortCodeKey: 'resortCode' }))
 
-export default enhancers(HomePage)
+export default enhancers(SearchPage)

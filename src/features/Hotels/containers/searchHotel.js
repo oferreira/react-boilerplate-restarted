@@ -29,7 +29,6 @@ export default (WrappedComponent) => {
     }
 
     componentWillMount() {
-      console.log('COMPONENT_WILL_MOUNT')
       const { requestDetails } = this.props
       requestDetails([{ id: 'FRA40267' }, { id: 'FRA42193' }, { id: 'FRA23316' }])
     }

@@ -7,14 +7,26 @@ import { createStructuredSelector } from 'reselect'
 
 import hotelReducer from 'features/Hotels/reducers'
 import injectReducer from 'core/reducers/utils/injectReducer'
-// import injectSaga from 'core/sagas/utils/injectSaga'
+import injectSaga from 'core/sagas/utils/injectSaga'
 
 import { makeSelectLocale } from 'core/language/selectors'
 
-import { requestAvailabilities } from '../actions'
-import { HOTEL_STORE_NAME } from '../constants'
-import { getLoading, getMapLoading, getHotels } from '../selectors'
-// import saga from '../sagas'
+import {
+  requestAvailabilities,
+} from '../actions'
+
+import {
+  HOTEL_STORE_NAME,
+  HOTEL_SAGA_NAME,
+} from '../constants'
+
+import {
+  getLoading,
+  getMapLoading,
+  getHotels,
+} from '../selectors'
+
+import saga from '../sagas'
 
 const AVAILABILITIES_REQUEST_PAYLOAD = {
   arrival: '2018-01-20T00:00:00',
@@ -89,12 +101,12 @@ export default (WrappedComponent) => {
     }
   }
 
-  const mapStateToProps = createStructuredSelector({
+  const mapStateToProps = (state) => (createStructuredSelector({
     loading: getLoading,
     mapLoading: getMapLoading,
     unfilteredHotel: getHotels,
     locale: makeSelectLocale(),
-  })
+  }))
 
   const mapDispatchToProps = (dispatch) => ({
     onGetAvailabilities: (query, locale) => dispatch(requestAvailabilities(query, locale)),
@@ -102,7 +114,7 @@ export default (WrappedComponent) => {
 
   const withConnect = connect(mapStateToProps, mapDispatchToProps)
   const withReducer = injectReducer({ key: HOTEL_STORE_NAME, reducer: hotelReducer })
-  // const withSaga = injectSaga({ key: HOTEL_STORE_NAME, saga })
+  const withSaga = injectSaga({ key: HOTEL_SAGA_NAME, saga })
 
   return compose(
     withReducer,

@@ -3,8 +3,6 @@ import { fromJS } from 'immutable'
 
 import { HOTEL_STORE_NAME } from '../constants'
 
-const selectSearch = (state) => state.get('search')
-
 /**
  * Direct selector to the autocomplete state domain
  */
@@ -51,9 +49,4 @@ const getInitValues = (location, value) => createSelector(
     }
     return objReturn
   }
-)
-
-const getHotels = () => createSelector(
-  selectSearch,
-  (search) => search.get('hotels')
 )

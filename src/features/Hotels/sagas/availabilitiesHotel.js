@@ -5,7 +5,8 @@ const mockAvailabilitiesResortPayload = {
 }
 // **********************************
 
-import { call, select, put, push } from 'redux-saga/effects'
+import { call, select, put } from 'redux-saga/effects'
+import { push } from 'react-router-redux'
 import _ from 'lodash'
 
 /**
@@ -22,6 +23,7 @@ import { URLQueryBuilder, mergeHotels } from 'core/utils/functions'
 import {
   setQuerySearch,
   requestAvailabilities,
+  requestAvailabilitiesSuccess,
   requestGeolocSearchSuccess,
   requestSearchError,
 } from '../actions'
@@ -88,8 +90,6 @@ export function* getAvailabilities(payload, resorts) {
 export function* getHotelsAvailabilities(action) {
   const { payload: { query } } = action
 
-  console.log('QUERY', query)
-
   if (!query.rooms || !query.rooms.length) {
     return yield put(errorAction('Number of rooms incorrect!'))
   }
@@ -110,11 +110,11 @@ export function* getHotelsAvailabilities(action) {
       numberOfChildren: 0,
     },
   })
-  console.log('HOTELS', hotels)
-  yield put(requestAvailabilities(jsonToHotels(hotels)))
+  // console.log('HOTELS', hotels)
+  yield put(requestAvailabilitiesSuccess(jsonToHotels(hotels)))
 
   delete query.rooms
-  // return yield put(push(new URLQueryBuilder(null, query).getPath('/results')))
+  return yield put(push(new URLQueryBuilder(null, query).getPath('/results')))
 }
 
 /** *****************************************
@@ -340,7 +340,6 @@ export function* requestGeoloc(location) {
  * @param {Array} payload List of resort id to get
  */
 export function* getResortsDetails(payload) {
-  console.log('SAGA_GET_RESORT_DETAILS', payload)
   // Create URI like id=a&id=b&id=c
   const params = payload.reduce((acc, p) => `${acc}&resortIdList=${p.id}`, '')
   // const locale = yield select(makeSelectLocale());
