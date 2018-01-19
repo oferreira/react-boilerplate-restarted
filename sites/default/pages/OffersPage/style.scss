@@ -5,6 +5,7 @@
    ========================================================================== */
 .gt-offer-conainter{
   @include make-container-max-widths();
+  margin:auto;
 
   .gt-offer-header {
     height:450px;

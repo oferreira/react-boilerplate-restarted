@@ -1,0 +1,31 @@
+@import '../../../scss/config';
+
+.Header {
+  background: $primary-color;
+  z-index: $zindex-navbar;
+  transition: all $animation-duration-short linear;
+  color: $white;
+  width: 100%;
+  position: relative;
+
+
+  &__Secondary {
+    background: $white;
+  }
+
+  &__Content {
+    height: $header-height;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+}
+@include media-breakpoint-up(md) {
+  .Header {
+    &--burgerIsOpen {
+      background: $white;
+    }
+  }
+}

@@ -1,10 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
+
 import Node from 'drupal/containers/Node'
-import Menu from 'drupal/containers/Menu'
-import Button from 'html/components/Button'
-import Footer from 'html/components/Footer'
+import Footer from 'common/containers/Footer'
+
+import BurgerMenu from 'common/components/BurgerMenu'
+import BurgerToggle from 'common/components/BurgerMenu/BurgerToggle'
+import Header from 'common/components/Header'
+import SelectLanguages from 'core/language/containers/SelectLanguages'
+import Translation from 'core/language/components/Translation'
+
+import H1 from 'common/components/H1'
+import Button from 'common/components/Button'
 import './style.scss'
 
 
@@ -12,49 +20,36 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   render() {
     return (
       <div className="HomePage">
-        <Menu id="main" />
-        <Node id={22} />
-        <div className="wrapper">
-          <h1>Buttons</h1>
-          <div className="buttons">
-            <Button primary>
-              <span>Button 1</span>
-            </Button>
-            <Button primary rounded>
-              <span>Button 1 rounded</span>
-            </Button>
-            <Button primary disabled>
-              <span>Button 1 disabled</span>
-            </Button>
+        <Header>
+          <BurgerToggle />
+        </Header>
+        <BurgerMenu />
+        <div className="container">
+          <Node id={22} />
+          <SelectLanguages />
+          <Translation id="app.CityTax.taxesAndChargeIncluded" />
+
+
+          <div className="blockCms blockOurBrands">
+            <H1 playful>Our brands</H1>
+            <h1 className="blockOurBrands__title">Our brands</h1>
+
+            <div className="blockOurBrands__brand">
+              <img className="blockOurBrands__img" src="../../assets/brands/royal-tulip.jpg" alt="Logo Royal Tulip - luxury hotel" />
+              <p className="blockOurBrands__txt">Midscale properties</p>
+
+              <Button rounded small>
+                Learn more
+              </Button>
+
+            </div>
+
+
           </div>
 
-          <div className="buttons">
-            <Button secondary>
-              <span>Button 2</span>
-            </Button>
-            <Button secondary rounded>
-              <span>Button 2 rounded</span>
-            </Button>
-            <Button secondary disabled>
-              <span>Button 2 disabled</span>
-            </Button>
-          </div>
-
-          <div className="buttons">
-            <Button tertiary>
-              <span>Button 3</span>
-            </Button>
-            <Button tertiary rounded>
-              <span>Button 3 rounded</span>
-            </Button>
-            <Button tertiary disabled>
-              <span>Button 3 disabled</span>
-            </Button>
-          </div>
         </div>
-        <Footer />
-      </div>
-    )
+        <Footer menuId="footer" />
+      </div>)
   }
 }
 
@@ -63,7 +58,6 @@ HomePage.defaultProps = {}
 
 const mapStateToProps = null
 const mapDispatchToProps = null
-
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps)
 

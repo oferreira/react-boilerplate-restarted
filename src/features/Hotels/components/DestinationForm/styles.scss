@@ -1,0 +1,28 @@
+@import '../../../utils/scss/flexbox.scss';
+@import '../../../utils/scss/variables.scss';
+@import '../../../utils/scss/breakpoints.scss';
+@import '../../../utils/scss/global.scss';
+
+.AutoCompleteList{
+  @extend .col-xs-12;
+  padding-top: $fg-gutter;
+  padding-bottom: $fg-gutter;
+  width: 100%;
+
+  &__Wrapper {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media #{$large-up} {
+  .AutoCompleteList {
+    width: rem-calc(310px);
+    padding-right: 0;
+
+    &__Wrapper {
+      padding: 0 .75rem;
+      margin-top: .5rem;
+    }
+  }  
+}

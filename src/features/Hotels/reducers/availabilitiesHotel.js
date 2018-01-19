@@ -4,7 +4,7 @@
  *
  */
 
-import { fromJS, Record } from 'immutable'
+import { fromJS, Record, List } from 'immutable'
 import {
   REQUEST_HOTEL_AVAILABILITIES,
   REQUEST_HOTEL_AVAILABILITIES_SUCCESS,
@@ -18,7 +18,7 @@ import {
 } from '../constants'
 
 const initialState = fromJS({
-  results: new Record(),
+  results: new List(),
   fetching: false,
   fetchingMap: false,
   error: null,

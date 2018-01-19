@@ -1,0 +1,10 @@
+@import "../../../scss/config";
+
+.H1 {
+  font-family: $font-family-secondary;
+  font-size: 5rem;
+  color: $primary-color;
+  &__Playful {
+    transform: translateY(50%);
+  }
+}

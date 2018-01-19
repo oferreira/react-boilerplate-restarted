@@ -41,6 +41,8 @@ $tertiary-color-light:  $lighter-grey;
 $tertiary-color:        $grey;
 $tertiary-color-dark:   $darker-grey;
 
+$error-color:   #ff0000;
+
 
 /* Font
    ========================================================================== */
@@ -48,7 +50,7 @@ $tertiary-color-dark:   $darker-grey;
 $font-path: '../assets/fonts/';
 
 
-$font-metric:                 'Metric', sans-serif !default;
+$font-metric:                 'Metric' !default;
 $font-dalaFloda:              'Dala Floda Web' !default;
 
 $font-chinese:                'hanyiruiyisong' !default;
@@ -167,7 +169,7 @@ $container-max-widths: (
                               sm: 100%,
                               md: 100%,
                               lg: 100%,
-                              xl: 1140px
+                              xl: 1280px
 );
 
 
@@ -198,6 +200,7 @@ $button-primary-background-opacity:     1 !default;
 $button-primary-background-focus:       $primary-color !default;
 $button-primary-background-disabled:    $tertiary-color-dark !default;
 $button-primary-font-size:              1rem !default;
+$button-primary-font-size-small:        0.875rem !default;
 $button-primary-color:                  $primary-color !default;
 $button-primary-color-focus:            $secondary-color !default;
 $button-primary-icon-font-size:         1.3rem !default;
@@ -207,12 +210,17 @@ $button-primary-radius:                 $button-primary-height / 2 !default;
 $button-primary-color-disabled:         $white;
 $button-primary-width:                  20rem;
 
+$button-i-margin:                       0 .5rem !default;
+
 $button-secondary-background-opacity:   .5;
 $button-secondary-color-focus:          $primary-color;
 
 $button-tertiary-border-color:          $primary-color;
 $button-tertiary-color-focus:           $white;
 
+$button-small-height:                   40px;
+$button-small-width:                    270px;
+$button-small-font-size:                1rem;
 
 /* Card
    ========================================================================== */
@@ -222,51 +230,105 @@ $button-tertiary-color-focus:           $white;
 // Forms
 // ==========================================================================
 
+$form-margin: 10px 0;
+$form-padding: 10px;
+$form-header-padding: 5px;
+$form-header-icon-padding: 0 10px 0 0;
+
 // Text Inputs + Textarea
 $input-height: 3rem !default;
+$input-background: $white !default;
+$input-alpha: 0.5;
+
 $input-border-color: $tertiary-color-dark !default;
 $input-border: 1px solid $input-border-color !default;
-$input-background: #fff !default;
+
+$input-border-light-color: rgba($tertiary-color-dark, $input-alpha) !default;
+$input-border-light: 1px solid $input-border-light-color !default;
+
+$input-error-color: $error-color !default;
+$input-focus-color: $secondary-color !default;
+
+$label-font-weight: $body-3-font-weight !default;
+$label-font-size: $body-1-font-size !default;
+$label-color: $body-1-color;
+$label-light-color: $white;
+
+$input-disabled-color: $tertiary-color !default;
+$input-disabled-background: $input-disabled-color !default;
+
+$input-font-size: 1rem !default;
+$input-margin-top: 8px;
+$input-margin-bottom: 8px;
+$input-margin: 0 0 $input-margin-bottom 0 !default;
+$input-padding: 0.25rem !default;
+$label-margin: $input-margin-top 0 $input-margin-bottom 0 !default;
+
+// $placeholder-text-color: lighten($input-border-color, 20%) !default;
+/* Header
+   ========================================================================== */
+$header-height: 46px;
+$header-margin: 10px;
+$header-primary-background: $primary-color;
+$header-primary-color: $white;
+
+$header-secondary-background: $white;
+$header-secondary-color: $primary-color;
+
+$header-tertiary-background: none;
+$header-tertiary-color: $primary-color;
+
+/* Misc
+   ========================================================================== */
+$animation-duration-short: .2s;
+$animation-duration-medium: .5s;
+$animation-duration-long: .7s;
 
 
-//$input-error-color: $error-color !default;
-//$input-success-color: $success-color !default;
-//$input-focus-color: $primary-color !default;
-//
-//$input-font-size: 1rem !default;
-//$input-margin-bottom: 8px;
-//
-//$input-margin: 0 0 $input-margin-bottom 0 !default;
-//$input-padding: 0 !default;
-//
-//$label-font-size: .8rem !default;
-//$input-disabled-color: rgba(0,0,0, .42) !default;
-//$input-disabled-solid-color: #949494 !default;
-//$input-disabled-border: 1px dotted $input-disabled-color !default;
-//$input-invalid-border: 1px solid $input-error-color !default;
-//$placeholder-text-color: lighten($input-border-color, 20%) !default;
-//
-//// Radio Buttons
-//$radio-fill-color:  !default;
-//$radio-empty-color:  !default;
-//$radio-border: !default;
+// Numeric Inputs
+$numeric-input-height: 27px !default;
+$numeric-input-width: 60px !default;
+$numeric-input-color: $tertiary-color-light !default;
+$numeric-input-border: 1px solid $numeric-input-color !default;
+$numeric-input-font-family: $body-1-font-family !default;
+$numeric-input-font-weight: $body-1-font-weight !default;
+$numeric-input-font-size: $body-1-font-size !default;
+
+// Radio Buttons + Checkbox
+$radio-fill-color: $primary-color !default;
+$radio-fill-light-color: $white !default;
+$radio-empty-color: $white !default;
+
+$radio-border-size: 1px;
+$radio-border: $radio-border-size solid $primary-color !default;
+$radio-border-light: $radio-border-size solid $input-border-light-color !default;
+
+$radio-size-fill: 10px;
+$radio-size-padding-inside: 3px;
+$radio-size: ($radio-size-fill + ($radio-size-padding-inside * 2));
+
 //
 //// Range
 //$range-height:  !default;
 //$range-width:  !default;
 //$track-height: !default;
-//
-//// Select
-//$select-border: !default;
-//$select-background:  !default;
-//$select-focus:  !default;
-//$select-option-hover:  !default;
-//$select-option-focus:  !default;
-//$select-option-selected: !default;
-//$select-padding:  !default;
-//$select-radius:  !default;
-//$select-disabled-color: !default;
-//
+
+// Select
+$select-height: 3rem !default;
+$select-border-color: $tertiary-color-dark !default;
+$select-border: 1px solid $select-border-color !default;
+$select-background: $white !default;
+// $select-focus:  !default;
+// $select-option-hover:  !default;
+// $select-option-focus:  !default;
+// $select-option-selected: !default;
+$select-padding: 0.25rem 2.0625rem 0.25rem 0.25rem !default;
+$select-icon-size: $heading-secondary-2-font-size;
+$select-icon-top: $select-height / 1.3;
+$select-icon-right: 10px;
+// $select-radius:  !default;
+$select-disabled-color: $tertiary-color !default;
+
 //// Switches
 //$switch-bg-color:  !default;
 //$switch-checked-lever-bg: !default;

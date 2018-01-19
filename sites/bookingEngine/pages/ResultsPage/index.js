@@ -10,7 +10,7 @@ require('./styles.scss')
 export class ResultsPages extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     onSubmit: PropTypes.func,
-    unfilteredHotel: PropTypes.object,
+    unfilteredHotel: PropTypes.any,
   }
 
   componentWillMount() {
@@ -19,7 +19,7 @@ export class ResultsPages extends React.PureComponent { // eslint-disable-line r
 
   render() {
     const { unfilteredHotel } = this.props
-    // console.log('TEST', unfilteredHotel())
+    console.log('TEST', unfilteredHotel)
     return (
       <div>
         <h1>WBE-ResultsPage</h1>

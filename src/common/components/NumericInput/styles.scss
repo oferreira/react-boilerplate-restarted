@@ -1,0 +1,72 @@
+@import '../../../scss/_config.scss';
+
+/**
+ * This css is a bit dirty coz of the inline style of the component used
+ */
+.NumericInput {
+  border: none;
+  height: $numeric-input-height;
+  line-height: $numeric-input-height;
+  vertical-align: middle;
+  width: $numeric-input-width;;
+  text-align: center;
+  background: transparent;
+  color: $numeric-input-color;
+  font-family: $numeric-input-font-family;
+  font-size: $numeric-input-font-size;
+  font-weight: $numeric-input-font-weight;
+  
+  &__InputWrap {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__Button {
+    border: $numeric-input-border;
+    border-radius: 100%;
+    height: $numeric-input-height;
+    width: $numeric-input-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $numeric-input-color;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+
+    & span { // Center the "-" in the div > It misses 2px
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  &__Wrapper {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    height: rem-calc(125px / 2);  
+    align-items: center;
+  
+    &-noBorder {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+      height: rem-calc(125px / 2);
+      border: none;
+      align-items: center;
+    }
+  }
+
+  &__Label {
+    display: flex;
+    flex: 1;
+    color: $numeric-input-color;
+    text-transform: capitalize;
+    &-mini {
+      font-size: $body-1-font-size-mobile; 
+      color: $numeric-input-color;
+    }
+  }
+}

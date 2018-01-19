@@ -2,7 +2,7 @@
  * Get informations of a Menu from Drupal
  */
 
-import { call, put, select, takeLatest } from 'redux-saga/effects'
+import { call, put, select, takeEvery } from 'redux-saga/effects'
 import request from 'core/utils/request'
 import { createUrl } from 'core/utils/api'
 import injectSaga from 'core/sagas/utils/injectSaga'
@@ -32,7 +32,7 @@ export function* fetchMenu({ id }) {
  * Root saga manages watcher lifecycle
  */
 export function* fetchMenuWatcher() {
-  yield takeLatest(DRUPAL_REQUEST_MENU, fetchMenu)
+  yield takeEvery(DRUPAL_REQUEST_MENU, fetchMenu)
 }
 
 export const injectDrupalFetchMenuWatcher = () => injectSaga({ key: 'injectDrupalFetchMenuWatcher', saga: fetchMenuWatcher })

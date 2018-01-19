@@ -38,6 +38,7 @@ import {
  */
 import {
   getInitValues,
+  getHotels,
 } from '../selectors'
 
 /**
@@ -47,7 +48,6 @@ import {
   jsonToRoomSearch,
   jsonToHotels,
   jsonToLocation,
-  getHotels,
 } from '../types'
 
 /**
@@ -110,7 +110,7 @@ export function* getHotelsAvailabilities(action) {
       numberOfChildren: 0,
     },
   })
-  // console.log('HOTELS', hotels)
+  console.log('HOTELS', hotels)
   yield put(requestAvailabilitiesSuccess(jsonToHotels(hotels)))
 
   delete query.rooms
@@ -299,6 +299,7 @@ export function* requestGeoloc(location) {
     method: 'GET',
   }
 
+  const hotels = yield select(getHotels)
   // Default location because '+' is recognized by google as address value
   let escapedLocation = '+'
 
@@ -308,7 +309,6 @@ export function* requestGeoloc(location) {
     escapedLocation = escapedLocation.replace(/\s\(Mainland\)/gi, '').replace(/\s\(大陆\)/gi, '')
   } else {
     // If a resort id is defined, define the location center as this hotel
-    const hotels = yield select(getHotels())
     escapedLocation = ((hotels.get(0) || hotels[0]) ? `${hotels.get(0).address}+${hotels.get(0).city || ''}` : escapedLocation)
   }
   // Escape location replacing space by '+'

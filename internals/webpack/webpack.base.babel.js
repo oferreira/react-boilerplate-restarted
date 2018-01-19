@@ -165,7 +165,7 @@ module.exports = (options) => ({
     new webpack.NamedModulesPlugin(),
   ]),
   resolve: {
-    modules: [path.resolve(process.cwd(), 'src/html'), path.resolve(process.cwd(), 'src'), path.resolve(process.cwd(), 'node_modules'), path.resolve(process.cwd(), `sites/${SITE_NAME}`)],
+    modules: [path.resolve(process.cwd(), 'src/common'), path.resolve(process.cwd(), 'src'), path.resolve(process.cwd(), 'node_modules'), path.resolve(process.cwd(), `sites/${SITE_NAME}`)],
     extensions: [
       '.js',
       '.jsx',
