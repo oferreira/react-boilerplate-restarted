@@ -258,7 +258,6 @@
     "minimist": "1.2.0",
     "moment": "^2.18.1",
     "prop-types": "15.6.0",
-    "query-string": "^5.0.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-google-tag-manager": "^2.2.1",

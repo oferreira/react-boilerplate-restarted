@@ -38,7 +38,10 @@ function RadioButton({
 }
 
 RadioButton.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
   name: PropTypes.string,
   half: PropTypes.bool,
   lightOnDark: PropTypes.bool,

@@ -4,9 +4,14 @@
   background: $primary-color;
   padding: $form-padding;
   margin: $form-margin;
+  color: $white;
 
-  &__Title {
-    color: $white;
+  &--White {
+    background: $white;
+    color: $primary-color;
+  }
+
+  &__Title {    
     text-align: center;
     font-size: $heading-primary-3-font-size;
     font-family: $heading-primary-3-font-family;
