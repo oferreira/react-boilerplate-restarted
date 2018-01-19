@@ -5,6 +5,9 @@ import { compose } from 'redux'
 // import { withSearchHotel, withAvailabiltiesHotel } from 'features/Hotels'
 import { StayConfigurator } from 'features/Hotels'
 // import withPayment from 'features/Payment'
+import AppBar from 'components/AppBar'
+
+import QueryBuilder from 'core/utils/urlQueryBuilder'
 
 require('./styles.scss')
 
@@ -12,7 +15,7 @@ require('./styles.scss')
 export class SearchPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     onSubmit: PropTypes.func,
-    unfilteredHotel: PropTypes.array,
+    location: PropTypes.object.isRequired,
   }
 
   componentWillMount() {
@@ -20,14 +23,13 @@ export class SearchPage extends React.PureComponent { // eslint-disable-line rea
   }
 
   render() {
+    const { location } = this.props
     return (
       <div>
-        <h1>
-          WBE-SearchPage
-        </h1>
-        <div>
-          <StayConfigurator />
-        </div>
+        <AppBar />
+        <StayConfigurator
+          initialValues={new QueryBuilder(location.search).getQuery()}
+        />
       </div>
     )
   }

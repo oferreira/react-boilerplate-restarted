@@ -10,10 +10,16 @@ function WrapperForm({
   submitButton,
   cancelButton,
   children,
+  white,
   className,
 }) {
   return (
-    <div className={classNames('WrapperForm', { [className]: className })}>
+    <div
+      className={classNames('WrapperForm', {
+        'WrapperForm--White': white,
+        [className]: className,
+      })}
+    >
       {title && (
         <div className="WrapperForm__Title">{title}</div>
       )}
@@ -33,6 +39,7 @@ WrapperForm.propTypes = {
   submitButton: PropTypes.node.isRequired,
   cancelButton: PropTypes.node,
   children: PropTypes.node,
+  white: PropTypes.bool,
 }
 
 WrapperForm.defaultProps = {
