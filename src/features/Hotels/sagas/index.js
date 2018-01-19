@@ -14,7 +14,6 @@ import { getResortsDetails } from './resortsDetails'
 
 export default function* () {
   yield all([
-    takeLatest(REQUEST_GEOLOC_SEARCH, requestGeoloc),
     takeLatest(REQUEST_HOTEL_AVAILABILITIES, getHotelsAvailabilities),
   ])
 }
