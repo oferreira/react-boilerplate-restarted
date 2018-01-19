@@ -1,9 +1,9 @@
-import withSearchHotel from './containers/searchHotel'
+import autocomplete from './containers/autocomplete'
 import withAvailabiltiesHotel from './containers/availabilitiesHotel'
 import StayConfigurator from './containers/StayConfigurator'
 
 export {
-  withSearchHotel,
+  autocomplete,
   withAvailabiltiesHotel,
   StayConfigurator,
 }

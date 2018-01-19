@@ -25,7 +25,7 @@ const initialState = fromJS({
   alternativeDates: {},
 })
 
-function searchHotelReducer(state = initialState, action) {
+function availabilitiesHotelReducer(state = initialState, action) {
   const { type, payload, error } = action
 
   switch (type) {
@@ -50,4 +50,4 @@ function searchHotelReducer(state = initialState, action) {
   }
 }
 
-export default searchHotelReducer
+export default availabilitiesHotelReducer

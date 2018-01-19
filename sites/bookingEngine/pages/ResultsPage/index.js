@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compose } from 'redux'
 
-import { withSearchHotel, withAvailabiltiesHotel } from 'features/Hotels'
+import { autocomplete, withAvailabiltiesHotel } from 'features/Hotels'
 
 require('./styles.scss')
 
@@ -40,6 +40,6 @@ export class ResultsPages extends React.PureComponent { // eslint-disable-line r
   }
 }
 
-const enhancers = compose(withSearchHotel, withAvailabiltiesHotel)
+const enhancers = compose(autocomplete, withAvailabiltiesHotel)
 
 export default enhancers(ResultsPages)

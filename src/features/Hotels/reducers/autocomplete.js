@@ -23,7 +23,7 @@ const initialState = fromJS({
   error: null,
 })
 
-function searchHotelReducer(state = initialState, action) {
+function autocompleteReducer(state = initialState, action) {
   const { type, payload, error } = action
 
   switch (type) {
@@ -55,4 +55,4 @@ function searchHotelReducer(state = initialState, action) {
   }
 }
 
-export default searchHotelReducer
+export default autocompleteReducer

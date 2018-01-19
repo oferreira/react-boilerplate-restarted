@@ -7,9 +7,9 @@
 import { combineReducers } from 'redux-immutable'
 
 import availabilitiesReducer from './availabilitiesHotel'
-import searchHotelReducer from './searchHotel'
+import autocompleteReducer from './autocomplete'
 
 export default combineReducers({
-  autocomplete: searchHotelReducer,
+  autocomplete: autocompleteReducer,
   availabilities: availabilitiesReducer,
 })
