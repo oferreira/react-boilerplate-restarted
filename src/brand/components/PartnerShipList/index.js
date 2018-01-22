@@ -31,7 +31,7 @@ const PartnerShipLayout = ({
 
   return (
     <div>
-      {title && <div><h1 className="partnership-title">{title}</h1></div>}
+      {title && <div className="text-center"><h1 className="partnership-title">{title}</h1></div>}
       <div
         className={classes}
       >
