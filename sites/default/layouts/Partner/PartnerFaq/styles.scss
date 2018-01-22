@@ -1,0 +1,8 @@
+@import '../../../styles/override-config';
+
+.PartnerFaq {
+  &__Title {
+    @extend .heading-primary-2;
+    text-align: center;
+  }
+}

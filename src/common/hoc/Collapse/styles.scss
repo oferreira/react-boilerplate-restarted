@@ -1,0 +1,16 @@
+.Collapse {
+  overflow: hidden;
+  max-height: 0;
+  transition: all .2s linear;
+  &--isOpen {
+    max-height: 100%;
+  }
+
+  &__Toggle {
+    background: none;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
