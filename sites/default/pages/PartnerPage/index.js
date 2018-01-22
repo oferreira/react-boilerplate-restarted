@@ -16,12 +16,4 @@ export class PartnerPage extends React.PureComponent { // eslint-disable-line re
   }
 }
 
-// OffersPage.propTypes = {}
-// OffersPage.defaultProps = {}
-//
-// const mapStateToProps = null
-// const mapDispatchToProps = null
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(OffersPage)
-
 export default PartnerPage
