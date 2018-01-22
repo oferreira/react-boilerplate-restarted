@@ -17,7 +17,7 @@ import {
 import { requestPartnerships } from 'brand/actions'
 import { injectBrandReducer } from 'brand/reducers'
 import { injectDrupalFetchPartnershipsWatcher } from 'brand/sagas'
-import PartnerShipLayout from 'brand/components/PartnerShipLayout'
+import PartnerShipList from 'brand/components/PartnerShipList'
 
 export class PartnershipsProvider extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   componentWillMount() {
@@ -27,8 +27,10 @@ export class PartnershipsProvider extends React.PureComponent { // eslint-disabl
   render() {
     return (
       <div>
-        <PartnerShipLayout
+        <PartnerShipList
           partnerships={this.props.partnerships}
+          title="Partnerships"
+          numberOfCards={3}
         />
       </div>
     )

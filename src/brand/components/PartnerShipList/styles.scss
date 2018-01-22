@@ -1,0 +1,50 @@
+@import '../../../scss/config';
+
+// Using Css Grid
+
+.card-wrapper {
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+    grid-auto-rows: auto;
+}
+
+.one-card {
+    grid-template-columns: 1fr 400px 1fr ;
+
+    .card-item-wrapper {
+        grid-column-start: 2;
+    }
+}
+
+.two-cards {
+   grid-template-columns: 1fr repeat(2, minmax(400px, 1fr)) 1fr;
+
+   .card-item-wrapper:nth-child(odd) {
+        grid-column-start: 2;
+    }
+}
+
+.three-cards {
+    grid-template-columns: 5% repeat(3, minmax(300px, 1fr)) 5%;
+
+    .card-item-wrapper:first-child {
+        grid-column-start: 2;
+    }
+
+    .card-item-wrapper:nth-child(4n) {
+        grid-column-start: 2;
+    }
+}
+
+.card-item {
+    //border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px;
+}
+
+.partnership-title {
+    text-align: center;
+    padding: 10px;
+    @extend .heading-primary-2;
+}
