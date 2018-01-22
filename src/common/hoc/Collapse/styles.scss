@@ -2,12 +2,12 @@
   overflow: hidden;
   height: auto;
   max-height: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-out;
 
   &--isOpen {
     max-height: 10vh;
     margin-top: 0.8em;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in;
   }
 
   &__Container {
