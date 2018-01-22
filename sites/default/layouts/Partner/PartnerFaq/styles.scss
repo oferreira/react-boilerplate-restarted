@@ -5,4 +5,22 @@
     @extend .heading-primary-2;
     text-align: center;
   }
+
+  &__Answer {
+    padding: 5vh;
+  }
+}
+
+.Answer {
+  display: flex;
+  color: $lighter-blue;
+  text-align: justify;
+  font-size: 1.125rem;
+  flex: 0 0 auto;
+}
+
+.Question {
+  font-weight: $font-weight-light;
+  text-align: justify;
+  font-size: 1rem;
 }

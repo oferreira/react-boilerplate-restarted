@@ -4,8 +4,8 @@ import './styles.scss'
 
 const PartnerFaq = () => (
   <div className="PartnerFaq">
-    <h1 className="PartnerFaq__Title">FAQ</h1>
-    <Answer />
+    <div><h1 className="PartnerFaq__Title">FAQ</h1></div>
+    <div className="PartnerFaq__Answer"><Answer /></div>
   </div>
 )
 

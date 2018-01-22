@@ -19,7 +19,7 @@ const Collapse = (Toggle) => (WrappedComponent) => (
       )
 
       return (
-        <div>
+        <div className="Collapse__Container">
           <button onClick={this.toggle} className="Collapse__Toggle">
             <Toggle />
           </button>
