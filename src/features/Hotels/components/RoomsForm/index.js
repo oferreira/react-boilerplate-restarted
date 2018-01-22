@@ -21,7 +21,7 @@ let RoomsForm = ({
 }) => {
   // eslint-disable-next-line
   const renderRooms = ({ fields }) => (
-    <div className="RoomsForm">
+    <div className="RoomsForm__Form">
       {fields.map((f, index) => (
         <div key={`${f.name}-${index}`} className="RoomsForm__RoomUpdate">
           <Header
@@ -32,6 +32,7 @@ let RoomsForm = ({
               <FlatButton onClick={() => fields.remove(index)} tertiary>
                 <Translation id="app.containers.SearchPage.room.remove" />
               </FlatButton>) : null}
+            className="RoomsForm__Header"
           />
           <div className="Form">
             <Field
@@ -66,7 +67,7 @@ let RoomsForm = ({
   )
 
   return (
-    <div className="RoomsForm__Wrapper">
+    <div className="RoomsForm">
       <form onSubmit={handleSubmit}>
         <FieldArray name="rooms" component={renderRooms} />
         <div className="Form">

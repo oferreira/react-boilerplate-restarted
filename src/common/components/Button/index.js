@@ -10,7 +10,7 @@ const Button = ({
   secondary,
   tertiary,
   rounded,
-  action,
+  onClick,
   small,
 }) => {
   const classes = classNames(
@@ -27,7 +27,7 @@ const Button = ({
   return (
     <button
       className={classes}
-      onClick={disabled ? null : action}
+      onClick={disabled ? null : onClick}
       disabled={disabled}
     >
       <div className="Button__Label">
@@ -45,7 +45,7 @@ Button.propTypes = {
   tertiary: PropTypes.bool,
   rounded: PropTypes.bool,
   small: PropTypes.bool,
-  action: PropTypes.func,
+  onClick: PropTypes.func,
 }
 
 Button.defaultProps = {
@@ -54,7 +54,6 @@ Button.defaultProps = {
   secondary: false,
   tertiary: false,
   rounded: false,
-  action: null,
 }
 
 export default Button

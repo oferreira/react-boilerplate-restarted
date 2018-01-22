@@ -1,9 +1,6 @@
 @import '../../../scss/_config.scss';
 
 .Input {
-  width: 100%;
-  flex: 0 0 auto;  
-
   &--half {
     width: 48.5%;
     margin-bottom: 1.5rem;
@@ -49,16 +46,20 @@
       }      
     }
 
-    &--Light {
-      border: $input-border-light;
-      background: rgba($label-light-color, $input-alpha / 2);
-      color: $label-light-color;
-    }
-
     &--Disabled {
       background: $input-disabled-background;
       color: $input-disabled-color;
       outline: none;
+    }
+
+    &--Light {
+      border: $input-border-light;
+      background: rgba($label-light-color, $input-alpha / 2);
+      color: $label-light-color;
+
+      & i {
+        color: $input-focus-color;
+      }
     }
 
     &--Error {        
@@ -66,6 +67,7 @@
 
       & i {
         color: $input-error-color;
+        margin-top: 1px; // Avoid shift with border
       }
     }
 
@@ -73,8 +75,8 @@
       border-bottom: solid $input-focus-color 2px;
 
       & i {
-        font-size: 1rem;
         color: $input-focus-color;
+        margin-top: 1px; // Avoid shift with border
       }
     }
   }

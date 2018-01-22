@@ -28,6 +28,7 @@ class Input extends React.PureComponent {
     half: false,
     disabled: false,
     lightOnDark: false,
+    input: {},
   }
 
   componentDidMount() {

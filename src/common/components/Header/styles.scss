@@ -9,7 +9,6 @@
   position: relative;
   border-bottom: solid .05rem $primary-color-light;
 
-
   &__Secondary {
     background: $white;
   }
@@ -20,6 +19,10 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+    &--NoFlex {
+      display: block;
+    }
   }
 
 }

@@ -9,9 +9,9 @@ import hotelReducer from 'features/Hotels/reducers'
 import injectReducer from 'core/reducers/utils/injectReducer'
 // import injectSaga from 'core/sagas/utils/injectSaga'
 
-import { requestSearch } from '../actions'
-import { HOTEL_STORE_NAME } from '../constants'
-import {} from '../selectors'
+import { requestSearch } from 'features/Hotels/actions'
+import { HOTEL_STORE_NAME } from 'features/Hotels/constants'
+import {} from 'features/Hotels/selectors'
 // import saga from '../sagas'
 
 export default (WrappedComponent) => {

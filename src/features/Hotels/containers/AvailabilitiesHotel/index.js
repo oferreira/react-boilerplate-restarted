@@ -11,9 +11,9 @@ import injectReducer from 'core/reducers/utils/injectReducer'
 
 import { makeSelectLocale } from 'core/language/selectors'
 
-import { availabilitiesRequest } from '../actions'
-import { HOTEL_STORE_NAME } from '../constants'
-import { getLoading, getMapLoading, getHotels } from '../selectors'
+import { availabilitiesRequest } from 'features/Hotels/actions'
+import { HOTEL_STORE_NAME } from 'features/Hotels/constants'
+import { getLoading, getMapLoading, getHotels } from 'features/Hotels/selectors'
 // import saga from '../sagas'
 
 export default (WrappedComponent) => {
