@@ -53,6 +53,12 @@
   font-weight: $body-1-font-weight;
 }
 
+.body-1--secondary{
+  @extend .body-1;
+  color:$lighter-blue;
+}
+
+
 .body-2{
   color:$body-2-color;
   font-size: $body-2-font-size-mobile;
@@ -72,6 +78,7 @@
   font-size: $link-font-size-mobile;
   font-family: $link-font-family;
   font-weight: $link-font-weight;
+  text-decoration: underline;
 }
 
 

@@ -1,37 +1,88 @@
 @import "../../styles/override-config";
 
 
-.container{
+
+// Ours brand
+///////////////////////////////////////////
+.blockBrands{
+
+  &__title{
+    @extend .heading-primary-1;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  &__brand {
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__txt{
+    margin: 20px 0 30px 0;
+    @extend .body-1--secondary;
+  }
+
+  &__Link{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 75px 0;
+    span{
+      text-decoration: underline;
+      margin-right: 5px;
+    }
+    i{
+      color:$secondary-color;
+      font-size: 1.5em;
+    }
+  }
+
+  &__subTitle{
+    @extend .heading-primary-2;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+}
+
+
+
+/* GRID
+   ========================================================================== */
+
+.WrapperPage{
   @include make-container-max-widths();
   margin: auto;
 }
 
+.blockBrands {
 
-// Ours brand
-///////////////////////////////////////////
+  &__wrapper {
+    @include make-row();
+    justify-content: center;
+  }
 
-.blockOurBrands{
-
-  &__title{}
-
-  &__brand{}
-
-  &__img{}
-
-  &__txt{}
-
-  &__link{}
+  &__brand,
+  &__Link,
+  &__title,
+  &__subTitle {
+    @include make-col-ready();
+  }
 
 }
 
-
-/* GRID DESKTOP
-   ========================================================================== */
+// Desktop
 @include media-breakpoint-up(md) {
-  .gt-offer-header__title{
-    @include make-col(6);
-  }
-  .gt-offer-header__desc{
-    @include make-col(6);
-  }
+
+    .blockBrands{
+
+      &__brand{
+        @include make-col(4);
+      }
+
+    }
 }
