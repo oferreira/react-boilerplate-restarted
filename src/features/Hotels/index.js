@@ -1,5 +1,5 @@
-import withSearchHotel from './containers/searchHotel'
-import withAvailabiltiesHotel from './containers/availabilitiesHotel'
+import withSearchHotel from './containers/SearchHotel'
+import withAvailabiltiesHotel from './containers/AvailabilitiesHotel'
 import StayConfigurator from './containers/StayConfigurator'
 
 export {

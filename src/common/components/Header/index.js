@@ -14,6 +14,7 @@ const Header = ({
   children,
   secondary,
   tertiary,
+  noFlex,
 }) => {
   const classes = classNames(
     'Header',
@@ -24,10 +25,16 @@ const Header = ({
     }
   )
 
+  const contentClasses = classNames(
+    'Header__Content',
+    {
+      'Header__Content--NoFlex': noFlex,
+    }
+  )
 
   return (
     <div className={classes}>
-      <div className="Header__Content">
+      <div className={contentClasses}>
         {children}
       </div>
     </div>
@@ -38,6 +45,7 @@ Header.propTypes = {
   burgerIsOpen: PropTypes.bool,
   secondary: PropTypes.bool,
   tertiary: PropTypes.bool,
+  noFlex: PropTypes.bool,
   children: PropTypes.node,
 }
 
@@ -45,6 +53,7 @@ Header.defaultProps = {
   secondary: false,
   tertiary: false,
   burgerIsOpen: false,
+  noFlex: false,
 }
 
 const mapStateToProps = createStructuredSelector({

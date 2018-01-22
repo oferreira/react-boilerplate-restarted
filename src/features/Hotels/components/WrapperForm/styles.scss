@@ -1,9 +1,9 @@
-@import '../../../scss/_config.scss';
+@import '../../../../scss/_config.scss';
 
 .WrapperForm {
+  display: flex;
   background: $primary-color;
   padding: $form-padding;
-  margin: $form-margin;
   color: $white;
 
   &--White {
@@ -16,5 +16,15 @@
     font-size: $heading-primary-3-font-size;
     font-family: $heading-primary-3-font-family;
     font-weight: $heading-primary-3-font-weight;
+  }
+
+  &__Form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &--Inline {
+      flex-direction: row;
+    }
   }
 }

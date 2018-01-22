@@ -12,6 +12,7 @@ function WrapperForm({
   children,
   white,
   className,
+  inline,
 }) {
   return (
     <div
@@ -23,7 +24,13 @@ function WrapperForm({
       {title && (
         <div className="WrapperForm__Title">{title}</div>
       )}
-      <form onSubmit={onSubmit}>
+      <form
+        className={classNames('WrapperForm__Form', {
+          'WrapperForm__Form--Inline': inline,
+          [className]: className,
+        })}
+        onSubmit={onSubmit}
+      >
         {children}
         {cancelButton && (cancelButton)}
         {submitButton && (submitButton)}
@@ -40,6 +47,7 @@ WrapperForm.propTypes = {
   cancelButton: PropTypes.node,
   children: PropTypes.node,
   white: PropTypes.bool,
+  inline: PropTypes.bool,
 }
 
 WrapperForm.defaultProps = {

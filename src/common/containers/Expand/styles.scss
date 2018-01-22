@@ -1,0 +1,213 @@
+@import '../../utils/scss/variables.scss';
+@import '../../utils/scss/breakpoints.scss';
+@import '../../utils/scss/global.scss';
+
+
+.Expand {
+  &__Header {
+    background-color: $ui-bg;
+    height: rem-calc(60px/2);
+    width: 100%;
+    color: $tertiary;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding-left: rem-calc(12px);
+    &-primary {
+      color: $secondary;
+    }
+    &__Title {
+      margin-left: rem-calc(12px);
+      color: #ffffff;
+    }
+    &__Button {
+      justify-content: flex-end;
+    }
+  }
+
+  &__Toggle:hover {
+    cursor: pointer;
+  }
+  &__Small {
+    overflow: hidden;
+    max-height: 0;
+    transition: all linear 1s;
+    &--isOpen {
+      max-height: 1000px;
+    }
+  }
+  &__FullPage {
+    transition: all 300ms $deceleration-curve;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    overflow-y: auto;
+
+    &--isOpen {
+      transition-timing-function: $acceleration-curve;
+      transform: translate3d(0, 0%, 0);
+      @media #{$large-up} {
+        top: inherit;
+        height: auto;
+        width: auto;
+      }
+    }
+
+    &--isClosed {
+      transition-timing-function: $deceleration-curve;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  &__Medium {
+    @extend .Expand__FullPage;
+    @extend .Expand__FullPage--isOpen;
+    @extend .Expand__FullPage--isClosed;
+    // top: -100%;
+    height: auto;
+    min-height: 30vh;
+
+    .IconButton{
+      position: absolute;
+      right: 0;
+      z-index: $zindex-overlay;
+    }
+
+    &--isOpen {
+      transform: translate3d(0, 0%, 0);
+    }
+
+    &--isClosed {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  &__DropDown {
+    padding: 0 rem-calc(12px);
+    background-color: $ui-bg-light;
+    position: absolute;
+    display: none;
+    z-index: $zindex-expand;
+    &--isOpen {
+      margin-top: rem-calc(8px);
+      display: block;
+      width: 100%;
+    }
+  }
+  &__SidePanel {
+    @extend .Expand__FullPage;
+    @extend .Expand__FullPage--isOpen;
+    @extend .Expand__FullPage--isClosed;
+    background: $lightOnPrimary;
+    z-index: $zindex-expand - 50;
+    position: absolute;
+    left: 0;
+    width: auto;
+    max-width: 30%;
+    min-width: 30%;
+    min-height: 100%;
+    box-shadow: $shadow-02;
+    transition-property: all;
+    &--isOpen {
+      transform: translate3d(0, 0%, 0);
+    }
+    &--isClosed {
+      transform: translate3d(-100%, 0, 0);
+      box-shadow: none;
+    }
+  }
+}
+
+.Medium {
+  &__Close {
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+}
+
+
+.FullPage {
+  &__Title {
+    @extend .secondary-font;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+  }
+}
+
+.Wrapper__Expand {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: $zindex-expand;
+  pointer-events: none;
+  @media #{$large-up} {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: inherit;
+  }
+  &--isOpen {
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: all;
+    z-index: $zindex-modal;
+  }
+}
+
+.Modal {
+  position: relative;
+  z-index: $zindex-modal +1;
+  background: $lightOnPrimary;
+
+  &__Wrapper {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &__Header {
+    height: $header-size;
+    background-color: $primary;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $alternate;
+  }
+
+  &__HeaderTitle {
+    margin: 0;
+
+    font-weight: $font-XS;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: $header-size;
+  }
+
+  &__HeaderBtnClose {
+    @extend .tertiary-font;
+    position: absolute;
+    right: $base-margin;
+    top: $header-size / 3;
+    cursor: pointer;
+  }
+}
+
+@media #{$large-up} {
+  .Modal {
+    &__Wrapper {
+      max-width: 950px;
+      max-height: 85vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}
