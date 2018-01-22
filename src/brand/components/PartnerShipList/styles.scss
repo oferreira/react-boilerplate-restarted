@@ -1,11 +1,10 @@
 @import '../../../scss/config';
 
 // Using Css Grid
-
 .card-wrapper {
     display: grid;
     grid-gap: 30px;
-    padding: 30px;
+    padding: 5vh;
     grid-auto-rows: auto;
 }
 
@@ -38,13 +37,36 @@
 }
 
 .card-item {
-    //border: 1px solid rgba(0, 0, 0, 0.8);
     text-align: center;
     padding: 10px;
 }
 
 .partnership-title {
-    text-align: center;
-    padding: 10px;
     @extend .heading-primary-2;
+}
+
+// Not mobile first
+@media only screen and (max-width: 530px) {
+    .card-wrapper {
+        display: grid;
+        grid-gap: 0;
+        grid-auto-rows: auto;
+        grid-row-gap: 5vh;
+    }
+
+    .one-card, .two-cards, .three-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .two-cards {
+        .card-item-wrapper:nth-child(odd) {
+            grid-column-start: 1;
+        }
+     }
+
+     .three-cards {
+        .card-item-wrapper:first-child, .card-item-wrapper:nth-child(4n) {
+            grid-column-start: 1;
+        }
+     }
 }
