@@ -49,15 +49,18 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 
         </div>
 
-
         <BurgerMenu />
+
         <div className="WrapperPage">
 
           <div className="blockCms blockBrands">
 
             <div className="blockBrands__wrapper">
 
-              <h1 className="blockBrands__title">Our brands</h1>
+              <h1 className="blockBrands__title">
+                Our brands
+              </h1>
+              <p className="blockBrands__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> In massa augue, finibus semper sagittis malesuada</p>
 
               <a href="http://www.google.com" title="Brand - Royal Tulip " className="blockBrands__brand">
                 <img className="blockBrands__img" src="../../assets/brands/royal-tulip.jpg" alt="Logo - Royal Tulip - luxury hotel" />
@@ -83,12 +86,28 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                 </Button>
               </a>
 
+              <div className="resumeArticleTxtImg-1">
+                <div className="resumeArticleTxtImg-1__txt">
+                  <h3 className="resumeArticleTxtImg-1__title">
+                    Lorem ipsum sit amet dolorem quit
+                    this biret litus radiom.
+                  </h3>
+                  <p className="resumeArticleTxtImg-1__desc">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vita. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+                <div className="resumeArticleTxtImg-1__img">
+                  <img src="https://dummyimage.com/470x350/adadad/525252" alt="" />
+                </div>
+              </div>
+
               <a href="http://www.google.com" title="View all Louvre hotel Group brands" className="blockBrands__Link">
                 <span>View all Louvre hotel Group brands</span>
                 <Icon name="arrow-bot" />
               </a>
 
               <h2 className="blockBrands__subTitle">Our hotel partner</h2>
+              <p className="blockBrands__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> In massa augue, finibus semper sagittis malesuada</p>
 
               <a href="http://www.google.com" title="Brand - Magnuson " className="blockBrands__brand">
                 <img className="blockBrands__img" src="../../assets/brands/magnuson.jpg" alt="Logo - Magnuson worldwide" />
@@ -101,7 +120,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             </div>
 
           </div>
-
 
         </div>
         <Footer menuId="footer" />

@@ -1,7 +1,5 @@
 @import "../../styles/override-config";
 
-
-
 // Ours brand
 ///////////////////////////////////////////
 .blockBrands{
@@ -9,7 +7,13 @@
   &__title{
     @extend .heading-primary-1;
     text-align: center;
-    margin: 50px 0;
+    margin: 50px 0 0px 0;
+  }
+
+  &__intro{
+    @extend .heading-secondary-3;
+    text-align: center;
+    margin: 0 0 35px 0;
   }
 
   &__brand {
@@ -17,6 +21,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin: 0 0 50px 0;
   }
 
   &__txt{
@@ -30,7 +35,7 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    margin: 75px 0;
+    margin: 50px 0;
     span{
       text-decoration: underline;
       margin-right: 5px;
@@ -44,18 +49,17 @@
   &__subTitle{
     @extend .heading-primary-2;
     text-align: center;
-    margin: 50px 0;
+    margin: 35px 0 0 0;
   }
 
 }
-
 
 
 /* GRID
    ========================================================================== */
 
 .WrapperPage{
-  @include make-container-max-widths();
+  @include make-container();
   margin: auto;
 }
 
@@ -69,7 +73,8 @@
   &__brand,
   &__Link,
   &__title,
-  &__subTitle {
+  &__subTitle,
+  &__intro{
     @include make-col-ready();
   }
 
@@ -85,4 +90,61 @@
       }
 
     }
+}
+
+
+
+
+
+/* resume article txt img
+========================================================================== */
+.resumeArticleTxtImg-1{
+  margin: 50px 0;
+
+  &__txt,
+  &__img{
+    @include make-col-ready();
+  }
+
+  &__title{
+    @extend .heading-secondary-3;
+  }
+
+  &__desc{
+    @extend .body-1--secondary;
+  }
+
+}
+
+
+/* GRID
+   ========================================================================== */
+
+
+/* Mobile
+----------------------------*/
+
+.resumeArticleTxtImg-1 {
+  @include make-row();
+  margin: 50px 0;
+  align-items: center;
+  &__txt,
+  &__img{
+    @include make-col-ready();
+  }
+}
+
+/* Desktop
+----------------------------*/
+@include media-breakpoint-up(md) {
+  .resumeArticleTxtImg-1 {
+    &__txt,
+    &__img{
+      @include make-col(6);
+    }
+
+    &__txt{
+      padding: 0 12%;
+    }
+  }
 }
