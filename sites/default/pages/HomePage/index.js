@@ -2,15 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 
-import Node from 'drupal/containers/Node'
+// import Node from 'drupal/containers/Node'
 import Footer from 'common/containers/Footer'
 
 import BurgerMenu from 'common/components/BurgerMenu'
 import BurgerToggle from 'common/components/BurgerMenu/BurgerToggle'
 import Header from 'common/components/Header'
+import Node from 'drupal/containers/Node'
 import SelectLanguages from 'core/language/containers/SelectLanguages'
 import Translation from 'core/language/components/Translation'
-
+import Partnerships from 'brand/containers/Partnerships'
 import H1 from 'common/components/H1'
 import Button from 'common/components/Button'
 import './style.scss'
@@ -24,6 +25,10 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <BurgerToggle />
         </Header>
         <BurgerMenu />
+        <Partnerships />
+        {/* <Node id={22} /> */}
+        <SelectLanguages />
+        <Translation id="app.CityTax.taxesAndChargeIncluded" />
         <div className="container">
           <Node id={22} />
           <SelectLanguages />
