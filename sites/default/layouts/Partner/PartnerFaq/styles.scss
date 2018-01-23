@@ -19,8 +19,49 @@
   flex: 0 0 auto;
 }
 
+.Circle {
+  border-radius: 18px;
+  width: 18px;
+  height: 18px;
+
+  &__Span {
+    position: relative;
+    color: $white;
+  }
+}
+
 .Question {
   font-weight: $font-weight-light;
   text-align: justify;
   font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+
+  &__Circle {
+    &__Container {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    &__Expanded {
+      @extend .Circle;
+      background-color: $blue;
+      span {
+        @extend .Circle__Span;
+        font-size: 1.5rem;
+        top: -7px;
+        left: 4px;
+      }
+    }
+    &__Collapsed {
+      @extend .Circle;
+      background-color: $yellow;
+      span {
+        @extend .Circle__Span;
+        font-size: 1.2rem;
+        top: -4px;
+        left: 3px;
+      }
+    }
+  }
 }

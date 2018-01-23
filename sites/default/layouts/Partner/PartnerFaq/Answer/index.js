@@ -11,4 +11,4 @@ const Answer = () => (
   </div>
 )
 
-export default Collapse(() => (<Question />))(Answer)
+export default Collapse(Question)(Answer)
