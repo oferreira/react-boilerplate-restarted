@@ -16,6 +16,7 @@ import {
 const initialState = fromJS({
   nodes: {},
   menus: {},
+  faq: {},
 })
 
 export function drupalReducer(state = initialState, action) {
