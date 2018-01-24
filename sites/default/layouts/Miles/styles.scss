@@ -40,14 +40,22 @@
   &__Grid {
     @include make-col-ready(); 
     @include make-row();
+    margin-top: 20px;
+    &__Border {
+    text-align: center;
+
+    &__One {
+      @include make-col(1);
+    }
+
+    &__Three {
+      @include make-col(3);
+    } 
+  }
   }
   &__Image {
     text-align: center;
-    @include make-col(2); 
-  }
-  &__Border {
-    text-align: center;
-    @include make-col(1); 
+    @include make-col(2);
   }
 }
 /* DESKTOP

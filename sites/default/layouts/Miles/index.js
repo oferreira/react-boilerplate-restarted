@@ -22,7 +22,6 @@ const logos = [
 
 const logoContent = logos.map((val) => {
   const logoFile = `${val.logo}.png`
-
   return (
     <div className="PartnerLogo__Image">
       <Img
@@ -51,8 +50,28 @@ const Miles = () => (
         <Text length={400} />
       </div>
     </div>
-    <div className="PartnerLink"><a href="/"> Missing Frequent flyers miles</a></div>
-    <div className="PartnerLogo__Grid">{logoContent}</div>
+
+    <div className="PartnerLink"><a href="/"> Missing Frequent flyers miles </a></div>
+
+    <div className="PartnerLogo__Grid">
+      <div className="PartnerLogo__Grid">
+        <div className="PartnerLogo__Grid__Border__One"></div>
+        {logoContent.filter((logo, ind) => ind <= 4)}
+        <div className="PartnerLogo__Grid__Border__One"></div>
+      </div>
+
+      <div className="PartnerLogo__Grid">
+        <div className="PartnerLogo__Grid__Border__One"></div>
+        {logoContent.filter((logo, ind) => ind > 4 && ind <= 9)}
+        <div className="PartnerLogo__Grid__Border__One"></div>
+      </div>
+
+      <div className="PartnerLogo__Grid">
+        <div className="PartnerLogo__Grid__Border__Three"></div>
+        {logoContent.filter((logo, ind) => ind > 9 && ind <= 12)}
+        <div className="PartnerLogo__Grid__Border__Three"></div>
+      </div>
+    </div>
   </div>
 )
 
