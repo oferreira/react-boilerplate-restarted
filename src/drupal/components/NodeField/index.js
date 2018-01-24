@@ -8,6 +8,8 @@ const NodeField = ({
 }) => {
   const classes = classNames(`NodeField ${name}`)
 
+  if (name === 'meta_tags') return null
+
   if (typeof value.alt !== 'undefined') {
     return (
       <div className={classes}>
@@ -19,6 +21,7 @@ const NodeField = ({
       </div>
     )
   }
+
   return <div className={classes} dangerouslySetInnerHTML={{ __html: value }}></div>
 }
 
