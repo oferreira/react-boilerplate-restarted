@@ -1,0 +1,29 @@
+.Collapse {
+  overflow: hidden;
+  height: auto;
+  max-height: 0;
+  transition: all 0.2s ease-out;
+
+  &--isOpen {
+    max-height: 10vh;
+    margin-top: 0.8em;
+    transition: all 0.2s ease-in;
+  }
+
+  &__Container {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 0.8em;
+  }
+
+  &__Toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
