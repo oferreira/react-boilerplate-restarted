@@ -121,13 +121,13 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 
           </div>
 
-          {/*Bloc history*/}
+          {/* Bloc history */}
           <div className="blockCms blockTimeline">
             <div className="blockTimeline__img">
               <img src="https://dummyimage.com/571x357/adadad/525252" alt="" />
             </div>
             <div className="blockTimeline__txt">
-              <h2 className="blockTimeline__title">Golden Tulip<br/>through the ages</h2>
+              <h2 className="blockTimeline__title">Golden Tulip<br />through the ages</h2>
               <p className="blockTimeline__intro">Golden Tulip, a prestigious heritage with an upscale positioning from the begining</p>
               <ul className="blockTimeline__lists">
                 <li className="blockTimeline__list">
