@@ -1,0 +1,54 @@
+@import "../../../scss/config";
+
+
+/* GRID
+   ========================================================================== */
+.container{
+  background: grey;
+  @include make-container-max-widths();
+
+  .row {
+    height:450px;
+    text-align: center;
+    @include make-row();
+    @extend .justify-content-center;
+    @extend .align-items-center;
+  }
+}
+
+/* MEDIA QUERIES
+   ========================================================================== */
+//@include media-breakpoint-up(xs) { ... }
+//@include media-breakpoint-up(sm) { ... }
+//@include media-breakpoint-up(md) { ... }
+//@include media-breakpoint-up(lg) { ... }
+//@include media-breakpoint-up(xl) { ... }
+
+
+/* GRID MOBILE
+   ========================================================================== */
+@include media-breakpoint-up(xs) {
+  .test1{
+    @include make-col(12);
+  }
+  .test2{
+    @include make-col(12);
+  }
+}
+
+/* GRID DESKTOP
+   ========================================================================== */
+@include media-breakpoint-up(md) {
+  .test1{
+    @include make-col(6);
+  }
+  .test2{
+    @include make-col(6);
+  }
+}
+
+
+
+.Button {
+  background-color: $primary-color;
+}
