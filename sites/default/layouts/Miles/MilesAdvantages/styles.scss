@@ -1,0 +1,31 @@
+@import "../../../styles/override-config";
+
+.PartnerLogo {
+  &__Grid {
+    @include make-col-ready(); 
+    @include make-row();
+    margin-top: 20px;
+    &__Border {
+    text-align: center;
+
+    &__One {
+      @include make-col(1);
+    }
+
+    &__Three {
+      @include make-col(3);
+    } 
+  }
+  }
+  &__Image {
+    text-align: center;
+    @include make-col(2);
+  }
+}
+/* DESKTOP
+   ========================================================================== */
+@include media-breakpoint-up(md) {
+  .PartnerHeader__Name {
+    transform: translateY(50%);
+  }
+}
