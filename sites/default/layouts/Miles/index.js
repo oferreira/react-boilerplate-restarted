@@ -23,7 +23,10 @@ const logos = [
 const logoContent = logos.map((val) => {
   const logoFile = `${val.logo}.png`
   return (
-    <div className="PartnerLogo__Image">
+    <div
+      key={val.logo}
+      className="PartnerLogo__Image"
+    >
       <Img
         height={50}
         width={150}
