@@ -10,6 +10,7 @@ import injectReducer from 'core/reducers/utils/injectReducer'
 import {
   DRUPAL_STATE_NAME,
   DRUPAL_REQUEST_NODE_SUCCESS,
+  DRUPAL_REQUEST_NODES_SUCCESS,
   DRUPAL_REQUEST_MENU_SUCCESS,
 } from './constants'
 
@@ -24,6 +25,8 @@ export function drupalReducer(state = initialState, action) {
       return state.setIn(['nodes', action.id], action.payload)
     case DRUPAL_REQUEST_MENU_SUCCESS:
       return state.setIn(['menus', action.id], action.payload)
+    case DRUPAL_REQUEST_NODES_SUCCESS:
+      return state.setIn(['nodes', action.id], action.payload)
     default:
       return state
   }
