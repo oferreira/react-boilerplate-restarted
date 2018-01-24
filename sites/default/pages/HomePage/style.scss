@@ -1,7 +1,8 @@
 @import "../../styles/override-config";
 
-// Ours brand
-///////////////////////////////////////////
+/* Ours brand
+   ********************************************/
+
 .blockBrands{
 
   &__title{
@@ -21,7 +22,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 5vh 0;
   }
 
   &__txt{
@@ -55,7 +56,7 @@
 }
 
 
-/* GRID
+/* GRID (Ours brand)
    ========================================================================== */
 
 .WrapperPage{
@@ -86,9 +87,8 @@
     .blockBrands{
 
       &__brand{
-        @include make-col(4);
+        @include make-col(3);
       }
-
     }
 }
 
@@ -96,14 +96,18 @@
 
 
 
-/* resume article txt img
+
+
+
+
+
+/* Resume block article txt img
 ========================================================================== */
 .resumeArticleTxtImg-1{
-  margin: 50px 0;
-
-  &__txt,
-  &__img{
-    @include make-col-ready();
+  margin-top: 50px;
+  margin-bottom: 50px;
+  &__txt{
+    margin-bottom: 15px;
   }
 
   &__title{
@@ -117,16 +121,13 @@
 }
 
 
-/* GRID
+/* GRID (Resume block article txt img)
    ========================================================================== */
 
-
-/* Mobile
-----------------------------*/
-
 .resumeArticleTxtImg-1 {
-  @include make-row();
-  margin: 50px 0;
+  @include make-row;
+  margin-left: 0;
+  margin-right: 0;
   align-items: center;
   &__txt,
   &__img{
@@ -134,8 +135,6 @@
   }
 }
 
-/* Desktop
-----------------------------*/
 @include media-breakpoint-up(md) {
   .resumeArticleTxtImg-1 {
     &__txt,
@@ -148,3 +147,90 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+/* Block Time line
+========================================================================== */
+.blockTimeline{
+  @include make-row;
+  &__img,
+  &__txt{
+    @include make-col-ready();
+  }
+
+  &__title{
+    @extend .heading-primary-2;
+    margin: 10px 0;
+  }
+
+  &__intro{
+    @extend .body-1--secondary;
+    margin: 10px 0;
+  }
+
+  &__lists{
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list{
+    margin-bottom: 20px;
+  }
+
+  &__listTitle{
+    font-size: 3rem;
+    color:$secondary-color;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-light;
+  }
+
+  &__listDesc{
+    @extend .body-1--secondary;
+  }
+
+}
+
+
+// DESKTOP
+
+@include media-breakpoint-up(md) {
+
+  .blockTimeline {
+    margin-top: 100px;
+    margin-bottom: 35px;
+    &__title{
+      margin-top: -70px;
+      margin-left: -100px;
+    }
+  }
+
+}
+
+
+
+/* GRID Block Time line
+========================================================================== */
+
+@include media-breakpoint-up(md) {
+  .blockTimeline {
+
+    &__img {
+      text-align: right;
+      @include make-col(5);
+      @include make-col-offset(2);
+    }
+
+    &__txt {
+      @include make-col(4);
+    }
+
+  }
+}
+
+
