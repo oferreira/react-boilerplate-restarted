@@ -117,6 +117,13 @@ $heading-secondary-3-font-size-mobile:  1rem !default;
 $heading-secondary-3-font-family:       $font-family-primary !default;
 $heading-secondary-3-font-weight:       $font-weight-regular !default;
 
+//Heading secondary 4
+$heading-secondary-4-color:             $primary-color !default;
+$heading-secondary-4-font-size:         1.250rem !default;
+$heading-secondary-4-font-size-mobile:  1rem !default;
+$heading-secondary-4-font-family:       $font-family-primary !default;
+$heading-secondary-4-font-weight:       $font-weight-normal !default;
+
 //body 1
 $body-1-color:                          $primary-color !default;
 $body-1-font-size:                      1.125rem !default;
@@ -176,6 +183,7 @@ $container-max-widths: (
 /* Z-index
    ========================================================================== */
 
+$zindex-title:                980 !default;
 $zindex-dropdown-backdrop:    990 !default;
 $zindex-navbar:               1000 !default;
 $zindex-dropdown:             1000 !default;
@@ -185,6 +193,7 @@ $zindex-modal-backdrop:       1040 !default;
 $zindex-modal:                1050 !default;
 $zindex-popover:              1060 !default;
 $zindex-tooltip:              1070 !default;
+
 
 
 /* Button

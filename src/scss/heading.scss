@@ -44,6 +44,13 @@
   font-weight: $heading-secondary-3-font-weight;
 }
 
+.heading-secondary-4{
+  color:$heading-secondary-4-color;
+  font-size: $heading-secondary-4-font-size-mobile;
+  font-family: $heading-secondary-4-font-family;
+  font-weight: $heading-secondary-4-font-weight;
+}
+
 //Body text
 
 .body-1{
@@ -109,6 +116,10 @@
 
   .heading-secondary-3{
     font-size: $heading-secondary-3-font-size;
+  }
+
+  .heading-secondary-4{
+    font-size: $heading-secondary-4-font-size;
   }
 
   .body-1{

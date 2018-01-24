@@ -61,7 +61,8 @@
 
 .WrapperPage{
   @include make-container();
-  margin: auto;
+  max-width: 1280px;
+  margin: 0 auto 50px auto ;
 }
 
 .blockBrands {
@@ -232,5 +233,189 @@
 
   }
 }
+
+
+/* Block Overview Header
+========================================================================== */
+
+.blockOverviewHeader{
+  @include make-row;
+  text-align: center;
+
+
+  &__title{
+    @include make-col-ready();
+    @extend .heading-primary-2;
+    margin-bottom: 20px;
+  }
+
+  &__desc{
+    @include make-col-ready();
+    @extend .body-1--secondary;
+    margin-bottom: 20px;
+  }
+}
+
+/* Block About Brand Header
+========================================================================== */
+
+.AboutBrandHeader{
+  @include make-col-ready();
+  text-align: center;
+  margin: 50px 0;
+
+  &__title{
+    @extend .heading-primary-1;
+  }
+}
+
+
+/* Block About Brand Content
+========================================================================== */
+
+.AboutBrandContent{
+
+
+
+  &__title{
+    @extend .heading-primary-2;
+  }
+
+  &__desc{
+    @extend .body-1--secondary;
+    margin: 10px 0;
+  }
+
+  &__blocks{
+
+  }
+
+  &__block{
+
+    &__title{
+      @extend .heading-secondary-4;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    &__desc{
+      @extend .body-1;
+      margin: 10px 0;
+    }
+
+    &__link{
+      margin: 10px 0;
+      @extend .link;
+      text-transform: uppercase;
+    }
+
+  }
+
+}
+
+
+// GRID Block About Brand Content
+
+.AboutBrandContent{
+
+  &__header{
+    @include make-col-ready();
+    margin-bottom: 30px;
+  }
+  &__title{
+
+  }
+
+  &__blocks{
+    @include make-row;
+  }
+
+  &__block{
+    @include make-col-ready();
+    margin: 15px 0;
+  }
+
+}
+
+
+
+@include media-breakpoint-up(md) {
+
+  .AboutBrandContent{
+    position: relative;
+
+    &__header{
+      margin-bottom: 30px;
+      position: absolute;
+      z-index: $zindex-title;
+      top:-20px;
+    }
+
+    &__desc{
+
+    }
+
+    &__title{
+
+    }
+
+    &__blocks{
+
+    }
+    &__block{margin: 0;}
+
+    &__block--1{
+      margin-top: 160px;
+      @include make-col(3);
+      padding-right: 0;
+
+    }
+    &__block--2{
+      @include make-col(8);
+      @include make-col-offset(1);
+      padding-left: 0;
+    }
+    &__block--3{
+      @include make-col(6);
+      margin-top: 100px;
+    }
+    &__block--4{
+      @include make-col(6);
+    }
+  }
+
+  //RTL
+  .rtl{
+    .AboutBrandContent {
+      &__block--1{
+        @include make-col-offset(1);
+      }
+      &__block--2{
+        @include make-col-offset(0);
+        padding-left: ($grid-gutter-width / 2);
+        padding-right: 0;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
