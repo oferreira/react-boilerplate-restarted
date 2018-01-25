@@ -19,4 +19,6 @@ import './scss/_override-config.scss'
 
 setup(routes)
 
-if (module.hot) { module.hot.accept() }
+if (module.hot) {
+  module.hot.accept()
+}

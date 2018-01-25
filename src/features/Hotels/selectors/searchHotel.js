@@ -32,19 +32,3 @@ export const selectInputValue = createSelector(
   selectAutocompleteDomain,
   (state) => state.getIn(['results', 'rawtext'])
 )
-
-/**
- *  Get the sum of fields value from fieldArray
- * @param {FieldArray} fields
- * @param {string} singular
- * @param {string} plural
- */
-export const getSumFields = (fields) => {
-  let total = 0
-  fields.map((f) => (
-    total += parseInt(Object.values(f).reduce((a, b) => (
-      (Number.isNaN(a) ? 0 : parseInt(a, 10)) + (Number.isNaN(b) ? 0 : parseInt(b, 10)) // Sum of values
-    )), 10) // Parse the value and add it to the total
-  ))
-  return total
-}

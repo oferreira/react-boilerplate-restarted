@@ -12,7 +12,7 @@ import WrapperForm from 'features/Hotels/components/WrapperForm'
 import RatesForm from 'features/Hotels/components/RatesForm'
 import RoomsForm from 'features/Hotels/components/RoomsForm'
 
-import { getSumFields } from 'features/Hotels/selectors'
+import { getSum } from 'core/utils/functions'
 
 
 class StayConfigurator extends React.PureComponent {
@@ -86,7 +86,7 @@ class StayConfigurator extends React.PureComponent {
                 <Input
                   type="text"
                   readOnly
-                  value={`${getSumFields(fields.getAll().toJS())}`}
+                  value={`${getSum(fields.getAll().toJS())}`}
                   // value={`${fields.length} ${fields.length > 1 ? 'ROOOOMS' : 'ROOOOOM'} - ${getSumFields(fields.getAll().toJS(), intl.formatMessage(messages.person), intl.formatMessage(messages.people))}`}
                   name="room"
                   placeholder="1 ROOOOOM - 1 ADUUUULT"
