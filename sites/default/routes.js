@@ -3,6 +3,9 @@ import HomePage from 'pages/HomePage/Loadable'
 import OffersPage from 'pages/OffersPage/Loadable'
 import PartnerPage from 'pages/PartnerPage/Loadable'
 
+import BrandsPage from 'pages/BrandsPage/Loadable'
+import BrandPage from 'pages/BrandPage/Loadable'
+
 const routes = [
   {
     component: AppRoot,
@@ -22,6 +25,16 @@ const routes = [
         name: 'Our Partner',
         path: '/partner',
         component: PartnerPage,
+      },
+      {
+        name: 'Brands',
+        path: '/brands',
+        component: BrandsPage,
+      },
+      {
+        name: 'Brand',
+        path: '/brand',
+        component: BrandPage,
       },
     ],
   },
