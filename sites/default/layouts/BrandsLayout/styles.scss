@@ -66,6 +66,7 @@
   &__wrapper {
     @include make-row();
     justify-content: center;
+    align-items: baseline;
   }
 
   &__brand,
@@ -236,8 +237,11 @@
 
 .blockOverviewHeader{
   @include make-row;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-
 
   &__title{
     @include make-col-ready();

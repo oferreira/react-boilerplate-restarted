@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 
-import BurgerMenu from 'common/components/BurgerMenu'
 import Button from 'common/components/Button'
 import Icon from 'common/components/Icon'
 
@@ -52,11 +51,11 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <div className="resumeArticleTxtImg-1">
               <div className="resumeArticleTxtImg-1__txt">
                 <h3 className="resumeArticleTxtImg-1__title">
-             Lorem ipsum sit amet dolorem quit
-             this biret litus radiom.
+                   Lorem ipsum sit amet dolorem quit
+                   this biret litus radiom.
                 </h3>
                 <p className="resumeArticleTxtImg-1__desc">
-             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vita. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vita. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
               </div>
               <div className="resumeArticleTxtImg-1__img">
@@ -84,71 +83,62 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 
         </div>
 
-        <BurgerMenu />
-
-        <div className="WrapperPage">
-
-
-          {/* Bloc history */}
-          <div className="blockCms blockTimeline">
-            <div className="blockTimeline__img">
-              <img src="https://dummyimage.com/571x357/adadad/525252" alt="" />
-            </div>
-            <div className="blockTimeline__txt">
-              <h2 className="blockTimeline__title">Golden Tulip<br />through the ages</h2>
-              <p className="blockTimeline__intro">Golden Tulip, a prestigious heritage with an upscale positioning from
-              the
-              begining
-              </p>
-              <ul className="blockTimeline__lists">
-                <li className="blockTimeline__list">
-                  <h4 className="blockTimeline__listTitle">2015</h4>
-                  <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
-                </li>
-                <li className="blockTimeline__list">
-                  <h4 className="blockTimeline__listTitle">2015</h4>
-                  <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
-                </li>
-                <li className="blockTimeline__list">
-                  <h4 className="blockTimeline__listTitle">2015</h4>
-                  <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
-                </li>
-                <li className="blockTimeline__list">
-                  <h4 className="blockTimeline__listTitle">2015</h4>
-                  <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
-                </li>
-                <li className="blockTimeline__list">
-                  <h4 className="blockTimeline__listTitle">2015</h4>
-                  <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
-                </li>
-                <li className="blockTimeline__list">
-                  <h4 className="blockTimeline__listTitle">2015</h4>
-                  <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
-                </li>
-                <li className="blockTimeline__list">
-                  <h4 className="blockTimeline__listTitle">2015</h4>
-                  <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
-                </li>
-              </ul>
-            </div>
-
+        {/* Bloc history */}
+        <div className="blockCms blockTimeline">
+          <div className="blockTimeline__img">
+            <img src="https://dummyimage.com/571x357/adadad/525252" alt="" />
+          </div>
+          <div className="blockTimeline__txt">
+            <h2 className="blockTimeline__title">Golden Tulip<br />through the ages</h2>
+            <p className="blockTimeline__intro">Golden Tulip, a prestigious heritage with an upscale positioning from
+            the
+            begining
+            </p>
+            <ul className="blockTimeline__lists">
+              <li className="blockTimeline__list">
+                <h4 className="blockTimeline__listTitle">2015</h4>
+                <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
+              </li>
+              <li className="blockTimeline__list">
+                <h4 className="blockTimeline__listTitle">2015</h4>
+                <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
+              </li>
+              <li className="blockTimeline__list">
+                <h4 className="blockTimeline__listTitle">2015</h4>
+                <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
+              </li>
+              <li className="blockTimeline__list">
+                <h4 className="blockTimeline__listTitle">2015</h4>
+                <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
+              </li>
+              <li className="blockTimeline__list">
+                <h4 className="blockTimeline__listTitle">2015</h4>
+                <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
+              </li>
+              <li className="blockTimeline__list">
+                <h4 className="blockTimeline__listTitle">2015</h4>
+                <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
+              </li>
+              <li className="blockTimeline__list">
+                <h4 className="blockTimeline__listTitle">2015</h4>
+                <p className="blockTimeline__listDesc">Golden Tulipis owned by Jin Jiang international</p>
+              </li>
+            </ul>
           </div>
 
+        </div>
 
-          <div className="blockCms blockOverviewHeader">
+        <div className="blockCms blockOverviewHeader">
 
-            <h2 className="blockOverviewHeader__title">
+          <h2 className="blockOverviewHeader__title">
             International standards,<br />
             local flavors
-            </h2>
+          </h2>
 
-            <p className="blockOverviewHeader__desc">
+          <p className="blockOverviewHeader__desc">
             Golden Tulip, a prestigious heritage with an upscale<br />
             positioning from the begining.
-            </p>
-
-          </div>
-
+          </p>
 
         </div>
       </div>)
