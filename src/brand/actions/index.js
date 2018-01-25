@@ -1,1 +1,0 @@
-export requestPartnerships from './requestPartnerships'
