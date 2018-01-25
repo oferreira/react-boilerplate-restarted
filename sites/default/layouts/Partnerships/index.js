@@ -1,6 +1,6 @@
 import React from 'react'
 import Node from 'drupal/containers/Node'
-import OtherPartnerships from './OtherPartnerships'
+import OtherPartnerships from 'brand/components/OtherPartnerships'
 import './styles.scss'
 
 const Partnerships = () => (

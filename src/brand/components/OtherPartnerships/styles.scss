@@ -1,0 +1,11 @@
+@import 'sites/default/styles/override-config';
+
+.OtherPartnerships {
+  max-width: 1170px;
+  margin: 0 auto;
+  &__Title {
+    @extend .heading-primary-2;
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
