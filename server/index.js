@@ -25,6 +25,7 @@ app.use('*/api/menu/footerburger', (req, res) => res.status(200).send(JSON.parse
 app.use('*/api/menu/footer', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/a24d3886ce0a13a42c5185e4d4675d6e.json'), 'utf8'))))
 app.use('*/api/menu/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/298d53551662b9ec1e79a334fd46d1a7.json'), 'utf8'))))
 app.use('*/api/node/*', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/683f604e365b7de2a6816f234d969227.json'), 'utf8'))))
+app.use('*/api/brand/partners-ships', (req, res) => res.status(200).send(JSON.parse(fs.readFileSync(resolve(__dirname, './mock/partners-ships.json'), 'utf8'))))
 
 app.use('/config/*', (req, res) => res.status(200).send(`window.config = eval(${JSON.stringify(config)})`))
 
