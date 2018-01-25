@@ -18,7 +18,7 @@ import {
  */
 export function* fetchNode({ id }) {
   const locale = yield select(makeSelectLocale())
-  const url = createUrl('{locale}/api/node/{id}', { id, locale })
+  const url = createUrl('http://gt-drupal-dev.louvrehotels.com/{locale}/api/node/{id}', { id, locale })
 
   try {
     const payload = yield call(request, url)

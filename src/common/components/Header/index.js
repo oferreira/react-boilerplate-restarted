@@ -7,6 +7,7 @@ import { isBurgerOpen } from 'common/selectors/burgerMenu'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import classNames from 'classnames'
+import BurgerToggle from 'common/components/BurgerMenu/BurgerToggle'
 import './styles.scss'
 
 const Header = ({
@@ -35,6 +36,7 @@ const Header = ({
   return (
     <div className={classes}>
       <div className={contentClasses}>
+        <BurgerToggle />
         {children}
       </div>
     </div>

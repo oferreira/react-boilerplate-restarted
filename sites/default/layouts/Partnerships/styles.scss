@@ -1,0 +1,7 @@
+@import '../../styles/override-config';
+@import './PartnershipsHeader/styles';
+@import './MainPartner/styles';
+
+.Partnerships {
+  @include make-col-ready()
+}
