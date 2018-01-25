@@ -30,17 +30,17 @@ export class Node extends React.PureComponent { // eslint-disable-line react/pre
   }
 
   render() {
-    const node = this.props.nodes.find(findByIdFilter(this.props.id))
+    const item = this.props.nodes.find(findByIdFilter(this.props.id))
 
-    if (!node) return null
+    if (!item) return null
 
     return (
       <div>
         <Helmet>
-          <title>{node.title}</title>
+          <title>{item.title}</title>
           <meta name="description" content="" />
         </Helmet>
-        {this.props.fields.map((name) => <NodeField key={name} name={name} node={node} />)}
+        {this.props.fields.map((name) => <NodeField key={name} name={name} value={item[name]} />)}
       </div>
     )
   }
