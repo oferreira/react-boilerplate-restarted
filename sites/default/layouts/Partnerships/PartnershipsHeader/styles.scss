@@ -1,0 +1,19 @@
+@import '../../../styles/override-config';
+
+.PartnershipsHeader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__Title {
+    @extend .heading-primary-1-light;
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+
+  &__SubTitle {
+    max-width: 45%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $primary-color-light;
+  }
+}

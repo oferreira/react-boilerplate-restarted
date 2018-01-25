@@ -1,0 +1,23 @@
+@import '../../../scss/config';
+
+.SmallCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 375px;
+
+  &__Title {
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-size: 1.2rem;
+  }
+
+  &__Text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    max-height: 4.5rem;
+    color: $primary-color-light;
+    font-weight: $font-weight-regular;
+  }
+}

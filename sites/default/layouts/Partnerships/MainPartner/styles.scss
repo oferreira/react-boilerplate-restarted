@@ -1,0 +1,12 @@
+@import '../../../styles/override-config';
+@import "src/brand/components/SmallCard/styles";
+
+.MainPartner {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__Title {
+    @extend .heading-primary-2;
+  }
+}

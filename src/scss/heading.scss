@@ -7,6 +7,10 @@
   font-family: $heading-primary-1-font-family;
   font-weight: $heading-primary-1-font-weight;
 }
+.heading-primary-1-light{
+  @extend .heading-primary-1;
+  color: $heading-primary-1-color-light;
+}
 
 .heading-primary-2{
   color:$heading-primary-2-color;
