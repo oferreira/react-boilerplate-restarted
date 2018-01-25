@@ -11,7 +11,7 @@ export class OffersPage extends React.PureComponent { // eslint-disable-line rea
 
         <div className="gt-offer-header">
           <H1 className="gt-offer-header__title">
-            OffersPage
+            OffersPageS
           </H1>
           <div className="gt-offer-header__desc">
             <Button>
