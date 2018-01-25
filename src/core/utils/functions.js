@@ -54,6 +54,20 @@ export function getMax(from, dkey) {
 }
 
 /**
+ *  Get the sum of array values
+ * @param {Array} array
+ */
+export const getSum = (array) => {
+  let total = 0
+  array.map((f) => (
+    total += parseInt(Object.values(f).reduce((a, b) => (
+      (Number.isNaN(a) ? 0 : parseInt(a, 10)) + (Number.isNaN(b) ? 0 : parseInt(b, 10)) // Sum of values
+    ), 1), 10) // Parse the value and add it to the total
+  ))
+  return total
+}
+
+/**
  * Group an iterable object by a key
  */
 export function groupBy(what, whatKey) {
