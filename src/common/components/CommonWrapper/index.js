@@ -12,7 +12,7 @@ const CommonWrapper = ({ children }) => (
     <div className="CommonWrapper__Container">
       {children}
     </div>
-    <Footer />
+    <Footer menuId="footer" />
   </div>
 )
 

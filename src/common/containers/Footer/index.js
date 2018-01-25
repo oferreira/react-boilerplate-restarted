@@ -21,7 +21,7 @@ const Footer = ({
         <div className="FooterWrapper__item"><Icon name="tulip-inn" /></div>
         <div className="FooterWrapper__item"><Icon name="jinjiang-inn" /></div>
         <div className="FooterWrapper__item"><Icon name="premiere-classe" /></div>
-        <div className="FooterWrapper__item--LHGLogo"></div>
+        <div className="FooterWrapper__item--LHGLogo" />
       </div>
     </div>
   </div>
