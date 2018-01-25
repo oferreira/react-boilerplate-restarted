@@ -1,0 +1,270 @@
+@import "../../styles/override-config";
+
+
+/* Ours brand
+   ********************************************/
+
+.blockBrands{
+
+  &__title{
+    @extend .heading-primary-1;
+    text-align: center;
+    margin: 50px 0 0px 0;
+  }
+
+  &__intro{
+    @extend .heading-secondary-3;
+    text-align: center;
+    margin: 0 0 35px 0;
+  }
+
+  &__brand {
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 0 5vh 0;
+  }
+
+  &__txt{
+    margin: 20px 0 30px 0;
+    @extend .body-1--secondary;
+  }
+
+  &__Link{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 50px 0;
+    span{
+      text-decoration: underline;
+      margin-right: 5px;
+    }
+    i{
+      color:$secondary-color;
+      font-size: 1.5em;
+    }
+  }
+
+  &__subTitle{
+    @extend .heading-primary-2;
+    text-align: center;
+    margin: 35px 0 0 0;
+  }
+
+}
+
+
+/* GRID (Ours brand)
+   ========================================================================== */
+
+
+.blockBrands {
+
+  &__wrapper {
+    @include make-row();
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  &__brand,
+  &__Link,
+  &__title,
+  &__subTitle,
+  &__intro{
+    @include make-col-ready();
+  }
+
+}
+
+// Desktop
+@include media-breakpoint-up(md) {
+
+  .blockBrands{
+
+    &__brand{
+      @include make-col(3);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Resume block article txt img
+========================================================================== */
+.resumeArticleTxtImg-1{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  &__txt{
+    margin-bottom: 15px;
+  }
+
+  &__title{
+    @extend .heading-secondary-3;
+  }
+
+  &__desc{
+    @extend .body-1--secondary;
+  }
+
+}
+
+
+/* GRID (Resume block article txt img)
+   ========================================================================== */
+
+.resumeArticleTxtImg-1 {
+  @include make-row;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center;
+  &__txt,
+  &__img{
+    @include make-col-ready();
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .resumeArticleTxtImg-1 {
+    &__txt,
+    &__img{
+      @include make-col(6);
+    }
+
+    &__txt{
+      padding: 0 12%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+/* Block Time line
+========================================================================== */
+.blockTimeline{
+  @include make-row;
+  &__img,
+  &__txt{
+    @include make-col-ready();
+  }
+
+  &__title{
+    @extend .heading-primary-2;
+    margin: 10px 0;
+  }
+
+  &__intro{
+    @extend .body-1--secondary;
+    margin: 10px 0;
+  }
+
+  &__lists{
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list{
+    margin-bottom: 20px;
+  }
+
+  &__listTitle{
+    font-size: 3rem;
+    color:$secondary-color;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-light;
+  }
+
+  &__listDesc{
+    @extend .body-1--secondary;
+  }
+
+}
+
+
+// DESKTOP
+
+@include media-breakpoint-up(md) {
+
+  .blockTimeline {
+    margin-top: 100px;
+    margin-bottom: 35px;
+    &__title{
+      margin-top: -70px;
+      margin-left: -100px;
+    }
+  }
+
+}
+
+
+
+/* GRID Block Time line
+========================================================================== */
+
+@include media-breakpoint-up(md) {
+  .blockTimeline {
+
+    &__img {
+      text-align: right;
+      @include make-col(5);
+      @include make-col-offset(2);
+    }
+
+    &__txt {
+      @include make-col(4);
+    }
+
+  }
+}
+
+
+/* Block Overview Header
+========================================================================== */
+
+.blockOverviewHeader{
+  @include make-row;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__title{
+    @include make-col-ready();
+    @extend .heading-primary-2;
+    margin-bottom: 20px;
+  }
+
+  &__desc{
+    @include make-col-ready();
+    @extend .body-1--secondary;
+    margin-bottom: 20px;
+  }
+}
+
+/* Block About Brand Header
+========================================================================== */
+
+.AboutBrandHeader{
+  @include make-col-ready();
+  text-align: center;
+  margin: 50px 0;
+
+  &__title{
+    @extend .heading-primary-1;
+  }
+}

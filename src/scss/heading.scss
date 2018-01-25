@@ -48,6 +48,13 @@
   font-weight: $heading-secondary-3-font-weight;
 }
 
+.heading-secondary-4{
+  color:$heading-secondary-4-color;
+  font-size: $heading-secondary-4-font-size-mobile;
+  font-family: $heading-secondary-4-font-family;
+  font-weight: $heading-secondary-4-font-weight;
+}
+
 //Body text
 
 .body-1{
@@ -56,6 +63,12 @@
   font-family: $body-1-font-family;
   font-weight: $body-1-font-weight;
 }
+
+.body-1--secondary{
+  @extend .body-1;
+  color:$lighter-blue;
+}
+
 
 .body-2{
   color:$body-2-color;
@@ -76,6 +89,7 @@
   font-size: $link-font-size-mobile;
   font-family: $link-font-family;
   font-weight: $link-font-weight;
+  text-decoration: underline;
 }
 
 
@@ -106,6 +120,10 @@
 
   .heading-secondary-3{
     font-size: $heading-secondary-3-font-size;
+  }
+
+  .heading-secondary-4{
+    font-size: $heading-secondary-4-font-size;
   }
 
   .body-1{
