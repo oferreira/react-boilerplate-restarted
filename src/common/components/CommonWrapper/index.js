@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Header from 'common/components/Header'
 import BurgerMenu from 'common/components/BurgerMenu'
-import Footer from 'common/components/Footer'
+import Footer from 'common/containers/Footer'
 import './styles.scss'
 
 const CommonWrapper = ({ children }) => (
