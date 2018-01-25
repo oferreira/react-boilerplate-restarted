@@ -19,7 +19,7 @@ const MenuList = ({
     }
 
     return (
-      <ItemToRender key={item.uri} item={item}>
+      <ItemToRender key={item.uri + id} item={item}>
         {below}
       </ItemToRender>
     )

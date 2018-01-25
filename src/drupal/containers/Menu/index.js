@@ -6,6 +6,7 @@ import MenuList from 'common/components/MenuList'
 
 const Menu = (props) => {
   const ListToRender = (typeof props.renderList !== 'undefined' ? props.renderList : MenuList)
+
   return (
     <div className="Menu">
       <ListToRender
