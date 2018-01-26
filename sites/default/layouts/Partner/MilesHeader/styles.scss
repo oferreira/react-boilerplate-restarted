@@ -1,0 +1,57 @@
+@import "../../../styles/override-config";
+
+.PartnerHeader {
+  @include make-col-ready();
+  @include make-col(12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__Logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__Name {
+    @extend .heading-primary-1;
+  }
+
+  &__Image {
+    & > img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__Desc {
+    font-weight: $font-weight-light;
+    text-align: justify;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+}
+
+// border: 1px solid blue; */
+//     width: 100%;
+//     display: flex;
+//     /* flex: 1; */
+//     /* align-items: end; */
+//     justify-content: flex-end;
+//     position: relative;
+//     top: 7vh;
+
+/* DESKTOP
+   ========================================================================== */
+@include media-breakpoint-up(md) {
+  .PartnerHeader__Name {
+    transform: translateY(50%);
+  }
+
+  .PartnerHeader__Logo {
+    position: relative;
+    top: 7vh;
+  }
+}
