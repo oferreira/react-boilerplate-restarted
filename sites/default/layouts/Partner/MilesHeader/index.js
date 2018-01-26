@@ -1,7 +1,4 @@
 import React from 'react'
-/* COMPONENTS
-  ======================================== */
-import Button from 'common/components/Button'
 /* PLACEHOLDERS
   ======================================== */
 import Img from 'common/PlaceHolders/Img'
@@ -23,9 +20,6 @@ const MilesHeader = () => (
     <div className="PartnerHeader__Desc">
       <Text length={400} />
     </div>
-    <Button rounded small>
-      Go to PartnerName
-    </Button>
   </div>
 )
 
