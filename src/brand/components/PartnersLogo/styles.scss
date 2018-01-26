@@ -1,21 +1,23 @@
 @import '../../../scss/config';
 
+.displayWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .PartnersLogo {
   &__Container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
+    @extend .displayWrap;
     align-items: center;
   }
   &__Row {
-    display: flex;
-
+    @extend .displayWrap;
     &__logo {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 20px;
+      margin: 30px;
     }
   }
 }
