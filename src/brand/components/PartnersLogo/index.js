@@ -1,59 +1,30 @@
 import React from 'react'
-import Img from 'common/PlaceHolders/Img'
 import './styles.scss'
 
-const logos = [
-  { logo: 'air-france', title: 'Air France' },
-  { logo: 'saudia', title: 'Saudia' },
-  { logo: 'tunisair', title: 'Tunisair' },
-  { logo: 'kuwait', title: 'Kuwait' },
-  { logo: 'qatar', title: 'Qatar' },
-  { logo: 'mea', title: 'MEA' },
-  { logo: 'varig', title: 'Varig' },
-  { logo: 'american-airlines', title: 'American Airlines' },
-  { logo: 'oman-air', title: 'Oman Air' },
-  { logo: 'ana', title: 'ANA' },
-  { logo: 'ethiopian-air', title: 'Ethiopian Air' },
-  { logo: 'gulf-air', title: 'Gulf Air' },
-  { logo: 'czech', title: 'Czech Airlines' },
-]
+const imgUrl = '../../assets/partnersLogo/'
 
-const logoContent = logos.map((val) => {
-  const logoFile = `${val.logo}.png`
-
-  return (
-    <div className="PartnerLogo__Image">
-      <Img
-        folder="../../assets/partnersLogo"
-        name={logoFile}
-        title={val.title}
-      />
+const PartnersLogo = () => (
+  <div className="PartnersLogo__Container">
+    <div className="PartnersLogo__Row">
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}air-france.png`} alt="Air France" /> </div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}saudia.png`} alt="Saudia" /> </div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}tunisair.png`} alt="Tunisair" /> </div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}kuwait.png`} alt="Kuwait" /> </div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}qatar.png`} alt="Qatar" /> </div>
     </div>
-  )
-})
-
-const PartnersLogo = () => {
-  return (
-    <div className="PartnerLogo__Grid">
-      <div className="PartnerLogo__Grid">
-        <div className="PartnerLogo__Grid__Border__One"></div>
-        {logoContent.filter((logo, ind) => ind <= 4)}
-        <div className="PartnerLogo__Grid__Border__One"></div>
-      </div>
-
-      <div className="PartnerLogo__Grid">
-        <div className="PartnerLogo__Grid__Border__One"></div>
-        {logoContent.filter((logo, ind) => ind > 4 && ind <= 9)}
-        <div className="PartnerLogo__Grid__Border__One"></div>
-      </div>
-
-      <div className="PartnerLogo__Grid">
-        <div className="PartnerLogo__Grid__Border__Three"></div>
-        {logoContent.filter((logo, ind) => ind > 9 && ind <= 12)}
-        <div className="PartnerLogo__Grid__Border__Three"></div>
-      </div>
+    <div className="PartnersLogo__Row">
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}mea.png`} alt="MEA" /></div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}Varig.png`} alt="Varig" /></div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}american-airlines.png`} alt="American Airlines" /></div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}oman-air.png`} alt="Oman Air" /></div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}ana.png`} alt="ANA" /></div>
     </div>
-  )
-}
+    <div className="PartnersLogo__Row">
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}ethiopian-air.png`} alt="Ethiopian Air" /></div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}gulf-air.png`} alt="Gulf Air" /></div>
+      <div className="PartnersLogo__Row__logo"><img src={`${imgUrl}czech.png`} alt="Czech Airlines" /></div>
+    </div>
+  </div>
+)
 
 export default PartnersLogo
