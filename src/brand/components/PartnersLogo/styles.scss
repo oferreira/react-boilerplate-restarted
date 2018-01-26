@@ -1,0 +1,62 @@
+@import '../../../scss/config';
+
+.PartnerHeader {
+  @include make-col-ready();
+  @include make-col(12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__Name {
+    @extend .heading-primary-1;
+  }
+
+  &__Image {
+    & > img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__Desc {
+    font-weight: $font-weight-light;
+    text-align: justify;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.PartnerLink {
+  @extend .link;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  transform: scaleY(1.001);
+}
+
+.PartnerLogo {
+  &__Grid {
+    @include make-col-ready(); 
+    @include make-row();
+    margin-top: 20px;
+    &__Border {
+    text-align: center;
+
+    &__One {
+      @include make-col(1);
+    }
+
+    &__Three {
+      @include make-col(3);
+    } 
+  }
+  }
+  &__Image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include make-col(2);
+  }
+}
