@@ -1,0 +1,33 @@
+@import "../../../styles/override-config";
+
+.NewsHeader {
+  @include make-col-ready();
+  @include make-col(12);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  &__Name {
+    @extend .heading-primary-1-light;
+  }
+
+  &__Desc {
+    color: $heading-primary-1-color-light;
+    font-size: 1.5rem;
+    font-weight: $font-weight-light;
+    margin: 1.5rem 0;
+    text-align: center;
+    width: 50%;
+  }
+}
+
+
+/* DESKTOP
+   ========================================================================== */
+@include media-breakpoint-up(md) {
+  .NewsHeader__Name {
+    transform: translateY(30%);
+  }
+}

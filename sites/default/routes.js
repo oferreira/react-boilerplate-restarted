@@ -3,6 +3,7 @@ import HomePage from 'pages/HomePage/Loadable'
 import OffersPage from 'pages/OffersPage/Loadable'
 import PartnerPage from 'pages/PartnerPage/Loadable'
 import PartnershipsPage from 'pages/PartnershipsPage/Loadable'
+import NewsPage from 'pages/NewsPage/Loadable'
 
 import BrandsPage from 'pages/BrandsPage/Loadable'
 import BrandPage from 'pages/BrandPage/Loadable'
@@ -41,6 +42,11 @@ const routes = [
         name: 'Brand',
         path: '/brand',
         component: BrandPage,
+      },
+      {
+        name: 'News',
+        path: '/news',
+        component: NewsPage,
       },
     ],
   },
