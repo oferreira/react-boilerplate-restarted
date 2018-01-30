@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import InjectDrupalNodes from 'drupal/hoc/InjectDrupalNodes'
+import Button from 'common/components/Button'
 import ArticleCard from '../ArticleCard'
 import MainArticle from '../MainArticle'
 import './styles.scss'
@@ -36,6 +37,9 @@ const ArticlesList = ({ items }) => {
         />
       </div>
       <div className="ArticlesList">{content}</div>
+      <div className="ArticlesList__Btn">
+        <Button rounded small> More news </Button>
+      </div>
     </div>
   )
 }

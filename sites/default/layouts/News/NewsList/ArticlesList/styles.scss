@@ -10,4 +10,10 @@
     margin-bottom: 30px;
     position: relative;
   }
+
+  &__Btn {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
 }
