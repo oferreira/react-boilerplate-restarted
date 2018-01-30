@@ -2,6 +2,7 @@
 
 .MainArticle {
   display: flex;
+  flex-direction: column;
 
   &__Img {
     flex: 1;
@@ -14,10 +15,10 @@
     justify-content: center;
 
     &__Wrapper {
+      align-self: center;
       display: flex;
       flex-direction: column;
       width: 50%;
-      align-self: center;
     }
   }
 
@@ -27,11 +28,27 @@
     margin-top: 5px;
   }
 
+  &__Date {
+    margin-top: 10px;
+  }
+
   &__Description {
     color: $primary-color-light;
     font-size: 1.1rem;
     font-weight: $font-weight-regular;
     margin-bottom: 20px;
     margin-top: 20px;
+  }
+}
+
+// Desktop
+@include media-breakpoint-up(md) {
+
+  .MainArticle{
+    flex-direction: row;
+
+    &__Date {
+      margin-top: 0;
+    } 
   }
 }

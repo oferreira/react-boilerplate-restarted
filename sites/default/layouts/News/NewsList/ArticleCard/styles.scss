@@ -3,9 +3,14 @@
 .ArticleCard {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin: 20px;
   max-width: 375px;
   width: 100%;
+
+  &--grey {
+    border: 1px solid $darker-grey;
+    padding: 10px;
+  }
 
   &__Date {
     margin: 10px auto 10px 0;
@@ -14,5 +19,16 @@
   &__Title {
     color: $primary-color;
     font-size: 1.4rem;
+  }
+
+  &__Desc {
+    color: $darker-grey;
+    font-family: $font-metric;
+    font-size: 1.1rem;
+    font-weight: 200;
+    height: 150px;
+    line-height: 1.5rem;
+    margin-top: 10px;
+    overflow: hidden;
   }
 }

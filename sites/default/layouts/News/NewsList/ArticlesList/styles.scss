@@ -3,10 +3,11 @@
 .ArticlesList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: baseline;
+
   &__First {
-    position: relative;
     left: -5vh;
     margin-bottom: 30px;
+    position: relative;
   }
 }

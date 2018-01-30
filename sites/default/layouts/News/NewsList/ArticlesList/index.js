@@ -5,15 +5,27 @@ import ArticleCard from '../ArticleCard'
 import MainArticle from '../MainArticle'
 import './styles.scss'
 
+const mainArticleIndex = 0
+const articleThumbnail = 5
+
 const ArticlesList = ({ items }) => {
-  const content = items.map((item, ind) => (
-    ind > 0 &&
-      <ArticleCard
-        key={`article${ind}`}
-        image={item.field_image}
-        title={item.title}
-      />
-  ))
+  const content = items.filter((item, ind) => ind > mainArticleIndex)
+    .map((item, ind) => (
+      ind !== articleThumbnail ?
+        <ArticleCard
+          key={`article${ind}`}
+          image={item.field_image}
+          title={item.title}
+        />
+        :
+        <ArticleCard
+          key={`article${ind}`}
+          image={item.field_image}
+          title={item.title}
+          description={item.body}
+          simple
+        />
+    ))
   return (
     <div>
       <div className="ArticlesList__First">
