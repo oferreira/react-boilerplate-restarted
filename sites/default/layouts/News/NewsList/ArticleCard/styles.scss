@@ -1,0 +1,18 @@
+@import '../../../../styles/override-config';
+
+.ArticleCard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  max-width: 375px;
+  width: 100%;
+
+  &__Date {
+    margin: 10px auto 10px 0;
+  }
+
+  &__Title {
+    color: $primary-color;
+    font-size: 1.4rem;
+  }
+}

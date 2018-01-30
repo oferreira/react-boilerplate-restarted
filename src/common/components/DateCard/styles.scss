@@ -1,0 +1,14 @@
+@import '../../../scss/variables';
+
+.DateCard {
+  background: $lighter-grey;
+  color: $lighter-blue;
+  color: $lighter-blue;
+  display: inline-block;
+  font-family: $font-metric;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px;
+  text-align: left;
+  transform: scaleX(1.0016);
+}

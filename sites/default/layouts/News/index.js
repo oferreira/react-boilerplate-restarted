@@ -1,13 +1,11 @@
 import React from 'react'
-import OtherPartnerships from 'brand/components/OtherPartnerships'
 import NewsHeader from './NewsHeader'
-import PartnerAdvantages from './PartnerAdvantages'
+import NewsList from './NewsList'
 
 const Partner = () => (
   <div className="Partner">
     <NewsHeader />
-    <PartnerAdvantages />
-    <OtherPartnerships />
+    <NewsList />
   </div>
 )
 

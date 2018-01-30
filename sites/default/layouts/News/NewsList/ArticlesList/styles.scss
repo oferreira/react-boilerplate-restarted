@@ -1,0 +1,12 @@
+@import '../../../../styles/override-config';
+
+.ArticlesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__First {
+    position: relative;
+    left: -5vh;
+    margin-bottom: 30px;
+  }
+}

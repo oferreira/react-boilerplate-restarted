@@ -1,0 +1,37 @@
+@import '../../../../styles/override-config';
+
+.MainArticle {
+  display: flex;
+
+  &__Img {
+    flex: 1;
+  }
+
+  &__Info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+
+    &__Wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-self: center;
+    }
+  }
+
+  &__Title {
+    color: $primary-color;
+    font-size: 1.4rem;
+    margin-top: 5px;
+  }
+
+  &__Description {
+    color: $primary-color-light;
+    font-size: 1.1rem;
+    font-weight: $font-weight-regular;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
